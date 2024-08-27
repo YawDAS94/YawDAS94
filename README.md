@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @YawDAS94
 - 👀 I’m interested in Data Science and looking to either leverage my Data Science skills in a new Product Manager job or become a Data Scientist
 
-The Spotify file shows Exploratory Data Analysis
+The Spotify file shows Exploratory Data Analysis. 
 The Zillow file shows linear regression
 
 - 🌱 I’m currently learning about Machine Learning 
