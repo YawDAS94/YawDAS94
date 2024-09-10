@@ -1,0 +1,1001 @@
+transaction_id,customer_id,merchant_id,amount,transaction_time,is_fraudulent,card_type,location,purchase_category,customer_age,transaction_description
+1,1461,2172,7120.42,2023-05-22 00:12:00,0,Discover,Boston,Pharmacy,24,Purchase at Merchant-2172
+2,1824,2095,6912.25,2023-04-26 19:18:00,0,MasterCard,Los Angeles,Pharmacy,64,Purchase at Merchant-2095
+3,1493,2243,7184.92,2023-11-15 04:58:00,0,MasterCard,Chicago,Grocery Store,39,Purchase at Merchant-2243
+4,1011,2560,4170.23,2023-10-08 11:40:00,0,Visa,Los Angeles,Restaurant,58,Purchase at Merchant-2560
+5,1952,2797,1413.39,2023-12-10 22:07:00,0,Discover,Chicago,Gas Station,21,Purchase at Merchant-2797
+6,1145,2236,2326.58,2023-10-02 21:48:00,0,Discover,New York,Gas Station,55,Purchase at Merchant-2236
+7,1693,2248,7625.9,2023-10-08 03:43:00,0,Visa,Boston,Gas Station,20,Purchase at Merchant-2248
+8,1430,2883,3542.4,2023-03-14 11:07:00,0,Amex,Boston,Pharmacy,33,Purchase at Merchant-2883
+9,1568,2839,8097.65,2023-03-16 10:34:00,0,Discover,Boston,Restaurant,52,Purchase at Merchant-2839
+10,1039,2796,3100.77,2023-11-29 10:31:00,0,Amex,Los Angeles,Gas Station,69,Purchase at Merchant-2796
+11,1660,2472,4699.63,2023-02-14 16:03:00,0,Amex,New York,Gas Station,37,Purchase at Merchant-2472
+12,1358,2673,6116.54,2023-03-09 18:38:00,0,Discover,New York,Online Shopping,56,Purchase at Merchant-2673
+13,1103,2392,9778.96,2023-05-03 06:14:00,0,Discover,San Francisco,Grocery Store,57,Purchase at Merchant-2392
+14,1250,2929,2735.78,2023-06-27 08:42:00,0,Visa,Chicago,Gas Station,59,Purchase at Merchant-2929
+15,1742,2463,3629.59,2023-09-07 16:28:00,0,Discover,Los Angeles,Online Shopping,62,Purchase at Merchant-2463
+16,1386,2417,8834.31,2023-11-16 12:04:00,0,Discover,Boston,Restaurant,47,Purchase at Merchant-2417
+17,1820,2650,1537.51,2023-03-08 10:58:00,0,Visa,Boston,Online Shopping,27,Purchase at Merchant-2650
+18,1650,2948,3975.62,2023-11-05 20:12:00,0,Amex,New York,Pharmacy,20,Purchase at Merchant-2948
+19,1436,2065,4068.84,2023-09-10 02:15:00,0,MasterCard,San Francisco,Online Shopping,52,Purchase at Merchant-2065
+20,1307,2033,2691.06,2023-01-07 03:13:00,0,MasterCard,Chicago,Grocery Store,58,Purchase at Merchant-2033
+21,1399,2758,9944.03,2023-07-12 22:59:00,0,Discover,Boston,Grocery Store,37,Purchase at Merchant-2758
+22,1840,2571,2713.88,2023-07-28 19:08:00,0,Discover,Los Angeles,Pharmacy,41,Purchase at Merchant-2571
+23,1547,2783,2079.54,2023-10-10 00:05:00,0,Visa,Boston,Grocery Store,63,Purchase at Merchant-2783
+24,1023,2021,6522.97,2023-02-20 23:59:00,0,Discover,San Francisco,Online Shopping,31,Purchase at Merchant-2021
+25,1638,2673,3535.37,2023-08-14 09:44:00,0,Discover,Los Angeles,Pharmacy,28,Purchase at Merchant-2673
+26,1103,2279,3515.52,2023-12-28 11:31:00,0,Amex,San Francisco,Online Shopping,30,Purchase at Merchant-2279
+27,1243,2617,1088.53,2023-11-16 23:15:00,0,Amex,Chicago,Gas Station,67,Purchase at Merchant-2617
+28,1593,2343,1266.43,2023-03-15 06:29:00,0,Visa,New York,Online Shopping,39,Purchase at Merchant-2343
+29,1634,2236,5308.05,2023-04-18 22:18:00,0,Amex,Chicago,Online Shopping,57,Purchase at Merchant-2236
+30,1178,2223,7375.94,2023-02-11 06:24:00,0,MasterCard,Chicago,Grocery Store,30,Purchase at Merchant-2223
+31,1580,2466,1292.32,2023-09-29 19:26:00,0,Visa,Los Angeles,Grocery Store,29,Purchase at Merchant-2466
+32,1857,2705,1957.67,2023-06-24 10:25:00,0,MasterCard,Los Angeles,Gas Station,72,Purchase at Merchant-2705
+33,1392,2551,4823.76,2023-11-16 15:13:00,0,Amex,Chicago,Gas Station,47,Purchase at Merchant-2551
+34,1709,2081,9966.14,2023-11-10 13:43:00,0,Visa,Los Angeles,Restaurant,40,Purchase at Merchant-2081
+35,1560,2964,3306.61,2023-03-29 21:53:00,0,Discover,San Francisco,Gas Station,57,Purchase at Merchant-2964
+36,1450,2060,6529.11,2023-01-15 03:23:00,0,Discover,Los Angeles,Pharmacy,39,Purchase at Merchant-2060
+37,1438,2437,2574.61,2023-11-14 08:10:00,0,Discover,Los Angeles,Gas Station,56,Purchase at Merchant-2437
+38,1420,2029,475.45,2023-02-11 11:01:00,0,Discover,San Francisco,Grocery Store,23,Purchase at Merchant-2029
+39,1747,2704,5936.38,2023-07-27 00:40:00,0,Visa,San Francisco,Online Shopping,59,Purchase at Merchant-2704
+40,1545,2179,9024.44,2023-07-20 14:39:00,0,Amex,Boston,Gas Station,70,Purchase at Merchant-2179
+41,1870,2700,2952.04,2023-09-24 18:59:00,0,Visa,Boston,Gas Station,19,Purchase at Merchant-2700
+42,1652,2698,3734.75,2023-02-22 16:24:00,0,Discover,Boston,Grocery Store,22,Purchase at Merchant-2698
+43,1749,2086,8197.46,2023-02-05 01:19:00,0,MasterCard,Los Angeles,Grocery Store,45,Purchase at Merchant-2086
+44,1753,2856,7428.61,2023-12-31 04:17:00,0,Discover,Boston,Restaurant,44,Purchase at Merchant-2856
+45,1473,2319,6713.34,2023-09-26 10:45:00,0,Visa,Boston,Gas Station,24,Purchase at Merchant-2319
+46,1552,2858,4383.28,2023-07-26 18:57:00,0,Visa,San Francisco,Grocery Store,73,Purchase at Merchant-2858
+47,1728,2773,8420.22,2023-03-29 18:22:00,0,Amex,San Francisco,Grocery Store,68,Purchase at Merchant-2773
+48,1938,2056,411.5,2023-03-08 15:20:00,0,MasterCard,New York,Pharmacy,32,Purchase at Merchant-2056
+49,1472,2317,4820.24,2023-12-12 12:50:00,0,MasterCard,San Francisco,Restaurant,57,Purchase at Merchant-2317
+50,1599,2345,6484.24,2023-11-23 00:11:00,0,Discover,Boston,Restaurant,24,Purchase at Merchant-2345
+51,1868,2135,7429.38,2023-06-28 18:03:00,0,MasterCard,San Francisco,Gas Station,47,Purchase at Merchant-2135
+52,1264,2935,6681.8,2023-05-06 03:27:00,0,MasterCard,New York,Restaurant,46,Purchase at Merchant-2935
+53,1658,2439,6147.69,2023-12-03 11:42:00,0,MasterCard,Boston,Online Shopping,67,Purchase at Merchant-2439
+54,1883,2675,5779.33,2023-09-04 18:13:00,0,MasterCard,New York,Gas Station,23,Purchase at Merchant-2675
+55,1426,2320,9283.71,2023-04-18 16:07:00,0,Discover,Los Angeles,Pharmacy,57,Purchase at Merchant-2320
+56,1318,2547,9562.5,2023-09-26 04:49:00,0,Discover,Boston,Gas Station,59,Purchase at Merchant-2547
+57,1245,2990,2978.17,2023-05-03 22:16:00,0,Discover,Boston,Gas Station,53,Purchase at Merchant-2990
+58,1806,2830,7259.04,2023-11-28 18:04:00,0,Discover,Los Angeles,Pharmacy,21,Purchase at Merchant-2830
+59,1437,2865,8907.76,2023-08-16 09:35:00,0,Visa,Boston,Pharmacy,69,Purchase at Merchant-2865
+60,1779,2265,7524.17,2023-06-20 13:02:00,0,Visa,Chicago,Grocery Store,74,Purchase at Merchant-2265
+61,1484,2246,9040.01,2023-10-29 23:18:00,0,Visa,Los Angeles,Online Shopping,59,Purchase at Merchant-2246
+62,1749,2086,3501.0,2023-03-26 13:44:00,0,Discover,Chicago,Restaurant,25,Purchase at Merchant-2086
+63,1275,2355,2720.58,2023-09-19 19:33:00,0,MasterCard,Los Angeles,Gas Station,59,Purchase at Merchant-2355
+64,1188,2842,8548.39,2023-02-24 08:45:00,0,MasterCard,Boston,Pharmacy,70,Purchase at Merchant-2842
+65,1172,2998,7745.95,2023-04-17 09:41:00,0,Discover,Chicago,Restaurant,71,Purchase at Merchant-2998
+66,1046,2480,3181.66,2023-11-20 07:49:00,0,MasterCard,Boston,Pharmacy,37,Purchase at Merchant-2480
+67,1910,2882,1816.9,2023-11-22 17:54:00,0,Amex,Chicago,Pharmacy,58,Purchase at Merchant-2882
+68,1374,2731,5140.87,2023-03-28 13:39:00,0,Visa,New York,Restaurant,55,Purchase at Merchant-2731
+69,1009,2042,5088.52,2023-08-29 09:20:00,0,Visa,New York,Online Shopping,72,Purchase at Merchant-2042
+70,1498,2760,9584.9,2023-07-25 08:08:00,0,Discover,San Francisco,Pharmacy,59,Purchase at Merchant-2760
+71,1048,2936,1127.59,2023-02-24 18:31:00,0,Visa,San Francisco,Gas Station,35,Purchase at Merchant-2936
+72,1856,2478,492.52,2023-08-15 23:31:00,0,Visa,Chicago,Online Shopping,67,Purchase at Merchant-2478
+73,1083,2011,7637.36,2023-01-31 16:50:00,0,MasterCard,New York,Gas Station,42,Purchase at Merchant-2011
+74,1357,2001,3275.45,2023-08-18 05:50:00,0,Discover,Chicago,Grocery Store,35,Purchase at Merchant-2001
+75,1743,2170,2104.07,2023-03-15 20:39:00,0,Discover,Los Angeles,Restaurant,62,Purchase at Merchant-2170
+76,1026,2537,6713.73,2023-07-30 19:31:00,0,Visa,Boston,Grocery Store,69,Purchase at Merchant-2537
+77,1252,2270,4895.55,2023-04-05 19:32:00,0,Discover,Los Angeles,Grocery Store,65,Purchase at Merchant-2270
+78,1879,2870,5437.69,2023-05-10 02:05:00,0,Discover,Chicago,Gas Station,57,Purchase at Merchant-2870
+79,1045,2965,9956.64,2023-01-14 23:18:00,0,Amex,New York,Restaurant,50,Purchase at Merchant-2965
+80,1404,2506,8351.13,2023-11-15 11:45:00,0,Discover,Boston,Gas Station,36,Purchase at Merchant-2506
+81,1374,2911,7308.87,2023-02-03 18:09:00,0,Amex,San Francisco,Restaurant,28,Purchase at Merchant-2911
+82,1954,2560,8311.49,2023-08-15 23:44:00,0,Discover,New York,Pharmacy,68,Purchase at Merchant-2560
+83,1317,2062,5434.13,2023-09-06 06:33:00,0,Discover,Boston,Restaurant,67,Purchase at Merchant-2062
+84,1388,2895,382.33,2023-01-18 02:07:00,0,Discover,San Francisco,Online Shopping,22,Purchase at Merchant-2895
+85,1064,2220,7248.35,2023-04-21 00:32:00,0,Discover,San Francisco,Online Shopping,75,Purchase at Merchant-2220
+86,1911,2112,427.59,2023-05-20 10:45:00,0,Visa,Los Angeles,Gas Station,42,Purchase at Merchant-2112
+87,1837,2853,1118.15,2023-06-16 03:44:00,0,Visa,New York,Grocery Store,41,Purchase at Merchant-2853
+88,1550,2913,2757.22,2023-08-06 16:18:00,0,Amex,San Francisco,Restaurant,54,Purchase at Merchant-2913
+89,1167,2588,5702.6,2023-05-16 11:34:00,0,MasterCard,Los Angeles,Online Shopping,19,Purchase at Merchant-2588
+90,1127,2006,9699.26,2023-04-22 16:55:00,0,MasterCard,Boston,Grocery Store,24,Purchase at Merchant-2006
+91,1625,2726,7134.77,2023-12-11 10:47:00,0,Amex,New York,Restaurant,32,Purchase at Merchant-2726
+92,1260,2191,8568.95,2023-08-27 18:55:00,0,Amex,Boston,Grocery Store,41,Purchase at Merchant-2191
+93,1608,2023,2954.6,2023-12-13 23:06:00,0,Discover,Chicago,Online Shopping,61,Purchase at Merchant-2023
+94,1192,2758,2662.74,2023-04-03 12:07:00,0,Discover,San Francisco,Pharmacy,26,Purchase at Merchant-2758
+95,1479,2756,7418.72,2023-05-08 09:04:00,0,MasterCard,Boston,Restaurant,61,Purchase at Merchant-2756
+96,1330,2363,7305.56,2023-01-29 16:16:00,0,Amex,New York,Gas Station,21,Purchase at Merchant-2363
+97,1923,2196,4732.4,2023-09-05 16:46:00,0,Visa,San Francisco,Restaurant,24,Purchase at Merchant-2196
+98,1644,2278,7508.51,2023-04-15 17:27:00,0,Discover,New York,Pharmacy,38,Purchase at Merchant-2278
+99,1562,2595,4928.98,2023-10-10 22:27:00,0,MasterCard,Los Angeles,Online Shopping,69,Purchase at Merchant-2595
+100,1547,2017,5187.89,2023-05-19 18:41:00,0,Amex,Los Angeles,Restaurant,23,Purchase at Merchant-2017
+101,1676,2016,5419.32,2023-01-26 18:53:00,0,MasterCard,New York,Pharmacy,64,Purchase at Merchant-2016
+102,1723,2407,1887.32,2023-02-10 15:39:00,0,Visa,Boston,Gas Station,72,Purchase at Merchant-2407
+103,1821,2481,3003.21,2023-11-06 19:06:00,0,Visa,New York,Restaurant,35,Purchase at Merchant-2481
+104,1764,2550,2926.3,2023-12-23 19:01:00,0,Amex,New York,Online Shopping,68,Purchase at Merchant-2550
+105,1029,2463,8766.12,2023-07-05 22:53:00,0,Visa,New York,Online Shopping,74,Purchase at Merchant-2463
+106,1442,2478,745.1,2023-01-11 09:44:00,0,MasterCard,Boston,Restaurant,65,Purchase at Merchant-2478
+107,1955,2697,4407.56,2023-03-21 04:13:00,0,Discover,New York,Grocery Store,72,Purchase at Merchant-2697
+108,1202,2456,3793.48,2023-04-02 15:11:00,0,Amex,Boston,Gas Station,53,Purchase at Merchant-2456
+109,1214,2070,3800.65,2023-01-12 02:21:00,0,Visa,New York,Grocery Store,33,Purchase at Merchant-2070
+110,1420,2109,2904.95,2023-06-07 10:45:00,0,Discover,New York,Pharmacy,42,Purchase at Merchant-2109
+111,1382,2419,7923.64,2023-11-20 01:31:00,0,Visa,New York,Pharmacy,60,Purchase at Merchant-2419
+112,1659,2622,331.28,2023-05-06 16:28:00,0,MasterCard,San Francisco,Restaurant,42,Purchase at Merchant-2622
+113,1462,2098,3590.06,2023-08-05 19:24:00,0,Visa,Boston,Restaurant,56,Purchase at Merchant-2098
+114,1127,2307,7113.31,2023-05-27 13:26:00,0,Discover,Chicago,Pharmacy,56,Purchase at Merchant-2307
+115,1921,2209,1065.61,2023-12-22 04:58:00,0,MasterCard,San Francisco,Restaurant,73,Purchase at Merchant-2209
+116,1935,2504,7989.78,2023-11-02 06:31:00,0,Discover,Los Angeles,Grocery Store,51,Purchase at Merchant-2504
+117,1420,2264,347.79,2023-12-20 21:18:00,0,Amex,Boston,Online Shopping,44,Purchase at Merchant-2264
+118,1677,2393,9940.05,2023-09-05 11:21:00,0,Visa,Los Angeles,Online Shopping,34,Purchase at Merchant-2393
+119,1733,2715,73.42,2023-02-11 17:32:00,0,Amex,San Francisco,Pharmacy,31,Purchase at Merchant-2715
+120,1754,2479,3579.6,2023-03-30 20:34:00,0,Discover,New York,Grocery Store,35,Purchase at Merchant-2479
+121,1711,2527,4077.35,2023-10-08 23:16:00,0,Amex,Los Angeles,Restaurant,35,Purchase at Merchant-2527
+122,1127,2870,5779.62,2023-03-19 06:50:00,0,MasterCard,New York,Gas Station,68,Purchase at Merchant-2870
+123,1002,2198,8455.19,2023-10-28 14:27:00,0,Discover,Los Angeles,Pharmacy,71,Purchase at Merchant-2198
+124,1067,2904,434.47,2023-08-12 17:24:00,0,MasterCard,Boston,Pharmacy,46,Purchase at Merchant-2904
+125,1913,2462,8323.62,2023-09-08 16:29:00,0,Visa,San Francisco,Gas Station,75,Purchase at Merchant-2462
+126,1653,2611,5586.98,2023-02-22 10:15:00,0,Discover,Chicago,Pharmacy,45,Purchase at Merchant-2611
+127,1730,2205,3554.48,2023-01-27 11:18:00,0,MasterCard,Chicago,Grocery Store,72,Purchase at Merchant-2205
+128,1265,2446,6068.22,2023-09-30 16:10:00,0,Amex,San Francisco,Online Shopping,64,Purchase at Merchant-2446
+129,1840,2732,2115.19,2023-03-07 12:33:00,0,Visa,New York,Online Shopping,57,Purchase at Merchant-2732
+130,1762,2874,2494.56,2023-09-19 01:16:00,0,MasterCard,Los Angeles,Gas Station,44,Purchase at Merchant-2874
+131,1024,2949,7791.38,2023-05-18 00:27:00,0,MasterCard,Los Angeles,Grocery Store,32,Purchase at Merchant-2949
+132,1564,2449,7660.94,2023-04-29 18:50:00,0,Visa,Chicago,Grocery Store,32,Purchase at Merchant-2449
+133,1669,2144,8439.63,2023-02-15 21:39:00,0,Amex,Chicago,Restaurant,59,Purchase at Merchant-2144
+134,1394,2414,234.54,2023-07-25 08:35:00,0,Amex,San Francisco,Restaurant,39,Purchase at Merchant-2414
+135,1737,2005,7123.83,2023-11-26 13:52:00,0,MasterCard,New York,Grocery Store,33,Purchase at Merchant-2005
+136,1053,2098,7495.54,2023-08-19 04:28:00,0,Discover,New York,Restaurant,25,Purchase at Merchant-2098
+137,1048,2843,4600.93,2023-08-20 03:34:00,0,Discover,San Francisco,Grocery Store,40,Purchase at Merchant-2843
+138,1901,2752,3959.27,2023-12-29 09:03:00,0,MasterCard,New York,Online Shopping,24,Purchase at Merchant-2752
+139,1934,2794,2240.91,2023-08-18 11:36:00,0,Amex,San Francisco,Grocery Store,20,Purchase at Merchant-2794
+140,1051,2115,3479.91,2023-03-06 04:19:00,0,MasterCard,Chicago,Gas Station,38,Purchase at Merchant-2115
+141,1768,2968,4597.0,2023-04-24 19:36:00,0,Visa,Boston,Online Shopping,61,Purchase at Merchant-2968
+142,1045,2567,3762.89,2023-12-26 13:06:00,0,Amex,San Francisco,Grocery Store,72,Purchase at Merchant-2567
+143,1065,2540,6216.86,2023-12-09 00:09:00,0,Amex,Boston,Online Shopping,68,Purchase at Merchant-2540
+144,1387,2182,6131.18,2023-11-01 13:54:00,0,Discover,San Francisco,Pharmacy,67,Purchase at Merchant-2182
+145,1431,2990,8602.83,2023-05-24 22:34:00,0,MasterCard,New York,Grocery Store,47,Purchase at Merchant-2990
+146,1325,2462,9911.71,2023-04-06 14:58:00,0,Amex,Chicago,Online Shopping,35,Purchase at Merchant-2462
+147,1737,2043,2373.21,2023-09-01 09:09:00,0,Discover,Boston,Restaurant,75,Purchase at Merchant-2043
+148,1111,2088,6214.56,2023-12-29 14:23:00,0,Amex,New York,Grocery Store,55,Purchase at Merchant-2088
+149,1372,2326,6868.41,2023-05-01 00:56:00,0,MasterCard,New York,Gas Station,70,Purchase at Merchant-2326
+150,1632,2465,4698.71,2023-04-18 14:57:00,0,MasterCard,San Francisco,Online Shopping,57,Purchase at Merchant-2465
+151,1695,2842,1851.17,2023-04-03 05:02:00,0,Discover,New York,Grocery Store,73,Purchase at Merchant-2842
+152,1887,2992,6770.09,2023-12-04 08:15:00,0,Amex,Chicago,Grocery Store,65,Purchase at Merchant-2992
+153,1950,2264,5942.73,2023-09-25 11:54:00,0,Discover,Los Angeles,Grocery Store,36,Purchase at Merchant-2264
+154,1520,2595,6782.87,2023-06-09 03:06:00,0,Amex,Los Angeles,Online Shopping,61,Purchase at Merchant-2595
+155,1948,2452,1555.21,2023-07-18 20:51:00,0,MasterCard,Boston,Pharmacy,29,Purchase at Merchant-2452
+156,1291,2854,8381.01,2023-02-02 19:26:00,0,MasterCard,Los Angeles,Pharmacy,25,Purchase at Merchant-2854
+157,1962,2038,6633.44,2023-01-25 13:03:00,0,MasterCard,San Francisco,Online Shopping,50,Purchase at Merchant-2038
+158,1602,2536,7156.05,2023-10-21 17:54:00,0,Discover,Los Angeles,Online Shopping,32,Purchase at Merchant-2536
+159,1625,2483,7021.32,2023-11-20 10:17:00,0,Visa,Chicago,Online Shopping,63,Purchase at Merchant-2483
+160,1353,2643,7976.23,2023-01-13 06:12:00,1,Amex,New York,Online Shopping,24,Purchase at Merchant-2643
+161,1648,2277,5152.56,2023-10-22 05:48:00,0,Discover,Los Angeles,Restaurant,32,Purchase at Merchant-2277
+162,1744,2945,7533.53,2023-05-27 03:42:00,0,Visa,Los Angeles,Grocery Store,74,Purchase at Merchant-2945
+163,1988,2418,5349.55,2023-12-08 12:47:00,0,Discover,Chicago,Gas Station,33,Purchase at Merchant-2418
+164,1030,2092,6169.37,2023-03-14 15:19:00,0,Discover,Chicago,Grocery Store,59,Purchase at Merchant-2092
+165,1826,2480,8329.97,2023-04-09 22:04:00,0,MasterCard,Los Angeles,Online Shopping,44,Purchase at Merchant-2480
+166,1964,2278,263.99,2023-12-08 07:24:00,1,MasterCard,New York,Restaurant,34,Purchase at Merchant-2278
+167,1437,2329,4217.55,2023-07-28 06:06:00,0,Amex,Boston,Grocery Store,44,Purchase at Merchant-2329
+168,1130,2659,8962.92,2023-09-03 19:20:00,0,Amex,New York,Pharmacy,62,Purchase at Merchant-2659
+169,1115,2927,3791.29,2023-08-16 18:22:00,0,MasterCard,San Francisco,Pharmacy,47,Purchase at Merchant-2927
+170,1607,2058,1159.78,2023-05-25 07:02:00,0,Discover,San Francisco,Pharmacy,35,Purchase at Merchant-2058
+171,1516,2420,8192.21,2023-04-16 10:49:00,0,Amex,Chicago,Grocery Store,29,Purchase at Merchant-2420
+172,1986,2340,6456.77,2023-01-25 14:09:00,0,MasterCard,San Francisco,Online Shopping,37,Purchase at Merchant-2340
+173,1994,2903,6842.74,2023-01-20 12:02:00,0,Visa,New York,Pharmacy,35,Purchase at Merchant-2903
+174,1684,2067,681.43,2023-08-24 22:37:00,0,Discover,Chicago,Gas Station,57,Purchase at Merchant-2067
+175,1139,2398,8806.47,2023-10-22 06:46:00,0,Visa,Boston,Gas Station,45,Purchase at Merchant-2398
+176,1471,2875,9688.24,2023-12-31 18:47:00,0,Amex,Chicago,Gas Station,54,Purchase at Merchant-2875
+177,1984,2704,6427.31,2023-09-17 03:40:00,0,MasterCard,San Francisco,Grocery Store,59,Purchase at Merchant-2704
+178,1589,2205,8806.17,2023-05-26 10:25:00,0,MasterCard,New York,Pharmacy,21,Purchase at Merchant-2205
+179,1985,2136,1480.12,2023-09-12 03:07:00,0,Discover,San Francisco,Restaurant,62,Purchase at Merchant-2136
+180,1328,2818,249.67,2023-01-16 19:30:00,0,Visa,San Francisco,Pharmacy,71,Purchase at Merchant-2818
+181,1665,2984,6272.44,2023-07-12 03:35:00,0,Discover,Chicago,Online Shopping,41,Purchase at Merchant-2984
+182,1081,2567,4355.22,2023-08-28 23:12:00,0,Visa,New York,Grocery Store,20,Purchase at Merchant-2567
+183,1986,2829,2006.32,2023-10-31 04:02:00,0,Visa,New York,Online Shopping,23,Purchase at Merchant-2829
+184,1465,2381,8092.09,2023-01-19 04:28:00,0,Discover,Chicago,Pharmacy,58,Purchase at Merchant-2381
+185,1947,2635,8859.35,2023-12-18 13:12:00,0,Amex,Los Angeles,Gas Station,55,Purchase at Merchant-2635
+186,1531,2517,2295.31,2023-10-20 20:45:00,0,Amex,San Francisco,Online Shopping,37,Purchase at Merchant-2517
+187,1438,2904,5608.47,2023-11-16 19:59:00,0,Discover,Los Angeles,Grocery Store,52,Purchase at Merchant-2904
+188,1377,2791,3562.13,2023-02-04 13:52:00,0,Discover,Boston,Gas Station,53,Purchase at Merchant-2791
+189,1470,2322,3435.66,2023-04-17 14:01:00,0,Visa,Boston,Online Shopping,36,Purchase at Merchant-2322
+190,1137,2132,7747.07,2023-09-13 05:09:00,0,Amex,Boston,Grocery Store,61,Purchase at Merchant-2132
+191,1415,2580,8661.99,2023-05-15 02:39:00,0,Amex,New York,Grocery Store,73,Purchase at Merchant-2580
+192,1415,2543,9285.7,2023-02-03 07:24:00,0,Discover,Boston,Grocery Store,65,Purchase at Merchant-2543
+193,1557,2973,7137.09,2023-07-30 10:28:00,0,Discover,San Francisco,Online Shopping,30,Purchase at Merchant-2973
+194,1750,2664,2103.91,2023-08-15 14:10:00,0,Visa,Los Angeles,Grocery Store,43,Purchase at Merchant-2664
+195,1035,2536,2150.61,2023-06-27 08:05:00,0,Amex,Chicago,Grocery Store,74,Purchase at Merchant-2536
+196,1521,2182,6856.66,2023-06-02 09:09:00,0,Visa,Los Angeles,Gas Station,20,Purchase at Merchant-2182
+197,1458,2122,5009.13,2023-03-01 03:47:00,0,Discover,San Francisco,Grocery Store,44,Purchase at Merchant-2122
+198,1752,2625,812.01,2023-07-24 16:59:00,0,Visa,San Francisco,Pharmacy,25,Purchase at Merchant-2625
+199,1983,2685,7916.86,2023-08-09 17:20:00,0,Visa,Boston,Gas Station,64,Purchase at Merchant-2685
+200,1410,2860,7626.6,2023-04-05 19:38:00,1,Discover,New York,Online Shopping,28,Purchase at Merchant-2860
+201,1972,2866,7553.49,2023-05-26 10:11:00,0,Amex,Los Angeles,Grocery Store,31,Purchase at Merchant-2866
+202,1076,2013,7673.68,2023-05-24 23:38:00,0,Amex,Los Angeles,Online Shopping,29,Purchase at Merchant-2013
+203,1087,2267,2038.0,2023-06-01 17:56:00,0,Discover,Los Angeles,Grocery Store,18,Purchase at Merchant-2267
+204,1027,2652,2895.01,2023-06-06 04:35:00,0,MasterCard,Los Angeles,Gas Station,33,Purchase at Merchant-2652
+205,1803,2568,4601.11,2023-02-22 16:27:00,0,Visa,Chicago,Restaurant,48,Purchase at Merchant-2568
+206,1836,2200,6170.57,2023-03-12 10:56:00,0,Discover,Chicago,Restaurant,32,Purchase at Merchant-2200
+207,1808,2656,5961.46,2023-12-29 04:51:00,0,Discover,New York,Restaurant,66,Purchase at Merchant-2656
+208,1598,2399,1723.65,2023-12-23 18:29:00,0,Amex,Boston,Restaurant,33,Purchase at Merchant-2399
+209,1643,2466,98.93,2023-09-06 08:11:00,0,Discover,Boston,Restaurant,24,Purchase at Merchant-2466
+210,1240,2373,9886.75,2023-09-30 15:05:00,0,Visa,San Francisco,Pharmacy,57,Purchase at Merchant-2373
+211,1662,2069,2637.09,2023-01-22 02:32:00,0,MasterCard,Los Angeles,Online Shopping,56,Purchase at Merchant-2069
+212,1207,2115,6541.3,2023-09-16 23:45:00,0,Amex,New York,Online Shopping,41,Purchase at Merchant-2115
+213,1253,2059,925.02,2023-06-11 06:40:00,0,MasterCard,Los Angeles,Pharmacy,19,Purchase at Merchant-2059
+214,1825,2761,4461.79,2023-04-13 21:18:00,0,MasterCard,San Francisco,Restaurant,75,Purchase at Merchant-2761
+215,1113,2951,4993.31,2023-07-15 22:46:00,0,Amex,San Francisco,Pharmacy,65,Purchase at Merchant-2951
+216,1983,2464,3739.49,2023-05-10 16:40:00,0,Amex,Los Angeles,Restaurant,49,Purchase at Merchant-2464
+217,1113,2925,4365.23,2023-08-09 00:28:00,0,Discover,San Francisco,Gas Station,26,Purchase at Merchant-2925
+218,1185,2234,3451.8,2023-08-09 23:50:00,0,Visa,New York,Restaurant,51,Purchase at Merchant-2234
+219,1090,2851,6081.87,2023-06-04 01:02:00,0,Visa,Boston,Grocery Store,25,Purchase at Merchant-2851
+220,1261,2221,2237.06,2023-09-04 02:19:00,0,Visa,Los Angeles,Restaurant,22,Purchase at Merchant-2221
+221,1569,2385,3221.65,2023-03-24 21:47:00,0,MasterCard,San Francisco,Gas Station,58,Purchase at Merchant-2385
+222,1884,2723,4968.72,2023-03-31 04:12:00,0,Visa,San Francisco,Pharmacy,67,Purchase at Merchant-2723
+223,1030,2611,4921.44,2023-08-30 19:07:00,0,MasterCard,New York,Online Shopping,49,Purchase at Merchant-2611
+224,1016,2981,2484.84,2023-07-04 13:32:00,0,Discover,Chicago,Grocery Store,64,Purchase at Merchant-2981
+225,1024,2406,2310.2,2023-03-10 01:37:00,0,MasterCard,San Francisco,Restaurant,73,Purchase at Merchant-2406
+226,1079,3000,726.57,2023-02-09 08:37:00,0,Visa,New York,Grocery Store,67,Purchase at Merchant-3000
+227,1465,2410,8179.58,2023-09-01 19:27:00,0,MasterCard,Los Angeles,Restaurant,44,Purchase at Merchant-2410
+228,1261,2739,7556.02,2023-01-20 01:14:00,0,Amex,Los Angeles,Restaurant,70,Purchase at Merchant-2739
+229,1923,2389,4815.73,2023-01-22 09:57:00,0,Discover,Boston,Pharmacy,52,Purchase at Merchant-2389
+230,1542,2853,787.78,2023-08-09 22:29:00,0,Discover,Boston,Gas Station,36,Purchase at Merchant-2853
+231,1449,2765,7206.82,2023-01-01 00:05:00,0,Amex,San Francisco,Online Shopping,38,Purchase at Merchant-2765
+232,1839,2066,7768.15,2023-09-04 10:48:00,0,Visa,Chicago,Gas Station,39,Purchase at Merchant-2066
+233,1858,2914,9845.3,2023-03-18 23:05:00,0,Amex,San Francisco,Pharmacy,34,Purchase at Merchant-2914
+234,1286,2393,1305.0,2023-02-18 14:27:00,0,Visa,Boston,Pharmacy,50,Purchase at Merchant-2393
+235,1833,2693,7725.91,2023-04-27 19:21:00,0,Discover,San Francisco,Online Shopping,65,Purchase at Merchant-2693
+236,1087,2747,3352.98,2023-11-29 14:19:00,0,Amex,Boston,Gas Station,44,Purchase at Merchant-2747
+237,1006,2713,213.19,2023-06-29 09:39:00,0,Discover,Chicago,Pharmacy,73,Purchase at Merchant-2713
+238,1420,2457,1430.65,2023-04-26 11:13:00,0,Discover,Los Angeles,Grocery Store,63,Purchase at Merchant-2457
+239,1704,2395,4812.98,2023-04-09 09:23:00,0,Visa,Los Angeles,Restaurant,67,Purchase at Merchant-2395
+240,1665,2553,4408.25,2023-09-26 08:00:00,0,Amex,Los Angeles,Restaurant,20,Purchase at Merchant-2553
+241,1043,2165,6436.15,2023-01-11 03:53:00,0,Amex,Chicago,Gas Station,68,Purchase at Merchant-2165
+242,1834,2648,5231.61,2023-05-18 13:34:00,0,Visa,Chicago,Gas Station,52,Purchase at Merchant-2648
+243,1981,2079,2568.37,2023-01-09 06:27:00,0,Amex,New York,Pharmacy,37,Purchase at Merchant-2079
+244,1406,2757,160.44,2023-05-31 02:44:00,0,Visa,San Francisco,Online Shopping,27,Purchase at Merchant-2757
+245,1054,2348,1496.41,2023-09-26 05:59:00,0,Visa,Los Angeles,Online Shopping,72,Purchase at Merchant-2348
+246,1361,2728,8956.59,2023-04-27 22:47:00,0,MasterCard,Los Angeles,Gas Station,46,Purchase at Merchant-2728
+247,1433,2400,1510.73,2023-10-31 11:30:00,0,Amex,Los Angeles,Restaurant,40,Purchase at Merchant-2400
+248,1100,2126,5556.72,2023-08-03 10:17:00,0,Discover,New York,Gas Station,30,Purchase at Merchant-2126
+249,1746,2894,1977.4,2023-03-06 12:15:00,0,Amex,Chicago,Gas Station,47,Purchase at Merchant-2894
+250,1086,2265,1978.89,2023-02-02 03:47:00,0,Visa,San Francisco,Grocery Store,44,Purchase at Merchant-2265
+251,1122,2959,9765.09,2023-02-22 10:52:00,0,Discover,New York,Grocery Store,48,Purchase at Merchant-2959
+252,1420,2415,4977.4,2023-02-15 14:38:00,0,Visa,New York,Gas Station,67,Purchase at Merchant-2415
+253,1284,2705,2324.14,2023-09-19 03:36:00,0,Visa,San Francisco,Restaurant,29,Purchase at Merchant-2705
+254,1009,2724,352.2,2023-07-15 05:08:00,0,MasterCard,New York,Grocery Store,40,Purchase at Merchant-2724
+255,1828,2714,2252.77,2023-10-30 10:11:00,0,Discover,Los Angeles,Pharmacy,26,Purchase at Merchant-2714
+256,1896,2945,9511.48,2023-02-27 22:11:00,0,MasterCard,Boston,Pharmacy,64,Purchase at Merchant-2945
+257,1192,2143,8042.19,2023-07-08 14:10:00,0,Visa,Los Angeles,Online Shopping,53,Purchase at Merchant-2143
+258,1253,2915,8220.16,2023-06-14 03:57:00,0,Amex,San Francisco,Online Shopping,19,Purchase at Merchant-2915
+259,1446,2486,3203.16,2023-04-25 00:27:00,0,Visa,San Francisco,Gas Station,60,Purchase at Merchant-2486
+260,1126,2244,2010.13,2023-02-21 21:15:00,0,Amex,New York,Gas Station,19,Purchase at Merchant-2244
+261,1302,2412,9806.94,2023-04-08 06:39:00,0,Discover,Los Angeles,Grocery Store,64,Purchase at Merchant-2412
+262,1898,2294,9263.64,2023-05-19 15:31:00,0,Amex,Boston,Online Shopping,53,Purchase at Merchant-2294
+263,1774,2410,7727.61,2023-05-19 06:57:00,0,MasterCard,San Francisco,Pharmacy,55,Purchase at Merchant-2410
+264,1493,2401,8742.59,2023-07-31 03:28:00,0,MasterCard,Chicago,Grocery Store,66,Purchase at Merchant-2401
+265,1728,2628,6597.3,2023-07-10 13:48:00,0,Discover,San Francisco,Online Shopping,45,Purchase at Merchant-2628
+266,1786,2422,860.01,2023-03-01 10:09:00,0,MasterCard,Los Angeles,Online Shopping,71,Purchase at Merchant-2422
+267,1379,2542,3143.52,2023-06-17 05:12:00,0,Visa,Los Angeles,Restaurant,38,Purchase at Merchant-2542
+268,1343,2275,1477.27,2023-02-15 12:53:00,0,Visa,Chicago,Online Shopping,22,Purchase at Merchant-2275
+269,1973,2192,6704.18,2023-06-07 22:46:00,0,MasterCard,San Francisco,Online Shopping,63,Purchase at Merchant-2192
+270,1415,2172,1871.82,2023-05-18 22:59:00,0,Amex,New York,Restaurant,64,Purchase at Merchant-2172
+271,1920,2466,8019.02,2023-03-24 22:20:00,0,Discover,Los Angeles,Restaurant,46,Purchase at Merchant-2466
+272,1174,2159,2354.08,2023-01-28 21:23:00,0,Discover,San Francisco,Online Shopping,60,Purchase at Merchant-2159
+273,1481,2457,269.99,2023-10-08 04:40:00,0,Discover,New York,Pharmacy,63,Purchase at Merchant-2457
+274,1453,2856,8926.61,2023-07-01 15:53:00,0,Discover,Chicago,Gas Station,26,Purchase at Merchant-2856
+275,1406,2828,5806.64,2023-11-18 08:01:00,0,MasterCard,Los Angeles,Online Shopping,74,Purchase at Merchant-2828
+276,1513,2447,2935.87,2023-10-30 13:24:00,0,MasterCard,Los Angeles,Grocery Store,56,Purchase at Merchant-2447
+277,1020,2928,5277.73,2023-11-03 04:45:00,0,MasterCard,Chicago,Online Shopping,48,Purchase at Merchant-2928
+278,1453,2365,4750.4,2023-08-23 08:51:00,0,Amex,San Francisco,Pharmacy,21,Purchase at Merchant-2365
+279,1033,2080,3917.09,2023-10-06 18:24:00,0,Amex,Chicago,Pharmacy,39,Purchase at Merchant-2080
+280,1669,2984,4755.93,2023-01-05 09:53:00,0,Discover,Los Angeles,Online Shopping,71,Purchase at Merchant-2984
+281,1564,2480,3250.64,2023-01-11 00:08:00,0,Amex,Chicago,Gas Station,45,Purchase at Merchant-2480
+282,1353,2904,7107.59,2023-11-20 08:53:00,0,MasterCard,New York,Restaurant,18,Purchase at Merchant-2904
+283,1253,2474,1101.28,2023-12-25 21:44:00,0,MasterCard,Los Angeles,Online Shopping,27,Purchase at Merchant-2474
+284,1670,2425,4700.3,2023-03-06 23:34:00,0,Amex,New York,Gas Station,74,Purchase at Merchant-2425
+285,1071,2081,25.82,2023-01-06 21:06:00,0,Visa,Boston,Pharmacy,70,Purchase at Merchant-2081
+286,1223,2640,4210.39,2023-11-18 23:32:00,0,Visa,Los Angeles,Restaurant,35,Purchase at Merchant-2640
+287,1291,2931,4290.2,2023-09-12 02:58:00,0,Discover,Los Angeles,Grocery Store,62,Purchase at Merchant-2931
+288,1046,2334,8514.83,2023-03-01 05:55:00,0,Visa,Chicago,Online Shopping,48,Purchase at Merchant-2334
+289,1303,2855,4962.7,2023-01-17 05:21:00,0,Visa,New York,Restaurant,56,Purchase at Merchant-2855
+290,1622,2609,6086.72,2023-11-26 10:00:00,0,Visa,Boston,Pharmacy,62,Purchase at Merchant-2609
+291,1271,2788,3770.16,2023-11-07 21:05:00,0,Visa,Los Angeles,Gas Station,60,Purchase at Merchant-2788
+292,1196,2256,7737.53,2023-05-22 10:24:00,0,MasterCard,San Francisco,Restaurant,72,Purchase at Merchant-2256
+293,1835,2580,4164.89,2023-10-11 12:13:00,0,Visa,Los Angeles,Pharmacy,37,Purchase at Merchant-2580
+294,1205,2889,5779.28,2023-11-10 17:58:00,0,Discover,San Francisco,Pharmacy,31,Purchase at Merchant-2889
+295,1097,2059,6857.98,2023-09-27 21:46:00,0,MasterCard,Los Angeles,Pharmacy,51,Purchase at Merchant-2059
+296,1766,2843,5793.24,2023-01-26 20:21:00,0,MasterCard,Chicago,Grocery Store,45,Purchase at Merchant-2843
+297,1002,2090,1412.31,2023-08-31 20:52:00,0,Discover,Chicago,Pharmacy,40,Purchase at Merchant-2090
+298,1818,2405,8544.71,2023-01-31 05:03:00,0,Discover,New York,Grocery Store,33,Purchase at Merchant-2405
+299,1695,2266,639.25,2023-07-29 04:08:00,0,Amex,Boston,Gas Station,51,Purchase at Merchant-2266
+300,1268,2039,3706.17,2023-02-23 01:50:00,0,Visa,Chicago,Gas Station,56,Purchase at Merchant-2039
+301,1241,2500,7417.64,2023-01-12 17:23:00,0,MasterCard,Los Angeles,Restaurant,48,Purchase at Merchant-2500
+302,1676,2286,5399.11,2023-06-09 11:56:00,0,Visa,San Francisco,Restaurant,25,Purchase at Merchant-2286
+303,1196,2735,5114.1,2023-10-23 05:05:00,0,Discover,New York,Pharmacy,45,Purchase at Merchant-2735
+304,1481,2825,6709.74,2023-09-25 19:56:00,0,Visa,San Francisco,Online Shopping,55,Purchase at Merchant-2825
+305,1339,2798,1376.75,2023-06-13 22:06:00,0,Discover,Chicago,Restaurant,27,Purchase at Merchant-2798
+306,1527,2726,4454.15,2023-09-06 08:42:00,0,Amex,San Francisco,Pharmacy,65,Purchase at Merchant-2726
+307,1756,2567,8075.33,2023-01-31 09:09:00,0,Discover,New York,Online Shopping,61,Purchase at Merchant-2567
+308,1933,2226,4533.44,2023-09-09 23:08:00,0,MasterCard,New York,Online Shopping,74,Purchase at Merchant-2226
+309,1339,2428,4453.08,2023-04-18 03:57:00,0,Amex,Los Angeles,Grocery Store,48,Purchase at Merchant-2428
+310,1235,2169,3781.02,2023-07-21 18:26:00,0,Amex,San Francisco,Online Shopping,60,Purchase at Merchant-2169
+311,1532,2945,2070.35,2023-12-23 07:20:00,0,Visa,New York,Pharmacy,68,Purchase at Merchant-2945
+312,1388,2594,478.05,2023-07-15 19:54:00,0,MasterCard,Boston,Gas Station,72,Purchase at Merchant-2594
+313,1562,2428,3297.52,2023-02-15 22:01:00,0,Visa,New York,Pharmacy,45,Purchase at Merchant-2428
+314,1559,2860,7746.33,2023-02-05 05:23:00,0,Visa,San Francisco,Pharmacy,54,Purchase at Merchant-2860
+315,1227,2134,9141.33,2023-03-07 04:33:00,0,Visa,New York,Online Shopping,62,Purchase at Merchant-2134
+316,1269,2507,1192.14,2023-03-16 14:25:00,0,Amex,Los Angeles,Online Shopping,42,Purchase at Merchant-2507
+317,1379,2817,3436.06,2023-10-06 06:38:00,0,MasterCard,Chicago,Grocery Store,71,Purchase at Merchant-2817
+318,1227,2245,6770.61,2023-03-25 16:07:00,0,MasterCard,Los Angeles,Online Shopping,67,Purchase at Merchant-2245
+319,1310,2064,8655.76,2023-04-28 20:46:00,0,Visa,New York,Online Shopping,35,Purchase at Merchant-2064
+320,1650,2157,4727.02,2023-03-27 15:32:00,0,Discover,New York,Grocery Store,29,Purchase at Merchant-2157
+321,1702,2099,2739.96,2023-01-18 17:17:00,0,Discover,San Francisco,Online Shopping,42,Purchase at Merchant-2099
+322,1360,2524,9718.42,2023-10-02 05:00:00,0,Visa,Boston,Online Shopping,73,Purchase at Merchant-2524
+323,1884,2299,2735.74,2023-04-25 02:46:00,0,Amex,Chicago,Grocery Store,26,Purchase at Merchant-2299
+324,1506,2941,9506.72,2023-01-02 15:55:00,0,Discover,San Francisco,Gas Station,42,Purchase at Merchant-2941
+325,1562,2759,5279.75,2023-01-14 12:20:00,0,MasterCard,San Francisco,Pharmacy,65,Purchase at Merchant-2759
+326,1749,2422,2233.32,2023-10-19 22:34:00,0,Discover,Boston,Pharmacy,72,Purchase at Merchant-2422
+327,1646,2206,3230.88,2023-07-08 02:45:00,0,Visa,San Francisco,Pharmacy,54,Purchase at Merchant-2206
+328,1287,2659,6613.06,2023-03-12 10:40:00,0,MasterCard,San Francisco,Grocery Store,21,Purchase at Merchant-2659
+329,1134,2291,6582.31,2023-07-17 06:21:00,0,Discover,San Francisco,Gas Station,63,Purchase at Merchant-2291
+330,1239,2785,8428.18,2023-06-17 02:23:00,0,Amex,San Francisco,Gas Station,68,Purchase at Merchant-2785
+331,1315,2700,138.94,2023-03-05 01:53:00,0,Visa,New York,Online Shopping,34,Purchase at Merchant-2700
+332,1380,2896,9331.72,2023-07-12 06:21:00,0,MasterCard,New York,Gas Station,23,Purchase at Merchant-2896
+333,1911,2033,563.93,2023-10-05 06:09:00,0,Amex,San Francisco,Pharmacy,54,Purchase at Merchant-2033
+334,1168,2242,4831.04,2023-04-01 17:04:00,0,MasterCard,Boston,Gas Station,34,Purchase at Merchant-2242
+335,1248,2463,9429.46,2023-08-25 18:31:00,0,MasterCard,New York,Gas Station,58,Purchase at Merchant-2463
+336,1879,2311,5046.82,2023-10-15 09:41:00,0,MasterCard,Boston,Pharmacy,71,Purchase at Merchant-2311
+337,1386,2539,9651.87,2023-03-15 00:46:00,0,Visa,Chicago,Pharmacy,70,Purchase at Merchant-2539
+338,1688,2178,1468.09,2023-12-15 09:45:00,0,Discover,San Francisco,Online Shopping,26,Purchase at Merchant-2178
+339,1207,2452,5145.64,2023-03-09 12:00:00,0,MasterCard,Los Angeles,Gas Station,27,Purchase at Merchant-2452
+340,1435,2666,2110.1,2023-08-09 20:56:00,0,MasterCard,Boston,Restaurant,46,Purchase at Merchant-2666
+341,1143,2756,2140.13,2023-08-12 12:31:00,0,MasterCard,Chicago,Restaurant,66,Purchase at Merchant-2756
+342,1595,2099,1443.08,2023-08-07 20:27:00,0,Visa,Los Angeles,Restaurant,45,Purchase at Merchant-2099
+343,1422,2311,3172.88,2023-03-01 17:37:00,0,Visa,New York,Grocery Store,29,Purchase at Merchant-2311
+344,1943,2682,1347.39,2023-06-23 17:15:00,0,Amex,Los Angeles,Pharmacy,65,Purchase at Merchant-2682
+345,1222,2931,1875.26,2023-04-22 00:26:00,0,Visa,San Francisco,Grocery Store,31,Purchase at Merchant-2931
+346,1607,2178,5961.22,2023-05-05 08:53:00,0,MasterCard,New York,Pharmacy,43,Purchase at Merchant-2178
+347,1899,2194,2679.97,2023-08-08 07:04:00,0,Discover,Boston,Pharmacy,59,Purchase at Merchant-2194
+348,1633,2406,8286.67,2023-01-25 15:53:00,0,Visa,Los Angeles,Pharmacy,67,Purchase at Merchant-2406
+349,1215,2157,6389.15,2023-12-11 23:11:00,0,Visa,Los Angeles,Restaurant,62,Purchase at Merchant-2157
+350,1455,2574,7688.27,2023-02-15 13:08:00,0,MasterCard,Boston,Gas Station,67,Purchase at Merchant-2574
+351,1429,2960,8016.53,2023-08-19 19:32:00,0,Amex,Los Angeles,Restaurant,69,Purchase at Merchant-2960
+352,1099,2984,9280.57,2023-09-13 18:23:00,0,MasterCard,Boston,Grocery Store,41,Purchase at Merchant-2984
+353,1328,2291,7712.96,2023-09-03 11:34:00,0,Visa,Chicago,Restaurant,56,Purchase at Merchant-2291
+354,1522,2896,8830.38,2023-08-02 07:38:00,0,Discover,New York,Gas Station,37,Purchase at Merchant-2896
+355,1648,2061,645.71,2023-05-29 00:45:00,0,Amex,San Francisco,Restaurant,72,Purchase at Merchant-2061
+356,1235,2716,9257.86,2023-08-20 22:43:00,0,MasterCard,Chicago,Restaurant,38,Purchase at Merchant-2716
+357,1033,2588,3002.39,2023-01-20 06:55:00,0,Amex,Boston,Grocery Store,43,Purchase at Merchant-2588
+358,1592,2795,8300.46,2023-12-29 01:01:00,0,MasterCard,San Francisco,Gas Station,42,Purchase at Merchant-2795
+359,1141,2338,8040.23,2023-05-29 22:48:00,0,Amex,San Francisco,Online Shopping,40,Purchase at Merchant-2338
+360,1610,2261,3666.32,2023-03-31 21:09:00,0,Amex,Boston,Online Shopping,62,Purchase at Merchant-2261
+361,1240,2111,1674.27,2023-12-07 07:03:00,0,Amex,New York,Online Shopping,34,Purchase at Merchant-2111
+362,1929,2916,2976.37,2023-11-10 01:38:00,0,MasterCard,Los Angeles,Pharmacy,64,Purchase at Merchant-2916
+363,1516,2410,5586.5,2023-04-27 22:14:00,0,Amex,Los Angeles,Gas Station,74,Purchase at Merchant-2410
+364,1486,2820,8834.05,2023-05-17 14:41:00,0,MasterCard,Boston,Grocery Store,62,Purchase at Merchant-2820
+365,1608,2616,8381.19,2023-03-15 13:46:00,0,Amex,New York,Restaurant,37,Purchase at Merchant-2616
+366,1677,2196,3895.8,2023-06-07 12:15:00,0,Visa,Boston,Grocery Store,27,Purchase at Merchant-2196
+367,1942,2833,4040.16,2023-09-25 17:07:00,0,Visa,Boston,Grocery Store,49,Purchase at Merchant-2833
+368,1719,2469,2113.96,2023-11-18 03:41:00,0,Visa,San Francisco,Grocery Store,62,Purchase at Merchant-2469
+369,1574,2816,2652.93,2023-11-19 18:02:00,0,Discover,New York,Online Shopping,24,Purchase at Merchant-2816
+370,1846,2605,9873.78,2023-10-08 18:24:00,0,MasterCard,Los Angeles,Online Shopping,53,Purchase at Merchant-2605
+371,1042,2431,4567.02,2023-10-16 04:15:00,0,Discover,Chicago,Online Shopping,52,Purchase at Merchant-2431
+372,1810,2291,4891.06,2023-02-06 08:09:00,0,Visa,New York,Online Shopping,55,Purchase at Merchant-2291
+373,1662,2745,9561.92,2023-06-18 17:29:00,0,Discover,Boston,Gas Station,68,Purchase at Merchant-2745
+374,1603,2494,9377.72,2023-12-05 03:16:00,0,Discover,New York,Restaurant,70,Purchase at Merchant-2494
+375,1118,2849,1999.5,2023-06-02 19:47:00,0,MasterCard,Chicago,Gas Station,46,Purchase at Merchant-2849
+376,1999,2488,3817.84,2023-03-04 08:58:00,0,MasterCard,New York,Gas Station,25,Purchase at Merchant-2488
+377,1167,2535,8381.55,2023-05-10 23:38:00,0,Amex,Los Angeles,Pharmacy,19,Purchase at Merchant-2535
+378,1690,2794,5307.68,2023-09-28 21:35:00,0,Visa,New York,Grocery Store,21,Purchase at Merchant-2794
+379,1758,2345,1877.49,2023-07-02 07:02:00,0,Amex,New York,Pharmacy,33,Purchase at Merchant-2345
+380,1589,2879,7040.26,2023-10-12 16:04:00,0,Visa,Chicago,Gas Station,23,Purchase at Merchant-2879
+381,1499,2963,9539.57,2023-07-14 12:20:00,0,Visa,Los Angeles,Pharmacy,74,Purchase at Merchant-2963
+382,1410,2630,7776.94,2023-11-22 14:26:00,0,MasterCard,Boston,Online Shopping,74,Purchase at Merchant-2630
+383,1361,2004,4327.0,2023-05-11 15:52:00,0,MasterCard,Los Angeles,Grocery Store,65,Purchase at Merchant-2004
+384,1954,2302,4623.93,2023-07-22 08:02:00,0,Amex,New York,Online Shopping,35,Purchase at Merchant-2302
+385,1748,2208,1748.91,2023-07-31 17:44:00,0,Amex,Chicago,Online Shopping,63,Purchase at Merchant-2208
+386,1373,2630,256.21,2023-08-08 21:25:00,0,Discover,New York,Online Shopping,40,Purchase at Merchant-2630
+387,1830,2841,4383.6,2023-01-14 13:17:00,0,MasterCard,Boston,Gas Station,48,Purchase at Merchant-2841
+388,1758,2319,8679.47,2023-02-27 12:46:00,0,Discover,Boston,Online Shopping,22,Purchase at Merchant-2319
+389,1045,2567,7691.17,2023-12-02 17:15:00,0,Discover,Boston,Restaurant,36,Purchase at Merchant-2567
+390,1397,2201,7714.25,2023-04-10 20:52:00,0,Visa,New York,Pharmacy,74,Purchase at Merchant-2201
+391,1102,2978,741.63,2023-08-25 13:33:00,0,Amex,Los Angeles,Pharmacy,42,Purchase at Merchant-2978
+392,1097,2224,8916.94,2023-04-10 20:12:00,0,Discover,San Francisco,Online Shopping,57,Purchase at Merchant-2224
+393,1180,2256,6247.79,2023-05-18 03:19:00,0,Visa,Boston,Online Shopping,19,Purchase at Merchant-2256
+394,1991,2717,2835.58,2023-08-02 23:19:00,0,Visa,Chicago,Grocery Store,53,Purchase at Merchant-2717
+395,1207,2679,6426.29,2023-06-10 11:43:00,0,Visa,New York,Restaurant,45,Purchase at Merchant-2679
+396,1044,2696,8353.54,2023-12-30 02:33:00,0,Amex,San Francisco,Gas Station,39,Purchase at Merchant-2696
+397,1415,2340,3437.64,2023-03-20 15:24:00,0,Discover,New York,Grocery Store,65,Purchase at Merchant-2340
+398,1160,2142,2734.79,2023-10-21 22:56:00,0,Amex,San Francisco,Restaurant,40,Purchase at Merchant-2142
+399,1893,2119,2263.85,2023-11-19 18:49:00,0,Visa,Boston,Pharmacy,25,Purchase at Merchant-2119
+400,1896,2957,5544.84,2023-08-31 22:40:00,0,Visa,Chicago,Restaurant,68,Purchase at Merchant-2957
+401,1146,2975,1251.68,2023-06-01 12:22:00,0,Visa,Los Angeles,Online Shopping,52,Purchase at Merchant-2975
+402,1602,2721,4897.37,2023-03-10 22:34:00,0,Discover,Los Angeles,Online Shopping,20,Purchase at Merchant-2721
+403,1746,2817,2793.17,2023-07-11 05:27:00,0,Visa,San Francisco,Restaurant,56,Purchase at Merchant-2817
+404,1708,2273,7837.92,2023-09-30 13:55:00,0,Visa,Los Angeles,Restaurant,31,Purchase at Merchant-2273
+405,1131,2390,4901.06,2023-12-14 10:23:00,0,Discover,New York,Restaurant,37,Purchase at Merchant-2390
+406,1698,2952,4954.95,2023-05-08 19:32:00,0,MasterCard,San Francisco,Pharmacy,75,Purchase at Merchant-2952
+407,1567,2106,4350.81,2023-04-19 14:23:00,0,Visa,Boston,Online Shopping,49,Purchase at Merchant-2106
+408,1442,2021,2516.99,2023-10-12 15:35:00,0,Visa,Chicago,Grocery Store,21,Purchase at Merchant-2021
+409,1375,2171,5033.06,2023-02-03 19:04:00,0,Visa,Chicago,Online Shopping,41,Purchase at Merchant-2171
+410,1257,2239,6417.78,2023-02-28 13:16:00,0,Discover,San Francisco,Restaurant,41,Purchase at Merchant-2239
+411,1704,2345,1897.97,2023-06-15 19:43:00,0,Visa,San Francisco,Online Shopping,56,Purchase at Merchant-2345
+412,1840,2206,8155.39,2023-01-17 13:27:00,0,MasterCard,New York,Restaurant,28,Purchase at Merchant-2206
+413,1608,2986,9387.84,2023-11-20 01:29:00,0,MasterCard,Los Angeles,Pharmacy,72,Purchase at Merchant-2986
+414,1940,2158,4458.44,2023-02-15 21:45:00,0,MasterCard,San Francisco,Online Shopping,56,Purchase at Merchant-2158
+415,1985,2106,6149.44,2023-11-14 20:12:00,0,Discover,Chicago,Gas Station,58,Purchase at Merchant-2106
+416,1615,2435,1334.69,2023-06-14 14:24:00,0,Amex,Los Angeles,Restaurant,55,Purchase at Merchant-2435
+417,1633,2800,4762.27,2023-12-27 01:58:00,0,Discover,Chicago,Grocery Store,73,Purchase at Merchant-2800
+418,1895,2400,4987.31,2023-08-17 12:16:00,0,Discover,Los Angeles,Online Shopping,61,Purchase at Merchant-2400
+419,1322,2035,40.09,2023-05-14 08:27:00,0,Amex,New York,Grocery Store,37,Purchase at Merchant-2035
+420,1999,2774,8690.74,2023-06-06 16:47:00,0,Discover,Chicago,Online Shopping,65,Purchase at Merchant-2774
+421,1877,2544,3763.32,2023-06-25 11:09:00,0,Visa,San Francisco,Pharmacy,54,Purchase at Merchant-2544
+422,1638,2018,7155.2,2023-05-03 13:53:00,0,Amex,Boston,Grocery Store,45,Purchase at Merchant-2018
+423,1615,2545,5149.7,2023-04-14 04:45:00,0,Visa,Los Angeles,Online Shopping,41,Purchase at Merchant-2545
+424,1567,2625,9897.06,2023-08-16 10:01:00,0,Amex,New York,Grocery Store,24,Purchase at Merchant-2625
+425,1563,2160,3056.71,2023-11-03 08:51:00,0,Discover,Chicago,Pharmacy,41,Purchase at Merchant-2160
+426,1334,2612,9978.65,2023-05-27 03:51:00,0,Visa,Boston,Gas Station,58,Purchase at Merchant-2612
+427,1232,2452,3461.04,2023-10-26 18:19:00,0,MasterCard,New York,Grocery Store,70,Purchase at Merchant-2452
+428,1310,2583,9793.95,2023-05-17 06:52:00,0,Amex,New York,Restaurant,64,Purchase at Merchant-2583
+429,1071,2372,1487.75,2023-02-01 11:41:00,0,MasterCard,Los Angeles,Pharmacy,73,Purchase at Merchant-2372
+430,1549,2840,1827.34,2023-12-21 21:01:00,0,Discover,Los Angeles,Online Shopping,68,Purchase at Merchant-2840
+431,1689,2526,1018.97,2023-12-13 06:18:00,0,MasterCard,Chicago,Restaurant,25,Purchase at Merchant-2526
+432,1875,2496,2875.35,2023-03-04 10:19:00,0,Visa,Boston,Gas Station,44,Purchase at Merchant-2496
+433,1123,2217,3810.94,2023-01-09 07:12:00,0,Amex,Los Angeles,Grocery Store,26,Purchase at Merchant-2217
+434,1674,2947,5772.5,2023-10-29 01:09:00,0,MasterCard,San Francisco,Grocery Store,44,Purchase at Merchant-2947
+435,1194,2070,2331.63,2023-10-22 08:29:00,0,Discover,Los Angeles,Restaurant,25,Purchase at Merchant-2070
+436,1794,2003,2334.68,2023-05-04 03:10:00,0,Amex,Boston,Restaurant,37,Purchase at Merchant-2003
+437,1887,2460,3182.55,2023-06-05 15:38:00,0,Amex,Chicago,Restaurant,40,Purchase at Merchant-2460
+438,1572,2152,6843.82,2023-10-15 01:42:00,0,Discover,Boston,Restaurant,23,Purchase at Merchant-2152
+439,1533,2767,8353.87,2023-10-30 07:12:00,0,MasterCard,Chicago,Restaurant,54,Purchase at Merchant-2767
+440,1387,2646,9799.5,2023-06-15 08:44:00,0,Amex,New York,Gas Station,46,Purchase at Merchant-2646
+441,1490,2936,6730.09,2023-06-27 10:09:00,0,Visa,San Francisco,Restaurant,75,Purchase at Merchant-2936
+442,1795,2381,6562.5,2023-06-07 07:31:00,0,MasterCard,San Francisco,Restaurant,19,Purchase at Merchant-2381
+443,1043,2826,9833.6,2023-10-15 01:58:00,0,Discover,San Francisco,Restaurant,24,Purchase at Merchant-2826
+444,1213,2097,8949.33,2023-10-31 08:13:00,0,Visa,Boston,Grocery Store,64,Purchase at Merchant-2097
+445,1065,2014,748.7,2023-12-04 03:41:00,0,MasterCard,Boston,Restaurant,56,Purchase at Merchant-2014
+446,1041,2167,8303.77,2023-08-06 10:06:00,0,MasterCard,Los Angeles,Online Shopping,18,Purchase at Merchant-2167
+447,1264,2591,2882.63,2023-08-21 08:17:00,0,Visa,San Francisco,Grocery Store,39,Purchase at Merchant-2591
+448,1202,2463,569.38,2023-08-05 15:48:00,0,Discover,Boston,Grocery Store,54,Purchase at Merchant-2463
+449,1203,2737,7575.68,2023-09-11 01:58:00,0,Visa,Los Angeles,Restaurant,54,Purchase at Merchant-2737
+450,1909,2322,7991.95,2023-05-08 03:45:00,1,MasterCard,Boston,Gas Station,47,Purchase at Merchant-2322
+451,1887,2185,8549.09,2023-11-19 16:36:00,0,Amex,Los Angeles,Online Shopping,67,Purchase at Merchant-2185
+452,1050,2620,846.24,2023-03-05 18:20:00,0,Visa,Chicago,Gas Station,37,Purchase at Merchant-2620
+453,1600,2157,4324.88,2023-09-06 16:27:00,0,Amex,San Francisco,Gas Station,35,Purchase at Merchant-2157
+454,1779,2576,7140.59,2023-07-05 17:42:00,0,Discover,Los Angeles,Gas Station,35,Purchase at Merchant-2576
+455,1104,2675,7298.53,2023-09-28 06:22:00,0,Amex,San Francisco,Pharmacy,42,Purchase at Merchant-2675
+456,1867,2752,1485.34,2023-07-01 03:07:00,0,Amex,San Francisco,Pharmacy,62,Purchase at Merchant-2752
+457,1882,2315,3970.46,2023-11-27 04:44:00,0,MasterCard,Los Angeles,Online Shopping,42,Purchase at Merchant-2315
+458,1524,2341,3970.96,2023-05-18 14:30:00,0,MasterCard,San Francisco,Grocery Store,24,Purchase at Merchant-2341
+459,1864,2662,5574.09,2023-02-10 17:27:00,0,Amex,Chicago,Online Shopping,72,Purchase at Merchant-2662
+460,1724,2836,9425.19,2023-10-06 17:15:00,0,Visa,Boston,Grocery Store,57,Purchase at Merchant-2836
+461,1859,2315,4827.12,2023-08-03 18:17:00,0,Amex,Chicago,Gas Station,72,Purchase at Merchant-2315
+462,1137,2223,8271.81,2023-12-07 21:55:00,0,Visa,New York,Grocery Store,72,Purchase at Merchant-2223
+463,1393,2290,6317.15,2023-06-18 02:24:00,0,Visa,Los Angeles,Restaurant,25,Purchase at Merchant-2290
+464,1418,2015,1051.84,2023-08-09 21:05:00,0,MasterCard,Los Angeles,Grocery Store,36,Purchase at Merchant-2015
+465,1096,2130,4387.4,2023-07-19 00:24:00,0,Visa,San Francisco,Pharmacy,56,Purchase at Merchant-2130
+466,1019,2948,4484.88,2023-08-13 17:10:00,0,Visa,New York,Pharmacy,67,Purchase at Merchant-2948
+467,1111,2344,2101.94,2023-10-23 03:13:00,0,Discover,Chicago,Online Shopping,27,Purchase at Merchant-2344
+468,1249,2614,1965.89,2023-11-11 02:20:00,0,Amex,Los Angeles,Online Shopping,39,Purchase at Merchant-2614
+469,1210,2628,9946.0,2023-02-03 20:04:00,0,Discover,New York,Restaurant,50,Purchase at Merchant-2628
+470,1673,2064,7885.94,2023-11-28 01:45:00,0,Amex,Boston,Pharmacy,36,Purchase at Merchant-2064
+471,1739,2595,8119.61,2023-05-16 14:49:00,0,Visa,Chicago,Restaurant,58,Purchase at Merchant-2595
+472,1886,2933,6587.16,2023-04-26 15:44:00,0,Visa,New York,Pharmacy,42,Purchase at Merchant-2933
+473,1343,2242,5464.01,2023-07-20 12:52:00,0,Amex,New York,Pharmacy,25,Purchase at Merchant-2242
+474,1112,2376,3119.3,2023-02-06 09:49:00,0,Discover,New York,Grocery Store,32,Purchase at Merchant-2376
+475,1389,2550,5300.85,2023-06-10 22:29:00,0,Amex,New York,Pharmacy,33,Purchase at Merchant-2550
+476,1431,2007,2207.67,2023-10-27 03:24:00,0,Amex,Boston,Gas Station,57,Purchase at Merchant-2007
+477,1086,2285,4175.37,2023-11-15 18:03:00,0,Discover,New York,Grocery Store,66,Purchase at Merchant-2285
+478,1610,2729,8732.7,2023-09-27 14:16:00,0,Visa,San Francisco,Restaurant,64,Purchase at Merchant-2729
+479,1332,2261,6024.0,2023-07-15 16:23:00,0,MasterCard,New York,Grocery Store,24,Purchase at Merchant-2261
+480,1375,2946,8976.12,2023-09-14 20:28:00,0,Visa,San Francisco,Restaurant,42,Purchase at Merchant-2946
+481,1572,2463,6768.23,2023-06-25 17:44:00,0,Amex,Los Angeles,Online Shopping,29,Purchase at Merchant-2463
+482,1754,2964,8115.28,2023-04-21 03:20:00,0,MasterCard,Chicago,Pharmacy,34,Purchase at Merchant-2964
+483,1459,2794,8584.6,2023-09-13 14:11:00,0,MasterCard,San Francisco,Online Shopping,69,Purchase at Merchant-2794
+484,1006,2449,8342.14,2023-12-29 21:11:00,0,Discover,New York,Restaurant,74,Purchase at Merchant-2449
+485,1291,2309,6814.69,2023-08-21 22:40:00,0,MasterCard,New York,Gas Station,57,Purchase at Merchant-2309
+486,1362,2656,5557.75,2023-02-14 09:17:00,0,Discover,Los Angeles,Pharmacy,51,Purchase at Merchant-2656
+487,1752,2174,1278.82,2023-10-15 03:21:00,0,MasterCard,New York,Grocery Store,33,Purchase at Merchant-2174
+488,1733,2264,4226.65,2023-10-02 02:04:00,0,Visa,San Francisco,Restaurant,69,Purchase at Merchant-2264
+489,1697,2694,612.0,2023-05-02 19:43:00,0,Visa,Chicago,Restaurant,18,Purchase at Merchant-2694
+490,1917,2005,7937.41,2023-08-16 06:56:00,0,Discover,New York,Pharmacy,19,Purchase at Merchant-2005
+491,1165,2874,4792.62,2023-07-24 19:23:00,0,Amex,San Francisco,Online Shopping,74,Purchase at Merchant-2874
+492,1543,2818,638.66,2023-12-15 16:35:00,0,MasterCard,San Francisco,Restaurant,59,Purchase at Merchant-2818
+493,1624,2507,8767.86,2023-11-22 03:31:00,0,Visa,Chicago,Pharmacy,73,Purchase at Merchant-2507
+494,1607,2334,1003.23,2023-02-20 07:02:00,0,Visa,Boston,Pharmacy,68,Purchase at Merchant-2334
+495,1885,2706,8310.75,2023-12-01 12:29:00,0,MasterCard,New York,Online Shopping,50,Purchase at Merchant-2706
+496,1785,2771,4509.71,2023-05-21 20:53:00,0,Discover,Los Angeles,Online Shopping,67,Purchase at Merchant-2771
+497,1255,2511,13.53,2023-05-27 17:42:00,0,Amex,New York,Pharmacy,41,Purchase at Merchant-2511
+498,1652,2605,5384.16,2023-01-07 20:41:00,0,Amex,Los Angeles,Online Shopping,64,Purchase at Merchant-2605
+499,1741,2760,8213.16,2023-11-16 15:57:00,0,MasterCard,Chicago,Grocery Store,63,Purchase at Merchant-2760
+500,1173,2826,6894.04,2023-09-04 07:18:00,0,Visa,New York,Grocery Store,69,Purchase at Merchant-2826
+501,1795,2185,7715.4,2023-07-26 17:27:00,0,Visa,New York,Online Shopping,69,Purchase at Merchant-2185
+502,1042,2509,3167.35,2023-06-24 10:35:00,0,Visa,San Francisco,Gas Station,62,Purchase at Merchant-2509
+503,1917,2673,8133.19,2023-10-28 08:44:00,0,Amex,New York,Pharmacy,50,Purchase at Merchant-2673
+504,1159,2331,3822.15,2023-10-18 00:45:00,0,Amex,Boston,Grocery Store,24,Purchase at Merchant-2331
+505,1846,2501,5387.75,2023-06-18 22:11:00,0,MasterCard,Boston,Online Shopping,53,Purchase at Merchant-2501
+506,1112,2826,5440.64,2023-07-21 09:38:00,0,MasterCard,Boston,Gas Station,38,Purchase at Merchant-2826
+507,1346,2649,9767.73,2023-12-02 02:05:00,0,Amex,Chicago,Restaurant,49,Purchase at Merchant-2649
+508,1628,2689,7799.73,2023-09-21 12:59:00,1,Discover,Los Angeles,Online Shopping,55,Purchase at Merchant-2689
+509,1898,2475,3144.39,2023-02-12 10:28:00,0,Amex,Los Angeles,Pharmacy,75,Purchase at Merchant-2475
+510,1216,2177,2693.54,2023-08-07 07:05:00,0,MasterCard,New York,Grocery Store,47,Purchase at Merchant-2177
+511,1481,2960,4359.47,2023-05-26 18:32:00,0,Discover,San Francisco,Pharmacy,41,Purchase at Merchant-2960
+512,1039,2969,7889.66,2023-05-29 19:49:00,0,Discover,San Francisco,Gas Station,62,Purchase at Merchant-2969
+513,1312,2856,5442.35,2023-07-09 00:30:00,0,MasterCard,New York,Online Shopping,65,Purchase at Merchant-2856
+514,1306,2925,6772.91,2023-11-27 12:33:00,0,MasterCard,Los Angeles,Grocery Store,67,Purchase at Merchant-2925
+515,1173,2198,2329.19,2023-02-16 22:54:00,0,Amex,Los Angeles,Online Shopping,36,Purchase at Merchant-2198
+516,1329,2904,9689.57,2023-12-03 19:16:00,0,MasterCard,Chicago,Online Shopping,19,Purchase at Merchant-2904
+517,1334,2019,9410.14,2023-12-08 07:49:00,0,MasterCard,Chicago,Grocery Store,45,Purchase at Merchant-2019
+518,1097,2084,8112.54,2023-08-22 12:45:00,0,MasterCard,San Francisco,Pharmacy,46,Purchase at Merchant-2084
+519,1609,2001,1796.19,2023-09-28 04:14:00,0,Visa,Chicago,Online Shopping,20,Purchase at Merchant-2001
+520,1047,2601,3621.9,2023-02-19 18:46:00,0,Discover,Los Angeles,Restaurant,26,Purchase at Merchant-2601
+521,1185,2696,7618.52,2023-10-05 08:57:00,0,Amex,Boston,Grocery Store,71,Purchase at Merchant-2696
+522,1539,2872,2147.49,2023-03-26 15:05:00,0,Visa,New York,Grocery Store,62,Purchase at Merchant-2872
+523,1878,2599,803.61,2023-09-13 00:47:00,0,MasterCard,Chicago,Online Shopping,39,Purchase at Merchant-2599
+524,1538,2632,3265.03,2023-10-07 14:28:00,0,Discover,San Francisco,Pharmacy,55,Purchase at Merchant-2632
+525,1764,2164,6694.61,2023-04-22 16:59:00,0,MasterCard,New York,Restaurant,41,Purchase at Merchant-2164
+526,1670,2904,2061.85,2023-10-18 06:01:00,0,Discover,San Francisco,Grocery Store,72,Purchase at Merchant-2904
+527,1961,2997,9768.48,2023-05-30 01:54:00,0,Visa,New York,Restaurant,25,Purchase at Merchant-2997
+528,1316,2964,6378.29,2023-05-23 12:59:00,0,Amex,New York,Online Shopping,75,Purchase at Merchant-2964
+529,1815,2319,6633.04,2023-09-11 05:55:00,0,Amex,Boston,Restaurant,60,Purchase at Merchant-2319
+530,1621,2426,1418.03,2023-09-10 19:13:00,0,Discover,New York,Restaurant,41,Purchase at Merchant-2426
+531,1159,2897,8808.58,2023-05-28 01:42:00,0,MasterCard,Boston,Pharmacy,71,Purchase at Merchant-2897
+532,1642,2987,5676.36,2023-12-26 00:50:00,0,Visa,Chicago,Grocery Store,61,Purchase at Merchant-2987
+533,1212,2720,2372.26,2023-07-20 03:00:00,0,Discover,Chicago,Pharmacy,60,Purchase at Merchant-2720
+534,1807,2635,711.52,2023-09-26 21:37:00,0,MasterCard,Los Angeles,Grocery Store,51,Purchase at Merchant-2635
+535,1314,2153,2181.52,2023-06-16 03:47:00,0,Discover,New York,Restaurant,49,Purchase at Merchant-2153
+536,1269,2806,6788.9,2023-06-13 10:46:00,0,Visa,San Francisco,Online Shopping,64,Purchase at Merchant-2806
+537,1110,2958,73.53,2023-09-28 11:09:00,0,Amex,San Francisco,Grocery Store,65,Purchase at Merchant-2958
+538,1440,2516,61.21,2023-10-13 18:14:00,0,Amex,Chicago,Gas Station,56,Purchase at Merchant-2516
+539,1630,2164,8164.65,2023-04-12 23:21:00,0,Amex,San Francisco,Gas Station,29,Purchase at Merchant-2164
+540,1411,2931,3385.1,2023-07-10 04:11:00,0,MasterCard,Chicago,Gas Station,23,Purchase at Merchant-2931
+541,1448,2699,6967.42,2023-03-07 04:43:00,0,MasterCard,Chicago,Pharmacy,62,Purchase at Merchant-2699
+542,1186,2702,5404.44,2023-11-14 02:28:00,0,MasterCard,New York,Pharmacy,22,Purchase at Merchant-2702
+543,1493,2510,9641.53,2023-06-01 01:12:00,0,MasterCard,San Francisco,Restaurant,29,Purchase at Merchant-2510
+544,1415,2969,2201.15,2023-02-21 03:37:00,0,MasterCard,Los Angeles,Grocery Store,48,Purchase at Merchant-2969
+545,1538,2256,9619.4,2023-02-06 17:19:00,0,Visa,Chicago,Gas Station,70,Purchase at Merchant-2256
+546,1786,2740,1365.03,2023-08-04 09:37:00,0,Visa,San Francisco,Online Shopping,32,Purchase at Merchant-2740
+547,1656,2351,3762.24,2023-02-17 18:05:00,0,Visa,New York,Restaurant,41,Purchase at Merchant-2351
+548,1446,2683,1452.72,2023-02-14 10:58:00,0,Discover,San Francisco,Grocery Store,57,Purchase at Merchant-2683
+549,1955,2180,8679.56,2023-04-26 17:51:00,0,Visa,Boston,Grocery Store,68,Purchase at Merchant-2180
+550,1676,2950,1516.9,2023-10-13 12:12:00,0,MasterCard,Chicago,Grocery Store,36,Purchase at Merchant-2950
+551,1519,2726,4772.5,2023-02-10 13:56:00,0,MasterCard,Boston,Pharmacy,56,Purchase at Merchant-2726
+552,1072,2543,6943.89,2023-05-19 14:32:00,0,Amex,San Francisco,Pharmacy,68,Purchase at Merchant-2543
+553,1579,2245,7716.24,2023-02-07 17:05:00,0,Visa,Los Angeles,Grocery Store,49,Purchase at Merchant-2245
+554,1831,2266,7434.19,2023-09-06 16:40:00,0,Visa,San Francisco,Restaurant,30,Purchase at Merchant-2266
+555,1296,2455,3136.9,2023-04-12 14:34:00,0,Amex,Boston,Gas Station,44,Purchase at Merchant-2455
+556,1777,2613,6425.32,2023-11-30 23:21:00,0,Visa,Chicago,Pharmacy,43,Purchase at Merchant-2613
+557,1266,2492,5899.06,2023-01-23 10:11:00,1,Discover,San Francisco,Pharmacy,45,Purchase at Merchant-2492
+558,1653,2809,3604.42,2023-10-16 05:41:00,0,Discover,Los Angeles,Pharmacy,32,Purchase at Merchant-2809
+559,1040,2372,8648.56,2023-09-05 21:51:00,0,Visa,Boston,Restaurant,52,Purchase at Merchant-2372
+560,1592,2822,8011.34,2023-08-17 03:49:00,0,Amex,Los Angeles,Gas Station,48,Purchase at Merchant-2822
+561,1800,2763,1962.15,2023-11-08 08:27:00,0,MasterCard,Chicago,Restaurant,43,Purchase at Merchant-2763
+562,1872,2386,3800.21,2023-03-25 14:12:00,0,Discover,Chicago,Restaurant,54,Purchase at Merchant-2386
+563,1381,2407,2242.41,2023-08-13 18:09:00,0,Visa,Chicago,Online Shopping,44,Purchase at Merchant-2407
+564,1184,2821,468.54,2023-04-06 22:43:00,0,Amex,San Francisco,Pharmacy,55,Purchase at Merchant-2821
+565,1204,2300,1778.27,2023-01-17 21:07:00,0,Amex,San Francisco,Gas Station,63,Purchase at Merchant-2300
+566,1141,2641,8749.49,2023-11-23 22:09:00,0,Amex,Los Angeles,Restaurant,75,Purchase at Merchant-2641
+567,1667,2983,4842.81,2023-04-02 22:13:00,0,Discover,New York,Grocery Store,65,Purchase at Merchant-2983
+568,1754,2649,7686.22,2023-08-10 01:39:00,0,Amex,Los Angeles,Restaurant,69,Purchase at Merchant-2649
+569,1682,2053,5203.84,2023-05-04 16:39:00,0,Discover,New York,Grocery Store,60,Purchase at Merchant-2053
+570,1483,2872,3065.81,2023-04-07 21:58:00,0,Discover,San Francisco,Online Shopping,18,Purchase at Merchant-2872
+571,1095,2436,5494.74,2023-01-27 15:42:00,0,Visa,San Francisco,Grocery Store,44,Purchase at Merchant-2436
+572,1970,2287,1047.96,2023-09-29 23:12:00,0,Discover,Chicago,Pharmacy,67,Purchase at Merchant-2287
+573,1814,2367,787.61,2023-07-11 21:06:00,0,Discover,San Francisco,Online Shopping,67,Purchase at Merchant-2367
+574,1611,2386,1842.97,2023-04-16 19:07:00,0,Visa,Los Angeles,Gas Station,39,Purchase at Merchant-2386
+575,1300,2434,9648.43,2023-08-07 02:14:00,0,MasterCard,New York,Grocery Store,74,Purchase at Merchant-2434
+576,1002,2965,3913.45,2023-05-23 07:58:00,0,Amex,Los Angeles,Online Shopping,32,Purchase at Merchant-2965
+577,1148,2302,5693.8,2023-06-16 14:09:00,0,MasterCard,Chicago,Online Shopping,57,Purchase at Merchant-2302
+578,1508,2601,8745.27,2023-10-04 06:15:00,0,Discover,Los Angeles,Restaurant,32,Purchase at Merchant-2601
+579,1372,2898,3658.08,2023-08-30 16:03:00,0,MasterCard,Chicago,Restaurant,22,Purchase at Merchant-2898
+580,1201,2578,7714.72,2023-05-01 04:56:00,0,Discover,New York,Online Shopping,75,Purchase at Merchant-2578
+581,1038,2927,6918.76,2023-10-25 05:29:00,0,MasterCard,San Francisco,Restaurant,68,Purchase at Merchant-2927
+582,1409,2080,3024.63,2023-03-23 00:59:00,0,Visa,New York,Online Shopping,48,Purchase at Merchant-2080
+583,1668,2120,4106.21,2023-10-23 05:24:00,0,Discover,Los Angeles,Restaurant,61,Purchase at Merchant-2120
+584,1834,2444,5027.59,2023-10-14 05:58:00,0,Discover,San Francisco,Pharmacy,20,Purchase at Merchant-2444
+585,1388,2980,5269.0,2023-01-02 03:02:00,0,Visa,New York,Online Shopping,50,Purchase at Merchant-2980
+586,1681,2062,9088.93,2023-11-20 16:24:00,0,MasterCard,Boston,Pharmacy,30,Purchase at Merchant-2062
+587,1072,2391,4707.05,2023-09-21 07:56:00,0,Visa,New York,Gas Station,60,Purchase at Merchant-2391
+588,1418,2504,730.09,2023-11-19 19:04:00,0,Visa,Chicago,Grocery Store,30,Purchase at Merchant-2504
+589,1610,2016,8074.31,2023-02-23 14:33:00,0,Visa,Boston,Grocery Store,43,Purchase at Merchant-2016
+590,1505,2776,4889.4,2023-11-14 14:35:00,0,Amex,Los Angeles,Gas Station,38,Purchase at Merchant-2776
+591,1463,2451,4217.79,2023-05-01 12:00:00,0,Amex,Chicago,Gas Station,22,Purchase at Merchant-2451
+592,1742,2836,6516.05,2023-04-08 18:33:00,0,MasterCard,Los Angeles,Restaurant,49,Purchase at Merchant-2836
+593,1812,2498,9619.29,2023-10-04 16:34:00,1,Visa,Chicago,Gas Station,45,Purchase at Merchant-2498
+594,1023,2548,9752.89,2023-06-10 00:25:00,0,Discover,Boston,Gas Station,34,Purchase at Merchant-2548
+595,1895,2309,683.86,2023-07-28 23:49:00,0,Amex,San Francisco,Restaurant,36,Purchase at Merchant-2309
+596,1332,2980,713.72,2023-02-07 16:21:00,0,Amex,Boston,Grocery Store,19,Purchase at Merchant-2980
+597,1084,2585,9262.08,2023-08-21 01:09:00,0,Amex,New York,Online Shopping,20,Purchase at Merchant-2585
+598,1504,2801,4345.1,2023-10-09 01:51:00,0,Discover,San Francisco,Online Shopping,24,Purchase at Merchant-2801
+599,1678,2417,2319.71,2023-03-16 07:22:00,0,MasterCard,San Francisco,Online Shopping,67,Purchase at Merchant-2417
+600,1975,2779,9146.36,2023-03-20 16:44:00,0,MasterCard,New York,Grocery Store,21,Purchase at Merchant-2779
+601,1012,2490,9309.55,2023-05-19 00:02:00,0,Discover,Los Angeles,Gas Station,62,Purchase at Merchant-2490
+602,1966,2876,9660.3,2023-01-20 20:38:00,0,Amex,New York,Pharmacy,65,Purchase at Merchant-2876
+603,1417,2604,7536.05,2023-09-07 23:23:00,0,Discover,Los Angeles,Gas Station,54,Purchase at Merchant-2604
+604,1273,2603,7608.9,2023-10-23 21:34:00,0,Amex,New York,Grocery Store,62,Purchase at Merchant-2603
+605,1947,2236,6520.82,2023-10-30 07:49:00,0,Amex,San Francisco,Pharmacy,30,Purchase at Merchant-2236
+606,1801,2827,9477.17,2023-06-10 10:59:00,0,Visa,New York,Grocery Store,53,Purchase at Merchant-2827
+607,1031,2231,3648.56,2023-04-21 11:47:00,0,Amex,Los Angeles,Gas Station,62,Purchase at Merchant-2231
+608,1312,2343,2621.35,2023-07-06 16:57:00,0,Amex,Chicago,Pharmacy,62,Purchase at Merchant-2343
+609,1303,2832,5270.43,2023-01-02 06:22:00,0,Visa,San Francisco,Online Shopping,29,Purchase at Merchant-2832
+610,1799,2090,8686.5,2023-01-08 07:33:00,0,Discover,San Francisco,Gas Station,64,Purchase at Merchant-2090
+611,1892,2815,5555.34,2023-07-03 13:51:00,0,Amex,San Francisco,Grocery Store,27,Purchase at Merchant-2815
+612,1581,2060,590.17,2023-01-08 00:14:00,0,MasterCard,Los Angeles,Online Shopping,48,Purchase at Merchant-2060
+613,1656,2428,4351.8,2023-01-13 11:32:00,0,Visa,New York,Grocery Store,59,Purchase at Merchant-2428
+614,1747,2073,60.57,2023-11-15 08:17:00,0,Discover,Boston,Grocery Store,36,Purchase at Merchant-2073
+615,1873,2796,1760.58,2023-05-15 02:38:00,0,Visa,San Francisco,Restaurant,57,Purchase at Merchant-2796
+616,1784,2913,3719.82,2023-04-17 01:13:00,0,Discover,Boston,Pharmacy,69,Purchase at Merchant-2913
+617,1327,2376,8719.65,2023-07-17 11:51:00,0,Visa,New York,Gas Station,35,Purchase at Merchant-2376
+618,1607,2609,3900.76,2023-08-26 08:51:00,0,Amex,Los Angeles,Restaurant,69,Purchase at Merchant-2609
+619,1993,2203,6413.1,2023-01-16 14:10:00,0,Visa,New York,Restaurant,28,Purchase at Merchant-2203
+620,1790,2703,6615.41,2023-08-02 16:59:00,0,Discover,Chicago,Restaurant,47,Purchase at Merchant-2703
+621,1766,2544,6721.65,2023-01-10 02:26:00,0,Visa,Chicago,Gas Station,61,Purchase at Merchant-2544
+622,1827,2289,5680.06,2023-08-18 06:46:00,0,Visa,Los Angeles,Restaurant,22,Purchase at Merchant-2289
+623,1001,2813,387.57,2023-04-30 06:23:00,0,Amex,Los Angeles,Restaurant,49,Purchase at Merchant-2813
+624,1860,2992,552.37,2023-01-07 03:09:00,0,Discover,Chicago,Grocery Store,35,Purchase at Merchant-2992
+625,1046,2846,1922.28,2023-06-20 11:19:00,0,MasterCard,New York,Restaurant,45,Purchase at Merchant-2846
+626,1161,2413,1332.8,2023-09-06 06:56:00,0,Amex,Chicago,Online Shopping,72,Purchase at Merchant-2413
+627,1477,2535,1766.8,2023-08-18 14:04:00,0,Visa,New York,Pharmacy,19,Purchase at Merchant-2535
+628,1491,2260,2098.13,2023-04-07 12:13:00,0,Visa,Boston,Grocery Store,38,Purchase at Merchant-2260
+629,1916,2650,5861.74,2023-11-01 14:49:00,0,Amex,San Francisco,Restaurant,19,Purchase at Merchant-2650
+630,1339,2933,4059.93,2023-07-21 19:54:00,0,Amex,Chicago,Gas Station,62,Purchase at Merchant-2933
+631,1957,2610,6167.32,2023-11-04 07:43:00,0,MasterCard,San Francisco,Grocery Store,57,Purchase at Merchant-2610
+632,1911,2930,3397.71,2023-10-10 12:50:00,0,Discover,New York,Gas Station,56,Purchase at Merchant-2930
+633,1346,2020,3703.16,2023-10-15 12:54:00,0,Amex,New York,Grocery Store,22,Purchase at Merchant-2020
+634,1386,2307,6346.2,2023-02-06 06:27:00,0,MasterCard,New York,Restaurant,49,Purchase at Merchant-2307
+635,1482,2065,4691.26,2023-04-22 13:01:00,0,Amex,Boston,Restaurant,44,Purchase at Merchant-2065
+636,1326,2360,1641.72,2023-08-21 09:55:00,0,Visa,Chicago,Gas Station,54,Purchase at Merchant-2360
+637,1818,2920,6440.33,2023-05-02 00:38:00,0,Visa,Boston,Online Shopping,41,Purchase at Merchant-2920
+638,1206,2728,7111.05,2023-03-29 22:19:00,0,Visa,San Francisco,Online Shopping,35,Purchase at Merchant-2728
+639,1540,2810,4003.13,2023-11-26 17:14:00,0,MasterCard,New York,Grocery Store,23,Purchase at Merchant-2810
+640,1749,2112,1392.93,2023-07-19 02:14:00,0,Amex,New York,Online Shopping,41,Purchase at Merchant-2112
+641,1786,2853,8109.79,2023-11-28 05:40:00,0,Amex,San Francisco,Online Shopping,48,Purchase at Merchant-2853
+642,1862,2556,426.17,2023-01-29 16:43:00,0,Visa,Chicago,Restaurant,74,Purchase at Merchant-2556
+643,1976,2061,1118.53,2023-06-05 08:49:00,0,Visa,Los Angeles,Gas Station,54,Purchase at Merchant-2061
+644,1990,2858,5985.93,2023-02-06 14:35:00,0,Amex,Chicago,Grocery Store,51,Purchase at Merchant-2858
+645,1738,2834,1145.56,2023-06-16 22:28:00,0,Discover,Los Angeles,Restaurant,70,Purchase at Merchant-2834
+646,1476,2699,6584.47,2023-08-18 07:43:00,0,Amex,San Francisco,Online Shopping,49,Purchase at Merchant-2699
+647,1962,2693,6853.24,2023-12-24 14:02:00,0,Visa,Chicago,Grocery Store,37,Purchase at Merchant-2693
+648,1517,2895,9407.97,2023-05-07 04:33:00,0,Discover,New York,Online Shopping,62,Purchase at Merchant-2895
+649,1663,2847,1462.66,2023-09-20 01:40:00,0,Amex,Chicago,Restaurant,25,Purchase at Merchant-2847
+650,1066,2537,8161.31,2023-05-29 08:02:00,0,Discover,Chicago,Gas Station,65,Purchase at Merchant-2537
+651,1739,2352,2175.51,2023-11-04 20:16:00,0,Visa,Los Angeles,Restaurant,50,Purchase at Merchant-2352
+652,1477,2806,7419.01,2023-09-18 10:57:00,0,MasterCard,Los Angeles,Gas Station,45,Purchase at Merchant-2806
+653,1756,2781,9966.09,2023-09-26 19:53:00,0,Visa,Los Angeles,Pharmacy,29,Purchase at Merchant-2781
+654,1010,2500,1505.33,2023-09-19 19:57:00,0,MasterCard,Chicago,Grocery Store,49,Purchase at Merchant-2500
+655,1428,2608,5466.05,2023-01-02 18:18:00,0,Discover,Los Angeles,Gas Station,65,Purchase at Merchant-2608
+656,1476,2355,3334.96,2023-08-14 00:06:00,0,Discover,San Francisco,Restaurant,56,Purchase at Merchant-2355
+657,1781,2102,7438.52,2023-02-08 21:31:00,0,Amex,San Francisco,Online Shopping,37,Purchase at Merchant-2102
+658,1522,2124,6504.51,2023-10-15 12:12:00,0,Visa,Los Angeles,Grocery Store,68,Purchase at Merchant-2124
+659,1904,2833,2587.57,2023-08-02 06:10:00,0,Discover,New York,Gas Station,32,Purchase at Merchant-2833
+660,1131,2619,449.73,2023-02-17 14:57:00,0,Discover,Los Angeles,Grocery Store,74,Purchase at Merchant-2619
+661,1977,2844,6827.26,2023-06-23 18:43:00,0,Visa,Boston,Online Shopping,24,Purchase at Merchant-2844
+662,1036,2223,9701.0,2023-06-29 12:56:00,0,MasterCard,Boston,Gas Station,47,Purchase at Merchant-2223
+663,1422,2728,5639.14,2023-09-23 08:32:00,0,Amex,San Francisco,Gas Station,50,Purchase at Merchant-2728
+664,1306,2478,450.67,2023-01-27 11:10:00,0,Discover,Chicago,Grocery Store,52,Purchase at Merchant-2478
+665,1660,2530,6334.97,2023-06-29 09:25:00,0,MasterCard,New York,Grocery Store,43,Purchase at Merchant-2530
+666,1775,2757,1859.32,2023-06-20 23:49:00,0,Amex,New York,Grocery Store,61,Purchase at Merchant-2757
+667,1676,2771,8139.84,2023-06-23 08:24:00,0,Discover,Boston,Grocery Store,27,Purchase at Merchant-2771
+668,1010,2074,6402.59,2023-02-18 12:44:00,0,Discover,Chicago,Gas Station,46,Purchase at Merchant-2074
+669,1139,2736,371.99,2023-08-01 03:07:00,0,Discover,Chicago,Gas Station,24,Purchase at Merchant-2736
+670,1378,2885,7921.64,2023-10-26 03:15:00,0,Discover,New York,Restaurant,69,Purchase at Merchant-2885
+671,1132,2560,1013.65,2023-10-22 22:59:00,0,Discover,Boston,Gas Station,37,Purchase at Merchant-2560
+672,1562,2363,2750.88,2023-08-31 21:58:00,0,Amex,Los Angeles,Gas Station,24,Purchase at Merchant-2363
+673,1457,2447,2581.15,2023-12-28 04:36:00,0,Amex,New York,Restaurant,28,Purchase at Merchant-2447
+674,1559,2716,9373.67,2023-04-28 02:29:00,0,Amex,Los Angeles,Grocery Store,31,Purchase at Merchant-2716
+675,1663,2448,9988.84,2023-07-09 00:55:00,0,MasterCard,Los Angeles,Grocery Store,70,Purchase at Merchant-2448
+676,1003,2945,6175.24,2023-09-20 18:02:00,0,MasterCard,Chicago,Grocery Store,41,Purchase at Merchant-2945
+677,1904,2541,6546.12,2023-01-10 13:46:00,0,Visa,Chicago,Online Shopping,65,Purchase at Merchant-2541
+678,1593,2703,9236.13,2023-06-28 15:53:00,0,Amex,San Francisco,Pharmacy,19,Purchase at Merchant-2703
+679,1502,2609,3702.53,2023-01-03 02:48:00,0,Discover,Los Angeles,Pharmacy,18,Purchase at Merchant-2609
+680,1809,2923,9168.86,2023-07-08 05:27:00,0,Discover,San Francisco,Pharmacy,40,Purchase at Merchant-2923
+681,1271,2276,2062.78,2023-07-12 21:39:00,0,Amex,New York,Restaurant,43,Purchase at Merchant-2276
+682,1507,2396,6457.91,2023-09-26 03:50:00,0,Amex,Los Angeles,Online Shopping,50,Purchase at Merchant-2396
+683,1469,2990,1634.2,2023-03-06 05:06:00,0,MasterCard,San Francisco,Restaurant,38,Purchase at Merchant-2990
+684,1462,2361,8186.7,2023-08-15 21:25:00,0,Discover,San Francisco,Online Shopping,66,Purchase at Merchant-2361
+685,1525,2168,8673.66,2023-07-29 23:29:00,0,MasterCard,Boston,Gas Station,52,Purchase at Merchant-2168
+686,1696,2011,3622.49,2023-03-28 09:04:00,0,Visa,San Francisco,Pharmacy,69,Purchase at Merchant-2011
+687,1066,2543,61.2,2023-07-04 20:41:00,0,Discover,Boston,Pharmacy,54,Purchase at Merchant-2543
+688,1582,2694,2651.72,2023-07-31 23:29:00,0,MasterCard,Boston,Grocery Store,19,Purchase at Merchant-2694
+689,1168,2279,442.33,2023-06-26 18:49:00,0,MasterCard,Los Angeles,Online Shopping,44,Purchase at Merchant-2279
+690,1293,2680,8813.57,2023-03-31 21:05:00,0,Visa,San Francisco,Pharmacy,61,Purchase at Merchant-2680
+691,1112,2598,3067.6,2023-04-10 03:24:00,0,Amex,Los Angeles,Grocery Store,43,Purchase at Merchant-2598
+692,1976,2533,524.48,2023-04-01 17:35:00,0,Visa,Los Angeles,Online Shopping,55,Purchase at Merchant-2533
+693,1048,2589,5287.87,2023-11-28 17:18:00,0,MasterCard,San Francisco,Online Shopping,61,Purchase at Merchant-2589
+694,1766,2692,8230.89,2023-04-28 10:10:00,0,Visa,New York,Online Shopping,73,Purchase at Merchant-2692
+695,1446,2996,9431.71,2023-02-23 02:46:00,1,Discover,San Francisco,Online Shopping,24,Purchase at Merchant-2996
+696,1093,2130,1539.03,2023-11-25 19:45:00,0,Amex,Boston,Online Shopping,20,Purchase at Merchant-2130
+697,1408,2900,9956.82,2023-10-29 15:16:00,0,Visa,Boston,Online Shopping,50,Purchase at Merchant-2900
+698,1899,2949,4358.35,2023-01-17 17:57:00,0,Amex,New York,Grocery Store,61,Purchase at Merchant-2949
+699,1199,2506,9787.06,2023-02-12 19:03:00,0,Visa,New York,Restaurant,53,Purchase at Merchant-2506
+700,1499,2291,7748.69,2023-07-03 10:59:00,0,Amex,San Francisco,Online Shopping,28,Purchase at Merchant-2291
+701,1351,2454,5551.55,2023-04-29 15:17:00,0,MasterCard,Chicago,Restaurant,32,Purchase at Merchant-2454
+702,1405,2882,7902.89,2023-03-22 11:38:00,0,MasterCard,Chicago,Online Shopping,67,Purchase at Merchant-2882
+703,1502,2472,9087.2,2023-07-29 09:25:00,0,Amex,Los Angeles,Pharmacy,54,Purchase at Merchant-2472
+704,1486,2466,1183.94,2023-05-14 08:23:00,0,MasterCard,San Francisco,Restaurant,45,Purchase at Merchant-2466
+705,1941,2986,9355.42,2023-02-12 15:06:00,0,Amex,New York,Gas Station,62,Purchase at Merchant-2986
+706,1381,2713,7701.34,2023-07-25 03:56:00,0,Amex,Los Angeles,Gas Station,51,Purchase at Merchant-2713
+707,1979,2592,418.89,2023-05-15 14:15:00,0,Amex,Boston,Restaurant,69,Purchase at Merchant-2592
+708,1102,2603,9574.92,2023-12-02 18:19:00,0,MasterCard,Chicago,Pharmacy,47,Purchase at Merchant-2603
+709,1438,2036,4211.18,2023-07-13 03:20:00,0,Amex,San Francisco,Pharmacy,19,Purchase at Merchant-2036
+710,1997,2312,7837.87,2023-10-01 07:51:00,0,Amex,Chicago,Restaurant,32,Purchase at Merchant-2312
+711,1119,2954,7065.58,2023-04-04 16:15:00,0,Discover,Boston,Grocery Store,19,Purchase at Merchant-2954
+712,1092,2120,5865.75,2023-06-14 03:59:00,0,Discover,San Francisco,Grocery Store,34,Purchase at Merchant-2120
+713,1353,2236,1042.08,2023-06-09 18:25:00,0,Discover,Los Angeles,Gas Station,20,Purchase at Merchant-2236
+714,1146,2850,8610.68,2023-06-28 13:16:00,0,Discover,Los Angeles,Pharmacy,65,Purchase at Merchant-2850
+715,1582,2798,6991.06,2023-10-04 19:02:00,0,Visa,Boston,Restaurant,73,Purchase at Merchant-2798
+716,1568,2503,3426.7,2023-09-13 17:44:00,0,MasterCard,Boston,Pharmacy,48,Purchase at Merchant-2503
+717,1725,2933,2616.9,2023-03-02 05:19:00,0,Amex,New York,Online Shopping,24,Purchase at Merchant-2933
+718,1892,2017,2276.67,2023-07-16 23:58:00,0,Discover,San Francisco,Online Shopping,66,Purchase at Merchant-2017
+719,1757,2859,9712.44,2023-04-07 04:52:00,0,Visa,San Francisco,Pharmacy,73,Purchase at Merchant-2859
+720,1846,2908,3603.41,2023-08-28 01:25:00,0,MasterCard,Chicago,Online Shopping,32,Purchase at Merchant-2908
+721,1297,2279,1550.76,2023-10-08 06:51:00,0,MasterCard,San Francisco,Pharmacy,41,Purchase at Merchant-2279
+722,1905,2347,8585.48,2023-04-18 21:02:00,0,MasterCard,Chicago,Online Shopping,49,Purchase at Merchant-2347
+723,1747,2143,7656.66,2023-08-16 06:31:00,0,Visa,San Francisco,Pharmacy,63,Purchase at Merchant-2143
+724,1121,2342,1241.84,2023-10-12 00:14:00,0,MasterCard,Chicago,Restaurant,45,Purchase at Merchant-2342
+725,1331,2420,6002.05,2023-04-19 23:33:00,0,Visa,Los Angeles,Gas Station,26,Purchase at Merchant-2420
+726,1972,2746,2402.27,2023-12-11 21:38:00,0,MasterCard,Los Angeles,Grocery Store,21,Purchase at Merchant-2746
+727,1604,2655,3978.67,2023-04-09 16:38:00,0,MasterCard,New York,Online Shopping,35,Purchase at Merchant-2655
+728,1046,2836,6026.65,2023-09-16 04:01:00,0,Amex,Los Angeles,Online Shopping,52,Purchase at Merchant-2836
+729,1693,2927,2923.74,2023-11-16 22:19:00,0,MasterCard,Chicago,Online Shopping,43,Purchase at Merchant-2927
+730,1788,2604,7557.6,2023-01-16 14:05:00,0,Visa,San Francisco,Grocery Store,53,Purchase at Merchant-2604
+731,1601,2657,40.34,2023-12-20 10:12:00,0,Visa,New York,Online Shopping,64,Purchase at Merchant-2657
+732,1263,2757,1770.45,2023-11-10 19:55:00,0,Amex,New York,Grocery Store,51,Purchase at Merchant-2757
+733,1192,2056,188.8,2023-08-20 09:32:00,0,Visa,Chicago,Gas Station,53,Purchase at Merchant-2056
+734,1731,2840,9027.25,2023-03-30 00:44:00,0,Visa,Chicago,Online Shopping,59,Purchase at Merchant-2840
+735,1722,2386,1588.2,2023-03-10 12:10:00,0,Discover,Chicago,Restaurant,26,Purchase at Merchant-2386
+736,1117,2429,8259.19,2023-09-04 19:34:00,0,Discover,New York,Restaurant,56,Purchase at Merchant-2429
+737,1874,2688,5057.52,2023-09-13 23:11:00,0,Amex,Chicago,Pharmacy,67,Purchase at Merchant-2688
+738,1446,2120,5677.41,2023-07-20 19:48:00,0,Amex,San Francisco,Online Shopping,75,Purchase at Merchant-2120
+739,1602,2723,7166.45,2023-10-24 20:54:00,0,Visa,Boston,Gas Station,65,Purchase at Merchant-2723
+740,1152,2590,5494.63,2023-10-29 01:33:00,0,MasterCard,Los Angeles,Online Shopping,40,Purchase at Merchant-2590
+741,1783,2567,6798.33,2023-06-11 03:08:00,0,MasterCard,New York,Online Shopping,72,Purchase at Merchant-2567
+742,1074,2371,7160.12,2023-11-14 16:28:00,0,Discover,Chicago,Pharmacy,36,Purchase at Merchant-2371
+743,1953,2104,4809.6,2023-01-06 06:02:00,0,MasterCard,Boston,Grocery Store,37,Purchase at Merchant-2104
+744,1912,2722,1816.38,2023-04-21 12:37:00,0,MasterCard,Boston,Restaurant,29,Purchase at Merchant-2722
+745,1561,2755,3622.91,2023-09-04 12:01:00,0,Visa,Boston,Grocery Store,75,Purchase at Merchant-2755
+746,1184,2764,785.23,2023-07-24 03:19:00,0,Discover,San Francisco,Grocery Store,62,Purchase at Merchant-2764
+747,1799,2261,6524.85,2023-02-13 11:12:00,0,Discover,Boston,Pharmacy,44,Purchase at Merchant-2261
+748,1874,2433,7342.46,2023-03-24 00:11:00,0,Amex,New York,Gas Station,22,Purchase at Merchant-2433
+749,1924,2826,1706.41,2023-12-17 14:08:00,0,MasterCard,Los Angeles,Restaurant,72,Purchase at Merchant-2826
+750,1910,2643,6691.03,2023-06-06 16:08:00,0,Visa,Boston,Pharmacy,73,Purchase at Merchant-2643
+751,1048,2418,5961.44,2023-01-23 05:09:00,0,Visa,Boston,Online Shopping,74,Purchase at Merchant-2418
+752,1945,2683,4787.07,2023-06-18 17:24:00,0,Discover,Boston,Pharmacy,75,Purchase at Merchant-2683
+753,1521,2225,6531.9,2023-02-02 04:19:00,0,Visa,Chicago,Restaurant,65,Purchase at Merchant-2225
+754,1395,2462,2957.31,2023-12-07 05:12:00,0,MasterCard,Boston,Restaurant,67,Purchase at Merchant-2462
+755,1976,2429,4617.72,2023-08-25 16:52:00,0,Visa,New York,Grocery Store,63,Purchase at Merchant-2429
+756,1477,2988,9661.56,2023-05-20 02:10:00,0,Discover,Los Angeles,Gas Station,37,Purchase at Merchant-2988
+757,1078,2895,5649.9,2023-10-10 06:40:00,0,Discover,Chicago,Gas Station,20,Purchase at Merchant-2895
+758,1526,2036,5832.74,2023-04-28 23:09:00,0,MasterCard,New York,Grocery Store,38,Purchase at Merchant-2036
+759,1038,2414,7421.38,2023-10-10 02:21:00,0,Amex,Boston,Gas Station,52,Purchase at Merchant-2414
+760,1620,2262,7399.21,2023-02-20 12:49:00,0,Amex,Los Angeles,Pharmacy,42,Purchase at Merchant-2262
+761,1376,2691,2016.51,2023-11-06 03:06:00,0,MasterCard,San Francisco,Pharmacy,21,Purchase at Merchant-2691
+762,1909,2008,5007.36,2023-10-06 10:13:00,0,Amex,Los Angeles,Online Shopping,71,Purchase at Merchant-2008
+763,1686,2921,5792.67,2023-03-14 15:26:00,0,MasterCard,San Francisco,Online Shopping,22,Purchase at Merchant-2921
+764,1196,2331,5153.87,2023-04-07 14:20:00,0,Discover,New York,Pharmacy,54,Purchase at Merchant-2331
+765,1976,2979,9469.2,2023-06-16 01:15:00,0,Amex,Boston,Grocery Store,27,Purchase at Merchant-2979
+766,1377,2956,120.3,2023-01-17 06:15:00,0,Discover,San Francisco,Gas Station,74,Purchase at Merchant-2956
+767,1538,2504,2182.52,2023-07-16 12:32:00,0,Amex,San Francisco,Gas Station,59,Purchase at Merchant-2504
+768,1943,2262,1833.03,2023-06-16 08:05:00,0,Discover,San Francisco,Restaurant,63,Purchase at Merchant-2262
+769,1319,2422,4092.21,2023-02-16 15:08:00,0,Visa,New York,Restaurant,72,Purchase at Merchant-2422
+770,1715,2591,6927.1,2023-12-07 14:22:00,0,Discover,Boston,Grocery Store,39,Purchase at Merchant-2591
+771,1555,2707,7765.61,2023-12-06 04:57:00,0,MasterCard,Los Angeles,Grocery Store,72,Purchase at Merchant-2707
+772,1484,2107,3792.71,2023-03-26 08:36:00,0,MasterCard,New York,Pharmacy,34,Purchase at Merchant-2107
+773,1800,2126,8055.04,2023-07-25 12:01:00,0,Discover,San Francisco,Grocery Store,65,Purchase at Merchant-2126
+774,1309,2634,7910.99,2023-09-20 13:33:00,0,Discover,New York,Pharmacy,31,Purchase at Merchant-2634
+775,1468,2899,4752.75,2023-01-08 12:02:00,0,Amex,New York,Grocery Store,51,Purchase at Merchant-2899
+776,1368,2683,4844.73,2023-09-21 00:33:00,0,Discover,San Francisco,Grocery Store,35,Purchase at Merchant-2683
+777,1010,2501,2917.59,2023-07-17 14:41:00,0,MasterCard,New York,Pharmacy,30,Purchase at Merchant-2501
+778,1153,2826,236.46,2023-12-12 14:56:00,0,Discover,Chicago,Online Shopping,26,Purchase at Merchant-2826
+779,1417,2821,2041.58,2023-12-01 04:43:00,0,Amex,San Francisco,Pharmacy,74,Purchase at Merchant-2821
+780,1866,2152,3380.67,2023-12-15 20:43:00,0,Discover,San Francisco,Online Shopping,27,Purchase at Merchant-2152
+781,1321,2472,6647.04,2023-06-25 00:14:00,0,Amex,Boston,Grocery Store,38,Purchase at Merchant-2472
+782,1542,2513,5362.91,2023-09-04 18:22:00,0,MasterCard,New York,Online Shopping,50,Purchase at Merchant-2513
+783,1079,2997,6206.74,2023-06-25 09:32:00,0,Visa,New York,Pharmacy,75,Purchase at Merchant-2997
+784,1319,2996,3980.23,2023-02-25 05:41:00,0,Amex,Boston,Grocery Store,74,Purchase at Merchant-2996
+785,1207,2699,9440.95,2023-03-28 16:33:00,0,Visa,Los Angeles,Restaurant,47,Purchase at Merchant-2699
+786,1393,2087,4668.81,2023-10-03 12:35:00,0,Discover,Chicago,Grocery Store,72,Purchase at Merchant-2087
+787,1315,2866,5592.94,2023-12-12 21:50:00,0,MasterCard,Los Angeles,Restaurant,60,Purchase at Merchant-2866
+788,1747,2389,9230.01,2023-03-17 15:23:00,0,Amex,New York,Online Shopping,51,Purchase at Merchant-2389
+789,1331,2598,8660.99,2023-11-28 09:10:00,0,Amex,Boston,Gas Station,54,Purchase at Merchant-2598
+790,1111,2986,6988.66,2023-07-26 18:18:00,0,Discover,Chicago,Pharmacy,35,Purchase at Merchant-2986
+791,1203,2116,3963.25,2023-05-08 12:27:00,0,MasterCard,Chicago,Gas Station,57,Purchase at Merchant-2116
+792,1126,2127,4373.3,2023-05-30 08:52:00,0,Amex,Boston,Restaurant,72,Purchase at Merchant-2127
+793,1940,2183,248.8,2023-03-12 15:00:00,0,Discover,New York,Restaurant,47,Purchase at Merchant-2183
+794,1272,2734,3056.77,2023-09-01 19:05:00,0,Visa,Chicago,Grocery Store,21,Purchase at Merchant-2734
+795,1142,2622,4814.05,2023-08-05 21:18:00,0,Discover,New York,Restaurant,69,Purchase at Merchant-2622
+796,1424,2645,5399.74,2023-05-11 15:42:00,0,Discover,San Francisco,Online Shopping,40,Purchase at Merchant-2645
+797,1402,2351,3733.45,2023-03-27 23:56:00,0,Visa,Boston,Gas Station,75,Purchase at Merchant-2351
+798,1337,2151,9426.87,2023-09-26 16:20:00,0,MasterCard,Chicago,Gas Station,63,Purchase at Merchant-2151
+799,1141,2839,9857.93,2023-12-17 06:50:00,0,Discover,New York,Grocery Store,26,Purchase at Merchant-2839
+800,1478,2423,5541.33,2023-07-01 15:36:00,0,Discover,San Francisco,Online Shopping,60,Purchase at Merchant-2423
+801,1419,2507,1758.55,2023-02-10 01:52:00,0,Amex,San Francisco,Pharmacy,66,Purchase at Merchant-2507
+802,1027,2118,2899.74,2023-12-13 14:28:00,0,Visa,San Francisco,Online Shopping,75,Purchase at Merchant-2118
+803,1361,2713,8946.92,2023-09-30 07:18:00,0,Amex,New York,Pharmacy,32,Purchase at Merchant-2713
+804,1350,2167,3288.31,2023-05-04 18:16:00,0,Visa,New York,Online Shopping,21,Purchase at Merchant-2167
+805,1192,2721,6315.32,2023-05-03 00:46:00,0,Amex,San Francisco,Gas Station,52,Purchase at Merchant-2721
+806,1556,2544,7165.87,2023-07-28 05:31:00,0,Discover,New York,Pharmacy,65,Purchase at Merchant-2544
+807,1313,2169,3014.51,2023-05-13 14:33:00,0,MasterCard,New York,Grocery Store,31,Purchase at Merchant-2169
+808,1502,2172,7010.71,2023-04-11 02:22:00,0,Amex,New York,Online Shopping,37,Purchase at Merchant-2172
+809,1509,2796,2640.25,2023-11-23 09:12:00,0,MasterCard,San Francisco,Gas Station,28,Purchase at Merchant-2796
+810,1686,2040,2793.29,2023-08-01 04:43:00,0,Discover,New York,Gas Station,19,Purchase at Merchant-2040
+811,1148,2248,6556.09,2023-07-29 22:35:00,0,MasterCard,San Francisco,Grocery Store,74,Purchase at Merchant-2248
+812,1740,2304,5155.4,2023-12-07 10:53:00,0,Discover,Los Angeles,Grocery Store,18,Purchase at Merchant-2304
+813,1728,2861,9715.91,2023-08-14 09:25:00,0,Visa,Los Angeles,Restaurant,63,Purchase at Merchant-2861
+814,1040,2339,963.7,2023-04-29 18:57:00,0,Amex,New York,Restaurant,25,Purchase at Merchant-2339
+815,1510,2737,3073.08,2023-09-02 11:54:00,0,MasterCard,San Francisco,Restaurant,36,Purchase at Merchant-2737
+816,1866,2944,1085.33,2023-06-13 11:57:00,0,Visa,Chicago,Grocery Store,48,Purchase at Merchant-2944
+817,1569,2438,562.2,2023-02-19 06:22:00,0,Visa,San Francisco,Restaurant,26,Purchase at Merchant-2438
+818,1693,2719,6897.22,2023-04-03 05:51:00,0,MasterCard,Chicago,Restaurant,65,Purchase at Merchant-2719
+819,1305,2631,7227.0,2023-11-09 19:39:00,0,Amex,San Francisco,Gas Station,24,Purchase at Merchant-2631
+820,1695,2723,5940.97,2023-12-17 20:42:00,0,Visa,Boston,Gas Station,41,Purchase at Merchant-2723
+821,1938,2814,5383.72,2023-10-14 21:44:00,0,Visa,San Francisco,Pharmacy,38,Purchase at Merchant-2814
+822,1687,2650,6216.26,2023-11-29 19:00:00,0,MasterCard,New York,Gas Station,21,Purchase at Merchant-2650
+823,1989,2334,756.34,2023-10-11 13:44:00,0,Discover,Chicago,Restaurant,29,Purchase at Merchant-2334
+824,1339,2981,2760.93,2023-08-07 00:21:00,0,Amex,New York,Online Shopping,35,Purchase at Merchant-2981
+825,1051,2498,6807.3,2023-01-14 03:26:00,0,Visa,Los Angeles,Grocery Store,67,Purchase at Merchant-2498
+826,1154,2941,7892.39,2023-10-18 08:17:00,0,Visa,New York,Pharmacy,33,Purchase at Merchant-2941
+827,1733,2696,7519.33,2023-07-16 23:58:00,0,Discover,Los Angeles,Grocery Store,65,Purchase at Merchant-2696
+828,1237,2420,3244.74,2023-06-18 00:14:00,0,Visa,New York,Pharmacy,65,Purchase at Merchant-2420
+829,1101,2881,5470.32,2023-12-16 23:57:00,0,Amex,Los Angeles,Online Shopping,73,Purchase at Merchant-2881
+830,1330,2631,882.5,2023-09-16 18:06:00,0,MasterCard,Boston,Online Shopping,35,Purchase at Merchant-2631
+831,1369,2554,8707.94,2023-04-06 04:48:00,0,Amex,Boston,Restaurant,50,Purchase at Merchant-2554
+832,1898,2750,5746.41,2023-12-10 02:01:00,0,Amex,New York,Grocery Store,52,Purchase at Merchant-2750
+833,1249,2124,6934.17,2023-12-08 17:46:00,0,Amex,Los Angeles,Online Shopping,37,Purchase at Merchant-2124
+834,1603,2146,3561.94,2023-03-10 01:42:00,0,Visa,Chicago,Pharmacy,22,Purchase at Merchant-2146
+835,1939,2468,4851.78,2023-01-29 14:00:00,0,Amex,San Francisco,Gas Station,21,Purchase at Merchant-2468
+836,1380,2460,9538.07,2023-12-06 09:10:00,0,Visa,San Francisco,Pharmacy,48,Purchase at Merchant-2460
+837,1989,2827,7061.23,2023-09-11 16:31:00,0,Discover,Chicago,Online Shopping,64,Purchase at Merchant-2827
+838,1378,2766,9554.59,2023-02-27 20:05:00,0,Discover,Chicago,Online Shopping,23,Purchase at Merchant-2766
+839,1971,2204,9088.87,2023-04-26 15:59:00,0,Visa,New York,Gas Station,60,Purchase at Merchant-2204
+840,1346,2186,3826.27,2023-01-18 08:44:00,0,Discover,New York,Gas Station,69,Purchase at Merchant-2186
+841,1548,2317,7701.93,2023-08-15 03:16:00,0,Amex,Chicago,Restaurant,60,Purchase at Merchant-2317
+842,1024,2499,1116.37,2023-09-08 02:42:00,0,MasterCard,Chicago,Gas Station,44,Purchase at Merchant-2499
+843,1953,2084,9800.98,2023-02-11 20:01:00,0,Visa,New York,Grocery Store,68,Purchase at Merchant-2084
+844,1360,2364,4341.77,2023-10-16 17:13:00,0,Discover,Los Angeles,Online Shopping,50,Purchase at Merchant-2364
+845,1090,2844,582.08,2023-05-26 01:09:00,0,Discover,New York,Pharmacy,23,Purchase at Merchant-2844
+846,1202,2649,8293.42,2023-04-12 04:37:00,0,Visa,New York,Online Shopping,18,Purchase at Merchant-2649
+847,1751,2683,9204.33,2023-09-03 01:47:00,0,MasterCard,Chicago,Restaurant,53,Purchase at Merchant-2683
+848,2000,2369,8240.74,2023-07-23 10:59:00,0,Amex,San Francisco,Restaurant,37,Purchase at Merchant-2369
+849,1857,2709,4497.81,2023-04-19 17:30:00,0,Discover,San Francisco,Restaurant,55,Purchase at Merchant-2709
+850,1396,2299,3654.37,2023-09-27 20:30:00,0,MasterCard,Los Angeles,Grocery Store,42,Purchase at Merchant-2299
+851,1468,2361,2964.93,2023-08-03 11:37:00,0,MasterCard,New York,Grocery Store,42,Purchase at Merchant-2361
+852,1786,2021,2568.3,2023-12-24 16:47:00,0,MasterCard,Los Angeles,Gas Station,52,Purchase at Merchant-2021
+853,1798,2240,5160.42,2023-02-25 07:30:00,0,Visa,Chicago,Grocery Store,34,Purchase at Merchant-2240
+854,1719,2823,2735.75,2023-01-11 17:07:00,0,Amex,Chicago,Restaurant,40,Purchase at Merchant-2823
+855,1397,2032,1485.25,2023-03-12 15:32:00,0,Visa,Boston,Grocery Store,20,Purchase at Merchant-2032
+856,1547,2646,5194.82,2023-01-03 07:20:00,0,Discover,Chicago,Grocery Store,35,Purchase at Merchant-2646
+857,1190,2396,7047.9,2023-10-03 03:05:00,0,Visa,Chicago,Restaurant,20,Purchase at Merchant-2396
+858,1586,2840,4804.63,2023-09-03 13:22:00,0,Discover,New York,Gas Station,32,Purchase at Merchant-2840
+859,1168,2206,8131.49,2023-07-26 15:39:00,0,Amex,San Francisco,Grocery Store,18,Purchase at Merchant-2206
+860,1434,2950,3766.71,2023-11-13 16:14:00,0,MasterCard,Los Angeles,Grocery Store,35,Purchase at Merchant-2950
+861,1746,2490,7351.89,2023-02-24 07:52:00,0,Discover,Los Angeles,Pharmacy,33,Purchase at Merchant-2490
+862,1908,2215,9200.75,2023-01-05 09:36:00,0,Amex,Chicago,Grocery Store,45,Purchase at Merchant-2215
+863,1993,2395,9369.59,2023-12-21 07:24:00,0,Discover,New York,Restaurant,49,Purchase at Merchant-2395
+864,1712,2831,5653.35,2023-10-14 00:15:00,0,Visa,Boston,Grocery Store,22,Purchase at Merchant-2831
+865,1157,2084,8492.21,2023-12-05 14:45:00,0,Amex,Chicago,Gas Station,69,Purchase at Merchant-2084
+866,1843,2352,8794.65,2023-10-08 01:32:00,0,MasterCard,Chicago,Online Shopping,68,Purchase at Merchant-2352
+867,1439,2378,5882.91,2023-12-20 18:29:00,0,Discover,Boston,Pharmacy,22,Purchase at Merchant-2378
+868,1362,2823,7269.93,2023-03-30 12:24:00,0,Discover,Boston,Grocery Store,31,Purchase at Merchant-2823
+869,1723,2998,7285.62,2023-04-24 10:46:00,0,MasterCard,Los Angeles,Grocery Store,39,Purchase at Merchant-2998
+870,1887,2985,5489.89,2023-08-02 20:09:00,0,Visa,Boston,Online Shopping,53,Purchase at Merchant-2985
+871,1092,2302,4560.96,2023-06-27 13:20:00,0,Amex,New York,Grocery Store,66,Purchase at Merchant-2302
+872,1919,2226,7617.94,2023-04-17 10:57:00,0,Visa,Chicago,Pharmacy,22,Purchase at Merchant-2226
+873,1821,2645,1948.31,2023-02-14 19:57:00,0,Visa,Boston,Restaurant,21,Purchase at Merchant-2645
+874,1320,2458,7560.23,2023-06-24 04:09:00,0,MasterCard,New York,Restaurant,48,Purchase at Merchant-2458
+875,1612,2433,9173.31,2023-03-16 06:39:00,0,Discover,San Francisco,Online Shopping,62,Purchase at Merchant-2433
+876,1651,2349,9957.86,2023-09-26 06:12:00,0,Discover,San Francisco,Restaurant,70,Purchase at Merchant-2349
+877,1625,2700,3768.57,2023-07-25 11:04:00,0,Amex,Los Angeles,Online Shopping,54,Purchase at Merchant-2700
+878,1341,2853,8821.63,2023-08-16 10:07:00,0,Visa,Los Angeles,Online Shopping,38,Purchase at Merchant-2853
+879,1068,2394,2351.98,2023-10-30 12:16:00,0,MasterCard,Los Angeles,Pharmacy,23,Purchase at Merchant-2394
+880,1348,2893,8096.78,2023-07-12 14:11:00,0,Visa,San Francisco,Restaurant,35,Purchase at Merchant-2893
+881,1534,2660,5511.54,2023-05-24 00:10:00,0,Amex,San Francisco,Gas Station,21,Purchase at Merchant-2660
+882,1296,2053,1048.01,2023-02-11 00:24:00,0,Amex,Los Angeles,Gas Station,63,Purchase at Merchant-2053
+883,1039,2950,1439.89,2023-06-22 23:33:00,0,Discover,Boston,Gas Station,19,Purchase at Merchant-2950
+884,1951,2247,2956.34,2023-08-15 00:03:00,0,Discover,Boston,Restaurant,56,Purchase at Merchant-2247
+885,1527,2003,205.52,2023-08-07 16:33:00,0,Visa,New York,Pharmacy,57,Purchase at Merchant-2003
+886,1651,2706,6808.31,2023-05-16 09:45:00,0,MasterCard,Los Angeles,Pharmacy,69,Purchase at Merchant-2706
+887,1461,2284,7755.01,2023-09-14 22:48:00,0,Amex,Boston,Online Shopping,30,Purchase at Merchant-2284
+888,1269,2731,223.94,2023-06-30 19:03:00,0,Amex,Boston,Restaurant,65,Purchase at Merchant-2731
+889,1972,2989,4673.16,2023-07-22 09:09:00,0,MasterCard,New York,Online Shopping,48,Purchase at Merchant-2989
+890,1018,2993,1822.09,2023-10-10 01:40:00,0,MasterCard,Los Angeles,Pharmacy,73,Purchase at Merchant-2993
+891,1058,2477,4294.25,2023-09-14 04:12:00,0,MasterCard,New York,Grocery Store,40,Purchase at Merchant-2477
+892,1850,2767,8430.12,2023-08-20 01:40:00,0,MasterCard,New York,Grocery Store,40,Purchase at Merchant-2767
+893,1841,2073,2873.24,2023-02-25 02:42:00,0,Discover,San Francisco,Pharmacy,34,Purchase at Merchant-2073
+894,1126,2113,5910.92,2023-06-05 11:00:00,0,Visa,Chicago,Grocery Store,48,Purchase at Merchant-2113
+895,1827,2490,8017.15,2023-03-07 21:02:00,0,MasterCard,New York,Grocery Store,45,Purchase at Merchant-2490
+896,1760,2426,1264.7,2023-04-15 04:14:00,0,Visa,New York,Pharmacy,22,Purchase at Merchant-2426
+897,1528,2504,4174.32,2023-02-17 23:01:00,0,MasterCard,Los Angeles,Pharmacy,48,Purchase at Merchant-2504
+898,1022,2041,7721.82,2023-06-18 09:57:00,0,MasterCard,San Francisco,Pharmacy,28,Purchase at Merchant-2041
+899,1705,2292,7526.79,2023-07-13 08:12:00,0,Amex,Boston,Gas Station,70,Purchase at Merchant-2292
+900,1132,2653,1182.71,2023-08-21 13:45:00,0,MasterCard,San Francisco,Gas Station,63,Purchase at Merchant-2653
+901,1738,2449,4644.97,2023-10-20 18:05:00,0,Discover,Boston,Grocery Store,51,Purchase at Merchant-2449
+902,1216,2580,5237.98,2023-01-03 05:11:00,0,Amex,Boston,Grocery Store,57,Purchase at Merchant-2580
+903,1669,2569,1672.36,2023-07-16 03:04:00,0,Visa,New York,Grocery Store,56,Purchase at Merchant-2569
+904,1461,2063,2710.82,2023-02-20 20:29:00,0,Discover,Boston,Online Shopping,29,Purchase at Merchant-2063
+905,1843,2356,9674.16,2023-02-07 23:00:00,0,Visa,New York,Online Shopping,53,Purchase at Merchant-2356
+906,1149,2406,9451.7,2023-11-09 00:59:00,0,Amex,New York,Restaurant,25,Purchase at Merchant-2406
+907,1579,2915,2354.02,2023-01-30 13:46:00,0,MasterCard,Chicago,Restaurant,51,Purchase at Merchant-2915
+908,1204,2311,8522.89,2023-06-21 21:27:00,0,MasterCard,Los Angeles,Pharmacy,24,Purchase at Merchant-2311
+909,1124,2445,9661.3,2023-03-03 22:44:00,0,Visa,Los Angeles,Grocery Store,44,Purchase at Merchant-2445
+910,1759,2189,2231.91,2023-10-19 02:47:00,0,Visa,San Francisco,Restaurant,37,Purchase at Merchant-2189
+911,1921,2331,7049.33,2023-11-13 06:14:00,0,MasterCard,Boston,Restaurant,42,Purchase at Merchant-2331
+912,1089,2286,7344.1,2023-07-12 15:56:00,0,Amex,San Francisco,Restaurant,44,Purchase at Merchant-2286
+913,1685,2961,8839.06,2023-08-11 03:07:00,0,Amex,New York,Grocery Store,37,Purchase at Merchant-2961
+914,1590,2537,3166.57,2023-11-26 17:12:00,0,Amex,Boston,Gas Station,29,Purchase at Merchant-2537
+915,1003,2189,4506.58,2023-01-13 06:20:00,0,Discover,Chicago,Online Shopping,67,Purchase at Merchant-2189
+916,1807,2364,309.33,2023-03-17 15:46:00,0,Amex,San Francisco,Gas Station,46,Purchase at Merchant-2364
+917,1523,2660,2373.7,2023-08-25 17:53:00,0,Visa,New York,Grocery Store,18,Purchase at Merchant-2660
+918,1246,2481,1915.71,2023-09-11 14:31:00,0,Discover,Boston,Online Shopping,38,Purchase at Merchant-2481
+919,1790,2975,1907.48,2023-12-22 19:29:00,0,Discover,New York,Restaurant,69,Purchase at Merchant-2975
+920,1560,2806,9826.66,2023-08-03 20:32:00,0,MasterCard,San Francisco,Grocery Store,23,Purchase at Merchant-2806
+921,1746,2990,3636.0,2023-11-09 14:53:00,0,MasterCard,Los Angeles,Gas Station,57,Purchase at Merchant-2990
+922,1454,2757,792.36,2023-09-23 14:50:00,0,Amex,Los Angeles,Pharmacy,32,Purchase at Merchant-2757
+923,1115,2319,2589.57,2023-03-28 12:56:00,0,Visa,New York,Online Shopping,65,Purchase at Merchant-2319
+924,1165,2135,625.58,2023-02-16 13:30:00,0,MasterCard,Los Angeles,Gas Station,53,Purchase at Merchant-2135
+925,1493,2067,8504.56,2023-03-31 19:58:00,0,Discover,San Francisco,Grocery Store,57,Purchase at Merchant-2067
+926,1055,2144,9760.5,2023-05-20 11:49:00,0,Amex,New York,Online Shopping,75,Purchase at Merchant-2144
+927,1640,2233,9249.11,2023-02-23 08:28:00,0,Visa,Chicago,Restaurant,40,Purchase at Merchant-2233
+928,1341,2819,3136.8,2023-08-29 20:44:00,0,Discover,Chicago,Pharmacy,30,Purchase at Merchant-2819
+929,1856,2147,6094.07,2023-11-19 08:12:00,0,Amex,San Francisco,Online Shopping,40,Purchase at Merchant-2147
+930,1157,2658,1360.14,2023-11-05 08:09:00,1,Visa,New York,Grocery Store,22,Purchase at Merchant-2658
+931,1455,2770,2334.73,2023-01-04 13:02:00,0,Amex,Chicago,Gas Station,67,Purchase at Merchant-2770
+932,1772,2892,4722.57,2023-11-17 17:04:00,0,Visa,San Francisco,Online Shopping,18,Purchase at Merchant-2892
+933,1962,2397,3063.31,2023-07-16 00:56:00,0,Amex,Chicago,Restaurant,34,Purchase at Merchant-2397
+934,1602,2792,6748.76,2023-12-17 18:26:00,0,Amex,Boston,Online Shopping,50,Purchase at Merchant-2792
+935,1109,2288,1205.96,2023-09-06 21:26:00,0,Discover,Boston,Online Shopping,52,Purchase at Merchant-2288
+936,1076,2299,4369.58,2023-07-23 00:35:00,0,Discover,San Francisco,Grocery Store,42,Purchase at Merchant-2299
+937,1688,2460,811.35,2023-09-24 04:26:00,0,Discover,Los Angeles,Gas Station,50,Purchase at Merchant-2460
+938,1643,2988,776.89,2023-08-19 01:48:00,0,MasterCard,Los Angeles,Online Shopping,40,Purchase at Merchant-2988
+939,1442,2683,5749.89,2023-09-26 08:56:00,0,Discover,San Francisco,Restaurant,68,Purchase at Merchant-2683
+940,1802,2521,4611.17,2023-08-26 16:29:00,0,Amex,New York,Gas Station,60,Purchase at Merchant-2521
+941,1000,2564,4919.59,2023-09-11 15:53:00,0,Discover,San Francisco,Pharmacy,60,Purchase at Merchant-2564
+942,1060,2172,4794.69,2023-06-01 14:47:00,0,Discover,San Francisco,Restaurant,21,Purchase at Merchant-2172
+943,1953,2944,6910.26,2023-06-11 09:40:00,0,Amex,San Francisco,Gas Station,42,Purchase at Merchant-2944
+944,1113,2277,2961.99,2023-08-05 11:42:00,0,Visa,Boston,Gas Station,72,Purchase at Merchant-2277
+945,1237,2565,8389.83,2023-06-22 23:06:00,0,Discover,New York,Restaurant,68,Purchase at Merchant-2565
+946,1757,2240,472.05,2023-09-09 11:13:00,0,MasterCard,Boston,Gas Station,60,Purchase at Merchant-2240
+947,1056,2306,4840.12,2023-11-06 22:02:00,0,Visa,Chicago,Pharmacy,21,Purchase at Merchant-2306
+948,1302,2775,6106.69,2023-07-18 11:03:00,0,Discover,New York,Gas Station,63,Purchase at Merchant-2775
+949,1769,2435,4372.89,2023-03-25 10:09:00,0,Amex,Chicago,Pharmacy,64,Purchase at Merchant-2435
+950,1673,2215,1435.32,2023-11-20 13:11:00,0,Discover,Boston,Online Shopping,24,Purchase at Merchant-2215
+951,1321,2126,7168.87,2023-02-25 04:43:00,0,MasterCard,New York,Restaurant,36,Purchase at Merchant-2126
+952,1911,2774,1350.99,2023-07-22 18:39:00,0,Discover,Boston,Gas Station,32,Purchase at Merchant-2774
+953,1113,2610,7010.12,2023-05-11 16:07:00,0,Discover,Chicago,Pharmacy,66,Purchase at Merchant-2610
+954,1252,2857,3663.73,2023-12-29 09:20:00,0,Discover,Boston,Gas Station,20,Purchase at Merchant-2857
+955,1684,2093,9533.86,2023-11-21 11:43:00,0,Discover,San Francisco,Online Shopping,42,Purchase at Merchant-2093
+956,1945,2463,4528.28,2023-07-13 07:18:00,0,Visa,San Francisco,Grocery Store,51,Purchase at Merchant-2463
+957,1039,2986,4485.3,2023-03-05 14:00:00,0,Visa,New York,Restaurant,53,Purchase at Merchant-2986
+958,1645,2854,645.95,2023-04-25 21:58:00,0,Discover,Los Angeles,Grocery Store,65,Purchase at Merchant-2854
+959,1817,2372,3294.2,2023-03-10 05:34:00,0,Visa,New York,Grocery Store,43,Purchase at Merchant-2372
+960,1800,2282,8044.1,2023-06-25 22:58:00,0,MasterCard,Los Angeles,Restaurant,45,Purchase at Merchant-2282
+961,1774,2723,112.21,2023-10-05 16:02:00,0,Discover,New York,Online Shopping,28,Purchase at Merchant-2723
+962,1843,2771,536.51,2023-10-01 08:35:00,0,Visa,New York,Gas Station,36,Purchase at Merchant-2771
+963,1565,2970,2383.95,2023-08-30 06:15:00,0,Visa,Chicago,Restaurant,67,Purchase at Merchant-2970
+964,1787,2856,3283.89,2023-09-19 17:44:00,0,Visa,New York,Restaurant,43,Purchase at Merchant-2856
+965,1938,2117,2084.52,2023-08-18 02:04:00,0,Amex,Chicago,Online Shopping,73,Purchase at Merchant-2117
+966,1760,2871,2249.32,2023-01-04 05:15:00,0,Amex,Boston,Pharmacy,27,Purchase at Merchant-2871
+967,1022,2327,4015.83,2023-04-01 17:52:00,0,Amex,Boston,Restaurant,51,Purchase at Merchant-2327
+968,1804,2644,5990.84,2023-03-29 07:21:00,0,Visa,New York,Gas Station,26,Purchase at Merchant-2644
+969,1503,2418,129.55,2023-09-18 12:16:00,1,Visa,New York,Online Shopping,18,Purchase at Merchant-2418
+970,1464,2328,378.37,2023-09-12 23:02:00,0,Visa,Los Angeles,Grocery Store,25,Purchase at Merchant-2328
+971,1030,2071,1527.07,2023-11-21 12:03:00,0,MasterCard,New York,Online Shopping,48,Purchase at Merchant-2071
+972,1881,2862,6041.7,2023-11-15 13:28:00,0,MasterCard,San Francisco,Online Shopping,58,Purchase at Merchant-2862
+973,1538,2435,4538.19,2023-04-03 08:09:00,0,Visa,Los Angeles,Grocery Store,23,Purchase at Merchant-2435
+974,1233,2702,9115.58,2023-02-06 19:54:00,0,Discover,Los Angeles,Restaurant,71,Purchase at Merchant-2702
+975,1188,2802,7021.88,2023-03-08 21:27:00,0,MasterCard,New York,Restaurant,67,Purchase at Merchant-2802
+976,1784,2332,8241.6,2023-02-28 06:52:00,0,Amex,Boston,Online Shopping,36,Purchase at Merchant-2332
+977,1656,2521,9571.98,2023-11-28 19:07:00,0,Visa,San Francisco,Restaurant,56,Purchase at Merchant-2521
+978,1403,2057,3051.11,2023-12-02 01:03:00,0,Discover,San Francisco,Pharmacy,49,Purchase at Merchant-2057
+979,1878,2648,1728.78,2023-10-31 15:11:00,0,Visa,Chicago,Restaurant,36,Purchase at Merchant-2648
+980,1985,2820,2880.97,2023-05-11 13:53:00,0,Amex,Chicago,Pharmacy,19,Purchase at Merchant-2820
+981,1745,2259,9847.16,2023-12-02 07:44:00,0,Amex,San Francisco,Gas Station,39,Purchase at Merchant-2259
+982,1471,2941,4993.25,2023-06-18 22:35:00,0,MasterCard,Los Angeles,Pharmacy,19,Purchase at Merchant-2941
+983,1681,2073,7515.14,2023-03-30 21:03:00,0,Visa,Los Angeles,Restaurant,64,Purchase at Merchant-2073
+984,1378,2509,5466.15,2023-08-17 14:55:00,0,Discover,New York,Online Shopping,50,Purchase at Merchant-2509
+985,1152,2364,5842.55,2023-03-22 10:28:00,0,Amex,New York,Online Shopping,73,Purchase at Merchant-2364
+986,1683,2608,4603.67,2023-02-01 08:08:00,0,Visa,Los Angeles,Pharmacy,66,Purchase at Merchant-2608
+987,1279,2023,5761.63,2023-06-11 14:39:00,0,Visa,New York,Gas Station,23,Purchase at Merchant-2023
+988,1696,2539,49.66,2023-01-10 21:32:00,0,MasterCard,Los Angeles,Online Shopping,42,Purchase at Merchant-2539
+989,1246,2613,9934.85,2023-10-01 01:59:00,0,Visa,Los Angeles,Restaurant,38,Purchase at Merchant-2613
+990,1339,2461,3599.42,2023-09-29 03:58:00,0,Amex,Chicago,Gas Station,57,Purchase at Merchant-2461
+991,1256,2394,8596.76,2023-07-27 09:43:00,0,Discover,Los Angeles,Online Shopping,65,Purchase at Merchant-2394
+992,1269,2775,4797.67,2023-09-17 04:47:00,0,Amex,New York,Pharmacy,75,Purchase at Merchant-2775
+993,1493,2689,6578.89,2023-06-04 17:37:00,0,Amex,Boston,Grocery Store,62,Purchase at Merchant-2689
+994,1381,2566,2374.5,2023-09-28 00:34:00,0,Visa,New York,Gas Station,39,Purchase at Merchant-2566
+995,1524,2867,7495.89,2023-12-16 14:07:00,0,Visa,San Francisco,Gas Station,27,Purchase at Merchant-2867
+996,1823,2439,2946.16,2023-10-10 15:56:00,0,Discover,Boston,Pharmacy,54,Purchase at Merchant-2439
+997,1077,2207,424.77,2023-08-19 04:57:00,0,Discover,Chicago,Pharmacy,40,Purchase at Merchant-2207
+998,1725,2451,2378.6,2023-11-14 03:20:00,0,Discover,Boston,Restaurant,67,Purchase at Merchant-2451
+999,1818,2539,2844.82,2023-07-17 14:52:00,0,Visa,Los Angeles,Online Shopping,58,Purchase at Merchant-2539
+1000,1658,2714,1921.87,2023-07-18 21:38:00,0,Discover,New York,Restaurant,25,Purchase at Merchant-2714
