@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Finance</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>%F0%9F%8F%A1</text></svg>"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">⌂</span>
+        <div>
+          <h1>Home Finance</h1>
+          <p class="tagline">How much to set aside each month to buy the house you actually want.</p>
+        </div>
+      </div>
+      <div class="provider-chip" id="providerChip" title="Where listing data is coming from">…</div>
+    </header>
+
+    <main class="layout">
+      <!-- ------------------------------ INPUTS ------------------------------ -->
+      <section class="panel inputs">
+        <div class="accordion" data-open="true">
+          <h2 class="accordion-head">1 · Household income</h2>
+          <div class="accordion-body">
+            <p class="hint">
+              Enter pay however your paycheck reads — per year, per month, or per pay period.
+            </p>
+            <div id="incomeRows" class="income-rows"></div>
+            <button class="ghost" id="addIncome" type="button">+ Add earner</button>
+
+            <details class="import">
+              <summary>Import from a bank / payroll CSV</summary>
+              <p class="hint">
+                Credit Karma, Mint successors and banks all export transaction CSVs. Drop one here and
+                recurring payroll deposits get detected and annualized. Nothing is uploaded anywhere —
+                it is parsed by the local server on your own machine.
+              </p>
+              <input type="file" id="incomeFile" accept=".csv,text/csv" />
+              <div id="importResult" class="import-result"></div>
+            </details>
+
+            <div class="grid2">
+              <label>Filing status
+                <select id="filingStatus">
+                  <option value="married">Married filing jointly</option>
+                  <option value="single">Single</option>
+                </select>
+              </label>
+              <label>State tax %
+                <input type="number" id="stateTaxPct" value="5" step="0.1" min="0" />
+              </label>
+              <label>Pre-tax retirement $/yr
+                <input type="number" id="pretaxRetirementAnnual" value="0" step="500" min="0" />
+              </label>
+              <label>Other monthly debts $
+                <input type="number" id="monthlyDebts" value="0" step="50" min="0" />
+              </label>
+            </div>
+
+            <div class="takehome" id="takeHomeBox">—</div>
+
+            <label class="checkline">
+              <input type="checkbox" id="useActualTakeHome" />
+              <span>I know our actual combined take-home — use that instead of the estimate</span>
+            </label>
+            <label id="actualTakeHomeWrap" hidden>Actual take-home $/mo (both of you, after everything)
+              <input type="number" id="actualTakeHome" value="12500" step="100" min="0" />
+            </label>
+
+            <div class="grid2">
+              <label>Current rent $/mo
+                <input type="number" id="currentRent" value="2600" step="50" min="0" />
+              </label>
+              <label>Other living costs $/mo
+                <input type="number" id="monthlyExpenses" value="3500" step="50" min="0" />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" data-open="true">
+          <h2 class="accordion-head">2 · Cash you have</h2>
+          <div class="accordion-body">
+            <p class="hint">
+              List accounts separately. Retirement money is excluded from the down payment by
+              default — pulling it out early costs tax plus a 10% penalty — but you can override any
+              row.
+            </p>
+            <div id="assetRows" class="asset-rows"></div>
+            <button class="ghost" id="addAsset" type="button">+ Add account</button>
+            <div class="takehome" id="assetSummary">—</div>
+          </div>
+        </div>
+
+        <div class="accordion" data-open="true">
+          <h2 class="accordion-head">3 · The house</h2>
+          <div class="accordion-body">
+            <div class="grid2">
+              <label>Area
+                <input list="areaList" id="area" placeholder="e.g. Queens" />
+                <datalist id="areaList"></datalist>
+              </label>
+              <label>Min beds
+                <input type="number" id="minBeds" value="3" min="0" step="1" />
+              </label>
+            </div>
+            <div class="row-actions">
+              <button class="ghost" id="useAreaMedian" type="button">Use area median price</button>
+              <button class="ghost" id="browseListings" type="button">Browse listings</button>
+            </div>
+            <div id="areaProfileBox" class="area-profile"></div>
+            <div id="listingsBox" class="listings"></div>
+
+            <label>Target price today $
+              <input type="number" id="targetPrice" value="650000" step="5000" min="0" />
+            </label>
+            <label>HOA / maintenance $/mo
+              <input type="number" id="hoaMonthly" value="0" step="25" min="0" />
+            </label>
+          </div>
+        </div>
+
+        <div class="accordion" data-open="true">
+          <h2 class="accordion-head">4 · Plan &amp; assumptions</h2>
+          <div class="accordion-body">
+            <label class="slider-label">Buy in <output id="yearsOut">4</output> years
+              <input type="range" id="years" min="1" max="15" step="1" value="4" />
+            </label>
+            <label class="slider-label">Down payment <output id="downOut">20</output>%
+              <input type="range" id="downPaymentPct" min="3" max="50" step="1" value="20" />
+            </label>
+            <div class="grid2">
+              <label>Return on savings %
+                <input type="number" id="savingsReturnPct" value="4" step="0.25" min="0" />
+              </label>
+              <label>Mortgage rate then %
+                <input type="number" id="futureRatePct" value="6" step="0.125" min="0" />
+              </label>
+              <label>Home appreciation %/yr
+                <input type="number" id="appreciationPct" value="3" step="0.25" />
+              </label>
+              <label>Property tax %/yr
+                <input type="number" id="propertyTaxPct" value="1.1" step="0.05" min="0" />
+              </label>
+              <label>Raises %/yr
+                <input type="number" id="raisePct" value="3" step="0.25" min="0" />
+              </label>
+              <label>Loan term yrs
+                <input type="number" id="termYears" value="30" step="5" min="5" />
+              </label>
+              <label>Closing costs %
+                <input type="number" id="closingCostPct" value="3" step="0.25" min="0" />
+              </label>
+            </div>
+            <p class="hint">
+              Defaults are conventional-loan norms: 28% housing / 36% total debt-to-income, PMI below
+              20% down, and 3 months of payments held back as reserves.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------------------------ RESULTS ------------------------------ -->
+      <section class="panel results" id="results">
+        <div class="verdict" id="verdict"></div>
+
+        <div class="headline-grid">
+          <div class="stat big">
+            <span class="stat-label">Save each month</span>
+            <span class="stat-value" id="statMonthly">—</span>
+            <span class="stat-sub" id="statMonthlySub"></span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Cash needed at closing</span>
+            <span class="stat-value" id="statCash">—</span>
+            <span class="stat-sub" id="statCashSub"></span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Price then</span>
+            <span class="stat-value" id="statPrice">—</span>
+            <span class="stat-sub" id="statPriceSub"></span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Monthly payment</span>
+            <span class="stat-value" id="statPayment">—</span>
+            <span class="stat-sub" id="statPaymentSub"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Savings trajectory</h3>
+          <div id="chart" class="chart"></div>
+        </div>
+
+        <div class="card two-col">
+          <div>
+            <h3>Where the cash goes</h3>
+            <table class="breakdown" id="cashTable"></table>
+          </div>
+          <div>
+            <h3>Monthly payment breakdown</h3>
+            <table class="breakdown" id="costTable"></table>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Reality checks</h3>
+          <ul class="checks" id="checks"></ul>
+        </div>
+
+        <div class="card">
+          <h3>When could you buy?</h3>
+          <p class="hint">
+            Flip the question: given what you can realistically save each month, when do the savings
+            catch the house — which is a moving target, since it appreciates while you save.
+          </p>
+          <label>We can save $/mo
+            <input type="number" id="monthlySavingsBudget" value="2500" step="100" min="0" />
+          </label>
+          <button id="solveWhen" type="button">Find the date</button>
+          <div id="whenResult" class="when-result"></div>
+        </div>
+
+        <div class="card">
+          <h3>Saved scenarios</h3>
+          <div class="row-actions">
+            <input type="text" id="scenarioName" placeholder="e.g. Queens 3-bed, 5 years" />
+            <button id="saveScenario" type="button">Save current</button>
+          </div>
+          <div id="scenarioList" class="scenario-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Planning estimates only — not mortgage, tax or investment advice. Tax figures use
+        <span id="taxYear">2025</span> federal brackets; verify against the current year before
+        relying on them. Confirm real numbers with a lender.
+      </p>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

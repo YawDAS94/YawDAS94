@@ -1,0 +1,5 @@
+# Saved scenarios hold real household income, savings and debt figures.
+# They stay on your machine.
+data/scenarios.json
+node_modules/
+.env

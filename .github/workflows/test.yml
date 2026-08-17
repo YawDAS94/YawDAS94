@@ -1,0 +1,28 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  # Lets you re-run the suite from the Actions tab without pushing a commit.
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: home-finance
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          # No npm cache: the app has zero dependencies, so there is no
+          # lockfile to key a cache on and nothing to restore.
+
+      # No `npm ci` step for the same reason -- the suite is `node --test`
+      # over Node built-ins only. Some tests read NY-House-Dataset.csv from
+      # the repo root, which the checkout above already provides.
+      - name: Run tests
+        working-directory: home-finance
+        run: npm test
