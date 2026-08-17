@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    name: home-affordability
+    name: home-finance
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,5 +24,5 @@ jobs:
       # over Node built-ins only. Some tests read NY-House-Dataset.csv from
       # the repo root, which the checkout above already provides.
       - name: Run tests
-        working-directory: home-affordability
+        working-directory: home-finance
         run: npm test

@@ -254,7 +254,7 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`Home affordability planner -> http://localhost:${PORT}`);
+  console.log(`Home Finance -> http://localhost:${PORT}`);
   const available = providerStatus()
     .filter((p) => p.available)
     .map((p) => p.id)

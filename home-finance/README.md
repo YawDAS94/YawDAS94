@@ -1,4 +1,4 @@
-# Home Savings Planner
+# Home Finance
 
 [![Tests](https://github.com/YawDAS94/YawDAS94/actions/workflows/test.yml/badge.svg)](https://github.com/YawDAS94/YawDAS94/actions/workflows/test.yml)
 
@@ -13,7 +13,7 @@ It answers two questions:
    division)
 
 ```bash
-cd home-affordability
+cd home-finance
 npm start          # -> http://localhost:4173
 npm test           # 53 unit tests, no install needed
 ```
@@ -204,7 +204,7 @@ curl -X POST localhost:4173/api/plan -H 'Content-Type: application/json' -d '{
 ## Layout
 
 ```
-home-affordability/
+home-finance/
 ├── server.js              # zero-dependency HTTP server + JSON API
 ├── lib/
 │   ├── affordability.js   # all the math (pure, fully tested)
