@@ -1,0 +1,14 @@
+{
+  "name": "home-affordability-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plan how much to save each month to buy a specific home, in a specific area, by a specific year.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/*.test.js"
+  }
+}
