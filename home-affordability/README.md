@@ -1,5 +1,7 @@
 # Home Savings Planner
 
+[![Tests](https://github.com/YawDAS94/YawDAS94/actions/workflows/test.yml/badge.svg)](https://github.com/YawDAS94/YawDAS94/actions/workflows/test.yml)
+
 Work out how much you and your partner need to save each month to buy a specific
 house, in a specific area, by a specific year.
 
