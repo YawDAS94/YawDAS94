@@ -328,6 +328,13 @@ export function buildPlan(input) {
     qualifies,
     maxAffordableAtPurchase: maxAtPurchase.price,
     priceGap: projectedPrice - maxAtPurchase.price,
+    // Which wall you hit first. Note that with exactly 20% down the PMI cliff
+    // sits precisely at the target price (the boundary IS 5x the down payment),
+    // so the ceiling can equal the price while income still has room to spare.
+    // Reporting the binding constraint keeps that from reading as "plenty of
+    // headroom" when there is none.
+    maxAffordableBinding: maxAtPurchase.binding,
+    maxAffordableUnusedBudget: maxAtPurchase.unusedBudget,
     schedule: savingsSchedule({
       present: currentSavings,
       monthlyContribution: monthlySavingsNeeded,

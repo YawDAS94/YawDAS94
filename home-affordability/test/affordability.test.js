@@ -213,3 +213,22 @@ test('yearsUntilAffordable returns null when appreciation outruns saving', () =>
   );
   assert.equal(found, null);
 });
+
+test('buildPlan reports when the ceiling is the PMI cliff rather than income', () => {
+  // At exactly 20% down the PMI boundary sits precisely on the target price
+  // (the boundary is 5x the down payment). When income would otherwise stretch
+  // past that, the ceiling equals the price with payment budget left unused --
+  // which must not be reported as comfortable headroom.
+  const plan = buildPlan({ ...BASE_PLAN, incomes: [{ annual: 178_200 }], downPaymentPct: 20 });
+  assert.equal(plan.maxAffordableBinding, 'pmi-cliff');
+  near(plan.maxAffordableAtPurchase, plan.projectedPrice, 1);
+  near(plan.priceGap, 0, 0.01, 'ceiling lands on the target, not above it');
+  assert.ok(plan.maxAffordableUnusedBudget > 0, 'income headroom remains despite the ceiling');
+});
+
+test('ample income binds on the housing ratio and clears the target outright', () => {
+  const plan = buildPlan({ ...BASE_PLAN, incomes: [{ annual: 230_000 }] });
+  assert.equal(plan.maxAffordableBinding, 'housing-ratio');
+  assert.ok(plan.maxAffordableAtPurchase > plan.projectedPrice, 'real headroom above the target');
+  assert.ok(plan.priceGap < 0);
+});

@@ -12,14 +12,40 @@ const money2 = (n) =>
   !Number.isFinite(n) ? '—' : n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 const pct = (n) => (Number.isFinite(n) ? `${(n * 100).toFixed(1)}%` : '—');
 
+/** Mirrors lib/income.js -- kept in sync via /api/meta at startup. */
+let PAY_FREQUENCIES = [{ id: 'annual', label: 'per year' }];
+let ACCOUNT_TYPES = [{ id: 'savings', label: 'Savings', usableByDefault: true }];
+
 const state = {
+  // Each earner stores what you typed (amount + frequency); annual is derived.
   incomes: [
-    { label: 'Me', annual: 110000 },
-    { label: 'Spouse', annual: 95000 },
+    { label: 'Me', amount: 110000, frequency: 'annual' },
+    { label: 'Spouse', amount: 95000, frequency: 'annual' },
+  ],
+  assets: [
+    { label: 'Checking', type: 'checking', amount: 10000, usable: true },
+    { label: 'Savings', type: 'savings', amount: 30000, usable: true },
   ],
   takeHome: null,
+  assetSummary: null,
   plan: null,
 };
+
+const PERIODS_PER_YEAR = {
+  annual: 1,
+  monthly: 12,
+  semimonthly: 24,
+  biweekly: 26,
+  weekly: 52,
+};
+
+/** What the plan API wants: [{ label, annual }]. */
+function annualIncomes() {
+  return state.incomes.map((i) => ({
+    label: i.label,
+    annual: (Number(i.amount) || 0) * (PERIODS_PER_YEAR[i.frequency] ?? 1),
+  }));
+}
 
 async function api(path, options) {
   const res = await fetch(path, options);
@@ -47,55 +73,153 @@ function collectInput() {
     propertyTaxPct: numOf('propertyTaxPct'),
     hoaMonthly: numOf('hoaMonthly'),
     closingCostPct: numOf('closingCostPct'),
-    incomes: state.incomes,
+    incomes: annualIncomes(),
     raisePct: numOf('raisePct'),
     monthlyDebts: numOf('monthlyDebts'),
-    currentSavings: numOf('currentSavings'),
+    // Only money you can actually spend on a house counts toward the plan.
+    currentSavings: state.assetSummary ? state.assetSummary.usable : 0,
     savingsReturnPct: numOf('savingsReturnPct'),
     monthlyExpenses: numOf('monthlyExpenses'),
     currentRent: numOf('currentRent'),
-    monthlyTakeHome: state.takeHome ? state.takeHome.monthlyNet : null,
+    monthlyTakeHome: monthlyTakeHome(),
   };
+}
+
+/** A figure you enter yourself beats a figure we estimate from tax tables. */
+function monthlyTakeHome() {
+  if ($('useActualTakeHome').checked) return numOf('actualTakeHome');
+  return state.takeHome ? state.takeHome.monthlyNet : null;
+}
+
+function el(tag, props = {}, children = []) {
+  const node = Object.assign(document.createElement(tag), props);
+  children.forEach((c) => node.append(c));
+  return node;
+}
+
+function removeButton(title, onClick) {
+  const b = el('button', { type: 'button', textContent: '×', title });
+  b.addEventListener('click', onClick);
+  return b;
 }
 
 function renderIncomeRows() {
   const box = $('incomeRows');
   box.innerHTML = '';
-  state.incomes.forEach((inc, idx) => {
-    const row = document.createElement('div');
-    row.className = 'income-row';
 
-    const name = document.createElement('input');
-    name.type = 'text';
-    name.value = inc.label;
-    name.placeholder = 'Name';
+  state.incomes.forEach((inc, idx) => {
+    const name = el('input', { type: 'text', value: inc.label, placeholder: 'Name' });
     name.addEventListener('input', () => {
       state.incomes[idx].label = name.value;
+      persist();
     });
 
-    const amount = document.createElement('input');
-    amount.type = 'number';
-    amount.step = '1000';
-    amount.min = '0';
-    amount.value = inc.annual;
-    amount.title = 'Gross annual income';
+    const amount = el('input', {
+      type: 'number',
+      step: '500',
+      min: '0',
+      value: inc.amount,
+      title: 'Gross pay before taxes',
+    });
+
+    const freq = el('select', { title: 'How often this is paid' });
+    PAY_FREQUENCIES.forEach((f) =>
+      freq.append(el('option', { value: f.id, textContent: f.label, selected: f.id === inc.frequency }))
+    );
+
+    // Shows the annualized figure whenever it differs from what was typed, so
+    // converting "every 2 weeks" into a yearly number is visible, not implied.
+    // Updated in place rather than by re-rendering, which would drop focus
+    // out of the field mid-keystroke.
+    const note = el('div', { className: 'row-note' });
+    const syncNote = () => {
+      const row = state.incomes[idx];
+      const annual = (Number(row.amount) || 0) * (PERIODS_PER_YEAR[row.frequency] ?? 1);
+      note.hidden = row.frequency === 'annual';
+      note.textContent = `↳ ${money(annual)} per year`;
+    };
+
     amount.addEventListener('input', () => {
-      state.incomes[idx].annual = Number(amount.value) || 0;
+      state.incomes[idx].amount = Number(amount.value) || 0;
+      syncNote();
+      scheduleRecompute();
+    });
+    freq.addEventListener('change', () => {
+      state.incomes[idx].frequency = freq.value;
+      syncNote();
+      scheduleRecompute();
+    });
+    syncNote();
+
+    box.append(
+      el('div', { className: 'income-row' }, [
+        name,
+        amount,
+        freq,
+        removeButton('Remove earner', () => {
+          state.incomes.splice(idx, 1);
+          renderIncomeRows();
+          scheduleRecompute();
+        }),
+      ]),
+      note
+    );
+  });
+}
+
+function renderAssetRows() {
+  const box = $('assetRows');
+  box.innerHTML = '';
+
+  state.assets.forEach((acct, idx) => {
+    const name = el('input', { type: 'text', value: acct.label, placeholder: 'Account' });
+    name.addEventListener('input', () => {
+      state.assets[idx].label = name.value;
+      persist();
+    });
+
+    const type = el('select', { title: 'Account type' });
+    ACCOUNT_TYPES.forEach((t) =>
+      type.append(el('option', { value: t.id, textContent: t.label, selected: t.id === acct.type }))
+    );
+    type.addEventListener('change', () => {
+      state.assets[idx].type = type.value;
+      // Switching type resets to that type's default answer, which the user can
+      // then override -- otherwise a stale checkbox silently contradicts it.
+      const def = ACCOUNT_TYPES.find((t) => t.id === type.value);
+      state.assets[idx].usable = def ? def.usableByDefault : true;
+      renderAssetRows();
       scheduleRecompute();
     });
 
-    const remove = document.createElement('button');
-    remove.type = 'button';
-    remove.textContent = '×';
-    remove.title = 'Remove earner';
-    remove.addEventListener('click', () => {
-      state.incomes.splice(idx, 1);
-      renderIncomeRows();
+    const amount = el('input', { type: 'number', step: '1000', min: '0', value: acct.amount });
+    amount.addEventListener('input', () => {
+      state.assets[idx].amount = Number(amount.value) || 0;
       scheduleRecompute();
     });
 
-    row.append(name, amount, remove);
-    box.append(row);
+    const usable = el('input', { type: 'checkbox', checked: acct.usable, title: 'Available for the down payment' });
+    usable.addEventListener('change', () => {
+      state.assets[idx].usable = usable.checked;
+      scheduleRecompute();
+    });
+
+    box.append(
+      el('div', { className: 'asset-row' }, [
+        name,
+        type,
+        amount,
+        el('label', { className: 'usable-box', title: 'Available for the down payment' }, [usable]),
+        removeButton('Remove account', () => {
+          state.assets.splice(idx, 1);
+          renderAssetRows();
+          scheduleRecompute();
+        }),
+      ])
+    );
+
+    const meta = ACCOUNT_TYPES.find((t) => t.id === acct.type);
+    if (meta && meta.note) box.append(el('div', { className: 'row-note', textContent: meta.note }));
   });
 }
 
@@ -109,11 +233,20 @@ function scheduleRecompute() {
 
 async function recompute() {
   try {
+    persist();
+
+    state.assetSummary = await api('/api/assets', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ accounts: state.assets }),
+    });
+    renderAssetSummary();
+
     state.takeHome = await api('/api/takehome', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        incomes: state.incomes,
+        incomes: annualIncomes(),
         filingStatus: $('filingStatus').value,
         stateTaxPct: numOf('stateTaxPct'),
         pretaxRetirementAnnual: numOf('pretaxRetirementAnnual'),
@@ -135,9 +268,71 @@ async function recompute() {
 
 function renderTakeHome() {
   const t = state.takeHome;
+  const overridden = $('useActualTakeHome').checked;
   $('takeHomeBox').innerHTML =
     `<strong>${money(t.gross)}</strong> gross · <strong>${money(t.monthlyNet)}/mo</strong> estimated take-home` +
-    `<br /><span class="hint">Effective tax rate ${pct(t.effectiveRate)} (federal + FICA + state)</span>`;
+    `<br /><span class="hint">Effective tax rate ${pct(t.effectiveRate)} (federal + FICA + state)${
+      overridden ? ' — overridden by your own figure below' : ''
+    }</span>`;
+}
+
+function renderAssetSummary() {
+  const s = state.assetSummary;
+  $('assetSummary').innerHTML =
+    `<strong>${money(s.usable)}</strong> available for a down payment` +
+    (s.locked > 0
+      ? `<br /><span class="hint">${money(s.locked)} more sits in accounts marked unavailable, so it is not counted.</span>`
+      : '');
+}
+
+/* ------------------------------- persistence ------------------------------- */
+// Typing a household balance sheet by hand once is fine. Twice is not, so the
+// form restores itself. localStorage is same-origin and stays on this machine.
+
+const STORAGE_KEY = 'home-savings-planner/v1';
+const PERSISTED_FIELDS = [
+  'targetPrice', 'years', 'downPaymentPct', 'appreciationPct', 'futureRatePct', 'termYears',
+  'propertyTaxPct', 'hoaMonthly', 'closingCostPct', 'raisePct', 'monthlyDebts', 'savingsReturnPct',
+  'monthlyExpenses', 'currentRent', 'filingStatus', 'stateTaxPct', 'pretaxRetirementAnnual',
+  'area', 'minBeds', 'monthlySavingsBudget', 'actualTakeHome',
+];
+
+function persist() {
+  try {
+    const fields = {};
+    PERSISTED_FIELDS.forEach((id) => {
+      if ($(id)) fields[id] = $(id).value;
+    });
+    localStorage.setItem(
+      STORAGE_KEY,
+      JSON.stringify({
+        incomes: state.incomes,
+        assets: state.assets,
+        fields,
+        useActualTakeHome: $('useActualTakeHome').checked,
+      })
+    );
+  } catch {
+    /* private browsing or a full quota -- the app still works, it just forgets */
+  }
+}
+
+function restore() {
+  let saved;
+  try {
+    saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+  } catch {
+    return;
+  }
+  if (!saved) return;
+
+  if (Array.isArray(saved.incomes) && saved.incomes.length) state.incomes = saved.incomes;
+  if (Array.isArray(saved.assets)) state.assets = saved.assets;
+  Object.entries(saved.fields || {}).forEach(([id, value]) => {
+    if ($(id)) $(id).value = value;
+  });
+  $('useActualTakeHome').checked = Boolean(saved.useActualTakeHome);
+  $('actualTakeHomeWrap').hidden = !saved.useActualTakeHome;
 }
 
 /* -------------------------------- rendering ------------------------------- */
@@ -220,13 +415,27 @@ function renderChecks(plan) {
     });
   }
 
-  checks.push({
-    level: plan.priceGap <= 0 ? 'ok' : 'bad',
-    text:
-      plan.priceGap <= 0
-        ? `A lender should support up to <strong>${money(plan.maxAffordableAtPurchase)}</strong> by then — comfortably above this house.`
-        : `A lender would support about <strong>${money(plan.maxAffordableAtPurchase)}</strong>, which is <strong>${money(plan.priceGap)}</strong> short of this house.`,
-  });
+  if (plan.priceGap > 0) {
+    checks.push({
+      level: 'bad',
+      text: `A lender would support about <strong>${money(plan.maxAffordableAtPurchase)}</strong>, which is <strong>${money(plan.priceGap)}</strong> short of this house.`,
+    });
+  } else if (plan.maxAffordableBinding === 'pmi-cliff') {
+    // The ceiling is the 20%-down boundary, not income — so it lands exactly on
+    // the target price and there is no real headroom above it.
+    checks.push({
+      level: 'warn',
+      text:
+        `Your ceiling is pinned at <strong>${money(plan.maxAffordableAtPurchase)}</strong> by the 20%-down boundary, not by income — ` +
+        `there is still <strong>${money(plan.maxAffordableUnusedBudget)}/mo</strong> of payment budget unused. ` +
+        `Going above this price drops you under 20% down and adds PMI, so more cash (not more salary) is what buys a bigger house.`,
+    });
+  } else {
+    checks.push({
+      level: 'ok',
+      text: `A lender should support up to <strong>${money(plan.maxAffordableAtPurchase)}</strong> by then — <strong>${money(-plan.priceGap)}</strong> above this house.`,
+    });
+  }
 
   if (plan.cost.pmi > 0) {
     checks.push({
@@ -409,7 +618,13 @@ async function handleIncomeFile(file) {
     box.querySelectorAll('button[data-i]').forEach((btn) =>
       btn.addEventListener('click', () => {
         const s = streams[Number(btn.dataset.i)];
-        state.incomes.push({ label: s.label.slice(0, 24), annual: Math.round(s.annual) });
+        // Keep the detected per-period amount and frequency rather than folding
+        // to a yearly number, so the row stays editable in the same terms.
+        state.incomes.push({
+          label: s.label.slice(0, 24),
+          amount: Math.round(s.typicalAmount),
+          frequency: s.frequency,
+        });
         renderIncomeRows();
         scheduleRecompute();
       })
@@ -476,9 +691,35 @@ function syncOutputs() {
   $('downOut').value = $('downPaymentPct').value;
 }
 
-function init() {
+async function loadMeta() {
+  try {
+    const meta = await api('/api/meta');
+    PAY_FREQUENCIES = meta.payFrequencies;
+    ACCOUNT_TYPES = meta.accountTypes;
+    $('taxYear').textContent = meta.taxYear;
+  } catch {
+    /* fall back to the built-in minimal lists */
+  }
+}
+
+async function init() {
+  await loadMeta();
+  restore();
   renderIncomeRows();
+  renderAssetRows();
   syncOutputs();
+
+  $('addAsset').addEventListener('click', () => {
+    state.assets.push({ label: 'Account', type: 'savings', amount: 0, usable: true });
+    renderAssetRows();
+    scheduleRecompute();
+  });
+
+  $('useActualTakeHome').addEventListener('change', (e) => {
+    $('actualTakeHomeWrap').hidden = !e.target.checked;
+    scheduleRecompute();
+  });
+  $('actualTakeHome').addEventListener('input', scheduleRecompute);
 
   document.querySelectorAll('.accordion-head').forEach((head) =>
     head.addEventListener('click', () => {
@@ -489,14 +730,14 @@ function init() {
 
   const watched = [
     'targetPrice', 'years', 'downPaymentPct', 'appreciationPct', 'futureRatePct', 'termYears',
-    'propertyTaxPct', 'hoaMonthly', 'closingCostPct', 'raisePct', 'monthlyDebts', 'currentSavings',
+    'propertyTaxPct', 'hoaMonthly', 'closingCostPct', 'raisePct', 'monthlyDebts',
     'savingsReturnPct', 'monthlyExpenses', 'currentRent', 'filingStatus', 'stateTaxPct',
-    'pretaxRetirementAnnual',
+    'pretaxRetirementAnnual', 'area', 'minBeds',
   ];
   watched.forEach((id) => $(id).addEventListener('input', () => { syncOutputs(); scheduleRecompute(); }));
 
   $('addIncome').addEventListener('click', () => {
-    state.incomes.push({ label: 'Earner', annual: 50000 });
+    state.incomes.push({ label: 'Earner', amount: 50000, frequency: 'annual' });
     renderIncomeRows();
     scheduleRecompute();
   });

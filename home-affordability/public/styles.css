@@ -156,14 +156,28 @@ button.ghost {
 .hint { font-size: 12px; color: var(--muted); margin: 0; }
 
 /* --------------------------------- income ---------------------------------- */
-.income-rows { display: flex; flex-direction: column; gap: 8px; }
-.income-row { display: grid; grid-template-columns: 1fr 120px 32px; gap: 8px; align-items: center; }
-.income-row button {
+.income-rows, .asset-rows { display: flex; flex-direction: column; gap: 8px; }
+.income-row { display: grid; grid-template-columns: 1fr 96px 104px 32px; gap: 6px; align-items: center; }
+.asset-row { display: grid; grid-template-columns: 1fr 108px 96px 26px 32px; gap: 6px; align-items: center; }
+.income-row button, .asset-row button {
   background: transparent;
   color: var(--bad);
   border: 1px solid var(--line);
   padding: 8px 0;
 }
+.income-row select, .asset-row select, .income-row input, .asset-row input { padding: 8px 7px; font-size: 13px; }
+.usable-box { display: grid; place-items: center; }
+.usable-box input { width: 16px; height: 16px; accent-color: var(--accent); }
+/* Derived values and caveats sit under the row they belong to. */
+.row-note { font-size: 11.5px; color: var(--muted); padding: 0 2px 2px; margin-top: -3px; }
+.checkline {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--text);
+}
+.checkline input { width: 16px; height: 16px; accent-color: var(--accent); flex: none; }
 .import summary { cursor: pointer; font-size: 13px; color: var(--accent-2); }
 .import { border: 1px dashed var(--line); border-radius: 8px; padding: 10px; }
 .import-result { font-size: 12.5px; margin-top: 8px; }

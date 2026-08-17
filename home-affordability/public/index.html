@@ -28,6 +28,9 @@
         <div class="accordion" data-open="true">
           <h2 class="accordion-head">1 · Household income</h2>
           <div class="accordion-body">
+            <p class="hint">
+              Enter pay however your paycheck reads — per year, per month, or per pay period.
+            </p>
             <div id="incomeRows" class="income-rows"></div>
             <button class="ghost" id="addIncome" type="button">+ Add earner</button>
 
@@ -62,6 +65,14 @@
 
             <div class="takehome" id="takeHomeBox">—</div>
 
+            <label class="checkline">
+              <input type="checkbox" id="useActualTakeHome" />
+              <span>I know our actual combined take-home — use that instead of the estimate</span>
+            </label>
+            <label id="actualTakeHomeWrap" hidden>Actual take-home $/mo (both of you, after everything)
+              <input type="number" id="actualTakeHome" value="12500" step="100" min="0" />
+            </label>
+
             <div class="grid2">
               <label>Current rent $/mo
                 <input type="number" id="currentRent" value="2600" step="50" min="0" />
@@ -74,7 +85,21 @@
         </div>
 
         <div class="accordion" data-open="true">
-          <h2 class="accordion-head">2 · The house</h2>
+          <h2 class="accordion-head">2 · Cash you have</h2>
+          <div class="accordion-body">
+            <p class="hint">
+              List accounts separately. Retirement money is excluded from the down payment by
+              default — pulling it out early costs tax plus a 10% penalty — but you can override any
+              row.
+            </p>
+            <div id="assetRows" class="asset-rows"></div>
+            <button class="ghost" id="addAsset" type="button">+ Add account</button>
+            <div class="takehome" id="assetSummary">—</div>
+          </div>
+        </div>
+
+        <div class="accordion" data-open="true">
+          <h2 class="accordion-head">3 · The house</h2>
           <div class="accordion-body">
             <div class="grid2">
               <label>Area
@@ -102,7 +127,7 @@
         </div>
 
         <div class="accordion" data-open="true">
-          <h2 class="accordion-head">3 · Plan &amp; assumptions</h2>
+          <h2 class="accordion-head">4 · Plan &amp; assumptions</h2>
           <div class="accordion-body">
             <label class="slider-label">Buy in <output id="yearsOut">4</output> years
               <input type="range" id="years" min="1" max="15" step="1" value="4" />
@@ -111,9 +136,6 @@
               <input type="range" id="downPaymentPct" min="3" max="50" step="1" value="20" />
             </label>
             <div class="grid2">
-              <label>Savings now $
-                <input type="number" id="currentSavings" value="40000" step="1000" min="0" />
-              </label>
               <label>Return on savings %
                 <input type="number" id="savingsReturnPct" value="4" step="0.25" min="0" />
               </label>

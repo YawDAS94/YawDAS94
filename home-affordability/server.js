@@ -13,7 +13,14 @@ import { fileURLToPath } from 'node:url';
 
 import { buildPlan, yearsUntilAffordable, maxAffordablePrice, housingCost } from './lib/affordability.js';
 import { loadLocalListings, searchListings, areaStats, areaProfile } from './lib/listings.js';
-import { estimateTakeHome, importIncomeCsv } from './lib/income.js';
+import {
+  estimateTakeHome,
+  importIncomeCsv,
+  summarizeAssets,
+  PAY_FREQUENCIES,
+  ACCOUNT_TYPES,
+  TAX_YEAR,
+} from './lib/income.js';
 import { providerStatus, fetchFromProvider, PROVIDERS } from './lib/providers/index.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -95,6 +102,20 @@ function num(v, fallback = undefined) {
 
 const routes = {
   'GET /api/health': async (_req, res) => sendJson(res, 200, { ok: true, port: PORT }),
+
+  // Dropdown vocabularies live in one place (lib/income.js) and are served to
+  // the UI, so the two never drift apart.
+  'GET /api/meta': async (_req, res) =>
+    sendJson(res, 200, {
+      payFrequencies: PAY_FREQUENCIES,
+      accountTypes: ACCOUNT_TYPES,
+      taxYear: TAX_YEAR,
+    }),
+
+  'POST /api/assets': async (req, res) => {
+    const { accounts } = await readJsonBody(req);
+    sendJson(res, 200, summarizeAssets(accounts || []));
+  },
 
   'GET /api/providers': async (_req, res) =>
     sendJson(res, 200, {

@@ -135,8 +135,76 @@ const PAY_PERIODS = {
   annual: 1,
 };
 
+/** Ordered for a dropdown: what people read off a paycheck, not just per-year. */
+export const PAY_FREQUENCIES = [
+  { id: 'annual', label: 'per year' },
+  { id: 'monthly', label: 'per month' },
+  { id: 'semimonthly', label: 'twice a month' },
+  { id: 'biweekly', label: 'every 2 weeks' },
+  { id: 'weekly', label: 'per week' },
+];
+
 export function annualize(amount, frequency) {
   return amount * (PAY_PERIODS[frequency] ?? 12);
+}
+
+/**
+ * Where the down payment can actually come from.
+ *
+ * Entering one "savings" number is the most common way to overstate readiness,
+ * because it invites you to count a 401(k) you cannot spend without a penalty.
+ * Accounts are itemized and typed, and each type has a default answer to "can
+ * this fund a down payment?" -- which you can override per account, since the
+ * exceptions are real (a 401(k) loan, Roth contributions).
+ */
+export const ACCOUNT_TYPES = [
+  { id: 'checking', label: 'Checking', usableByDefault: true },
+  { id: 'savings', label: 'Savings / HYSA', usableByDefault: true },
+  { id: 'brokerage', label: 'Brokerage', usableByDefault: true },
+  { id: 'cd', label: 'CD / T-bills', usableByDefault: true },
+  { id: 'gift', label: 'Family gift', usableByDefault: true },
+  {
+    id: 'roth',
+    label: 'Roth IRA',
+    usableByDefault: false,
+    note: 'Direct contributions can be withdrawn penalty-free; earnings cannot. Count only what you put in.',
+  },
+  {
+    id: 'retirement',
+    label: '401(k) / IRA',
+    usableByDefault: false,
+    note: 'Withdrawing early costs income tax plus a 10% penalty. A 401(k) loan is the usual route, and it adds a monthly payment that counts against your DTI.',
+  },
+  { id: 'other', label: 'Other', usableByDefault: true },
+];
+
+const TYPE_DEFAULT_USABLE = new Map(ACCOUNT_TYPES.map((t) => [t.id, t.usableByDefault]));
+
+export function isUsableByDefault(type) {
+  return TYPE_DEFAULT_USABLE.get(type) ?? true;
+}
+
+/**
+ * Split itemized accounts into what can fund a purchase and what cannot.
+ * `usable` is what feeds the savings plan; the rest is reported so the excluded
+ * money is visible rather than silently dropped.
+ */
+export function summarizeAssets(accounts = []) {
+  let usable = 0;
+  let locked = 0;
+  const byType = {};
+
+  for (const acct of accounts) {
+    const amount = Number(acct.amount) || 0;
+    if (amount <= 0) continue;
+    const type = acct.type || 'other';
+    const canUse = acct.usable === undefined ? isUsableByDefault(type) : Boolean(acct.usable);
+    if (canUse) usable += amount;
+    else locked += amount;
+    byType[type] = (byType[type] || 0) + amount;
+  }
+
+  return { usable, locked, total: usable + locked, byType };
 }
 
 /** Median gap between consecutive deposits -> pay frequency. */

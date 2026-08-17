@@ -13,7 +13,7 @@ It answers two questions:
 ```bash
 cd home-affordability
 npm start          # -> http://localhost:4173
-npm test           # 47 unit tests, no install needed
+npm test           # 53 unit tests, no install needed
 ```
 
 No dependencies, no build step, no account. Node 18+ is the only requirement.
@@ -46,6 +46,24 @@ inventory — apartments to lease, not homes for sale — so it can't price a ho
 you intend to buy, and it has no public API. Where rent matters here is the
 other side of the equation: what you pay in rent today is what funds the down
 payment. That's the `Current rent` input.
+
+### Entering it by hand (the expected path)
+
+Manual entry is first-class, not a fallback:
+
+- **Income** is entered however your paycheck reads — per year, per month, twice
+  a month, every two weeks, or weekly — and annualized for you, with the yearly
+  figure shown underneath so the conversion is visible rather than implied.
+- **Cash is itemized by account**, because "how much savings do you have" is the
+  question people answer wrong. A 401(k) is not down payment money: withdrawing
+  early costs income tax plus a 10% penalty. Retirement accounts are therefore
+  excluded by default and the excluded total is shown rather than silently
+  dropped, so nothing disappears without you noticing. Any row can be
+  overridden — Roth contributions genuinely are withdrawable.
+- **Take-home** is estimated from tax tables, but if you know your actual
+  combined net pay, tick the box and your number wins.
+- **Everything you type is remembered** in browser localStorage, so a refresh
+  does not cost you a re-entry. It stays on your machine.
 
 ### Credit Karma
 
@@ -129,6 +147,13 @@ $500,000 with $165/mo of budget left unused, and the thing that unlocks the next
 price band is a slightly bigger down payment — not a raise. The solver detects
 this and reports `binding: 'pmi-cliff'`.
 
+This also bites in a subtler place. At exactly 20% down, the boundary *is* the
+target price (it's 5x the down payment), so "the most a lender would give you"
+can come back equal to the house price — with income to spare. Reported as a
+plain number that reads like a comfortable pass when it's actually a wall, so
+the plan reports which constraint bound and how much payment budget went
+unused.
+
 ---
 
 ## API
@@ -141,6 +166,8 @@ Every endpoint is JSON; the browser UI is just a client of it.
 | `POST /api/when` | Given a monthly savings budget, when can you buy? |
 | `POST /api/max-price` | Highest price your income supports |
 | `POST /api/takehome` | Estimated net pay from gross incomes |
+| `POST /api/assets` | Split accounts into down-payment money and locked money |
+| `GET /api/meta` | Pay frequencies, account types, tax year |
 | `POST /api/income/import` | Infer income streams from a transaction CSV |
 | `GET /api/areas` | Every area with median price and quartiles |
 | `GET /api/area-profile?area=Queens&minBeds=3` | Stats for the home shape you want |
@@ -184,5 +211,5 @@ home-affordability/
 │   ├── csv.js             # RFC 4180 parser
 │   └── providers/         # local / RentCast / Zillow-RapidAPI adapters
 ├── public/                # UI (vanilla JS, no framework)
-└── test/                  # 47 tests: node --test
+└── test/                  # 53 tests: node --test
 ```

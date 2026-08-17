@@ -231,3 +231,43 @@ test('the imputed placeholder square footage is treated as missing', async () =>
   assert.equal(imputed.length, 0, 'the column-mean placeholder must not be reported as real sqft');
   assert.ok(listings.some((l) => l.sqft), 'genuine square footages should survive');
 });
+
+test('summarizeAssets excludes retirement money from the down payment by default', async () => {
+  const { summarizeAssets } = await import('../lib/income.js');
+  const s = summarizeAssets([
+    { type: 'checking', amount: 12_000 },
+    { type: 'savings', amount: 48_000 },
+    { type: 'retirement', amount: 180_000 },
+    { type: 'roth', amount: 30_000 },
+  ]);
+  assert.equal(s.usable, 60_000, 'only spendable cash funds the purchase');
+  assert.equal(s.locked, 210_000);
+  assert.equal(s.total, 270_000, 'excluded money is still reported, not dropped');
+});
+
+test('summarizeAssets honors a per-account override', async () => {
+  const { summarizeAssets } = await import('../lib/income.js');
+  // Roth contributions genuinely are withdrawable, so the override must win.
+  const s = summarizeAssets([
+    { type: 'savings', amount: 20_000 },
+    { type: 'roth', amount: 15_000, usable: true },
+    { type: 'checking', amount: 5_000, usable: false },
+  ]);
+  assert.equal(s.usable, 35_000);
+  assert.equal(s.locked, 5_000);
+});
+
+test('summarizeAssets ignores blank and negative rows', async () => {
+  const { summarizeAssets } = await import('../lib/income.js');
+  const s = summarizeAssets([{ type: 'savings', amount: 0 }, { type: 'checking', amount: -5 }, {}]);
+  assert.equal(s.total, 0);
+});
+
+test('annualize covers every offered pay frequency', async () => {
+  const { PAY_FREQUENCIES, annualize } = await import('../lib/income.js');
+  for (const f of PAY_FREQUENCIES) {
+    assert.ok(annualize(100, f.id) > 0, `${f.id} should convert`);
+  }
+  assert.equal(annualize(3_000, 'semimonthly'), 72_000);
+  assert.equal(annualize(1_500, 'weekly'), 78_000);
+});
