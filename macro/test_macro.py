@@ -231,6 +231,8 @@ class TestLongRows(unittest.TestCase):
         self.assertEqual(ghana["region"], "Sub-Saharan Africa")
         self.assertEqual(ghana["income_group"], "Lower middle income")
         self.assertEqual(ghana["short_name"], "Domestic credit by financial sector / GDP")
+        self.assertEqual(ghana["year"], 2020)
+        self.assertIsInstance(ghana["year"], int)
 
     def test_short_names_match_the_api_names(self):
         """Guard against labels drifting from what the API actually returns.
@@ -243,8 +245,6 @@ class TestLongRows(unittest.TestCase):
         self.assertEqual(BY_CODE["GFDD.OI.02"]["short_name"], "Bank deposits / GDP")
         self.assertEqual(BY_CODE["GFDD.SI.06"]["short_name"],
                          "Liquid assets / deposits & ST funding")
-        self.assertEqual(ghana["year"], 2020)
-        self.assertIsInstance(ghana["year"], int)
 
     def test_aggregates_excluded_by_default(self):
         self.assertNotIn("WLD", {r["iso3"] for r in self._long(DOMS)})
