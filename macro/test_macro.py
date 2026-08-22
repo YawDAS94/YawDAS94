@@ -231,6 +231,18 @@ class TestLongRows(unittest.TestCase):
         self.assertEqual(ghana["region"], "Sub-Saharan Africa")
         self.assertEqual(ghana["income_group"], "Lower middle income")
         self.assertEqual(ghana["short_name"], "Domestic credit by financial sector / GDP")
+
+    def test_short_names_match_the_api_names(self):
+        """Guard against labels drifting from what the API actually returns.
+
+        GFDD.OI.02 and GFDD.SI.06 shipped mislabelled: their codes suggest
+        concentration and credit/deposit ratios, but the API serves bank
+        deposits to GDP and a liquidity ratio.
+        """
+        from indicators import BY_CODE
+        self.assertEqual(BY_CODE["GFDD.OI.02"]["short_name"], "Bank deposits / GDP")
+        self.assertEqual(BY_CODE["GFDD.SI.06"]["short_name"],
+                         "Liquid assets / deposits & ST funding")
         self.assertEqual(ghana["year"], 2020)
         self.assertIsInstance(ghana["year"], int)
 

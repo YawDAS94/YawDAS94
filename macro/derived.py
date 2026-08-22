@@ -21,7 +21,7 @@ DERIVED_METRICS = [
         "short_name": "Bank sovereign saturation",
         "theme": "Derived - sovereign exposure",
         "indicator_name": (
-            "Bank sovereign saturation: net credit to central government "
+            "Bank sovereign saturation: claims on central government "
             "as % of domestic credit provided by the financial sector"
         ),
         "numerator": "FS.AST.CGOV.GD.ZS",

@@ -40,14 +40,14 @@ Add `--include-aggregates` if you want them.
 **Financial depth**
 - `FS.AST.PRVT.GD.ZS` — domestic credit to the private sector (% of GDP)
 - `FS.AST.DOMS.GD.ZS` — domestic credit provided by the financial sector (% of GDP)
-- `FS.AST.CGOV.GD.ZS` — net domestic credit to central government (% of GDP)
+- `FS.AST.CGOV.GD.ZS` — claims on central government, etc. (% of GDP)
 
 **Fiscal balance**
 - `GC.NLD.TOTL.GD.ZS` — net lending (+) / net borrowing (−) (% of GDP)
 
-**Financial structure and stability**
-- `GFDD.OI.02` — bank concentration
-- `GFDD.SI.06` — bank credit to bank deposits
+**Bank deposits and liquidity**
+- `GFDD.OI.02` — bank deposits to GDP
+- `GFDD.SI.06` — liquid assets to deposits and short-term funding
 
 **Savings, external balance and buffers**
 - `NY.GDS.TOTL.ZS` — gross domestic savings (% of GDP)
@@ -70,8 +70,8 @@ Coverage is very uneven, and one gap shapes the whole analysis:
 | `NY.GDS.TOTL.ZS` | 187 | 2000-2025 |
 | `FS.AST.PRVT.GD.ZS` | 186 | 2000-2025 |
 | `FS.AST.CGOV.GD.ZS` | 186 | 2000-2025 |
-| `GFDD.OI.02` | 184 | 2000-**2021** |
-| `GFDD.SI.06` | 177 | 2000-**2021** |
+| `GFDD.OI.02` (bank deposits / GDP) | 184 | 2000-**2021** |
+| `GFDD.SI.06` (liquid assets ratio) | 177 | 2000-**2021** |
 | `GC.NLD.TOTL.GD.ZS` | 154 | 2000-**2024** |
 | `DT.DOD.DECT.GN.ZS` | 121 | 2000-2024 |
 | `DT.TDS.DECT.EX.ZS` | 120 | 2000-2024 |
@@ -145,8 +145,10 @@ A starting layout:
 
 - **Rows** → `country` (add `region` above it to group)
 - **Columns** → `year`
-- **Values** → `value`, summarised by **AVERAGE** (not SUM — these are ratios,
-  and summing a percentage across years is meaningless)
+- **Values** → `value`, summarised by **AVERAGE**. Two traps here: putting
+  `indicator_name` or `short_name` in Values gives a column of zeros, because
+  Sheets cannot sum text — it must be `value`. And SUM is wrong even on the
+  right column, since these are all ratios
 - **Filters** → `indicator_code`, set to one indicator at a time
 
 Swap `country` for `region` or `income_group` on rows to compare groups.

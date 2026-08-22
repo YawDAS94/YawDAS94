@@ -28,7 +28,7 @@ INDICATORS = [
     },
     {
         "code": "FS.AST.CGOV.GD.ZS",
-        "short_name": "Net credit to central government / GDP",
+        "short_name": "Claims on central government / GDP",
         "theme": "Financial depth",
         "source": 2,
     },
@@ -40,14 +40,17 @@ INDICATORS = [
     },
     {
         "code": "GFDD.OI.02",
-        "short_name": "Bank concentration",
-        "theme": "Financial structure",
+        # The API returns "Bank deposits to GDP (%)" for this code - a depth
+        # measure, not the bank-concentration series the code suggests.
+        "short_name": "Bank deposits / GDP",
+        "theme": "Financial depth",
         # Passing source=33 makes the API reject this code; the default works.
         "source": None,
     },
     {
         "code": "GFDD.SI.06",
-        "short_name": "Bank credit / bank deposits",
+        # The API returns "Liquid assets to deposits and short term funding (%)".
+        "short_name": "Liquid assets / deposits & ST funding",
         "theme": "Financial stability",
         # Passing source=33 makes the API reject this code; the default works.
         "source": None,
