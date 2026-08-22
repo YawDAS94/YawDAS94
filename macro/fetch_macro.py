@@ -170,15 +170,16 @@ def fetch_indicator(client: WorldBankClient, code: str, countries: str,
             rows = client.paged_rows(f"country/{countries}/indicator/{code}", params)
         except WorldBankError as exc:
             last_error = exc
-            if exc.invalid_parameter:
-                raise WorldBankError(
-                    f"{code}: {exc} - check the indicator code exists at "
-                    f"https://data.worldbank.org/indicator/{code}")
             continue
         if any(row.get("value") is not None for row in rows):
             return rows
     if last_error is not None:
-        raise WorldBankError(f"{code}: {last_error}")
+        message = f"{code}: {last_error}"
+        if last_error.invalid_parameter:
+            # Every source refused it, so the code itself is the likely problem.
+            message += (f" - no source accepted this code; check it exists at "
+                        f"https://data.worldbank.org/indicator/{code}")
+        raise WorldBankError(message)
     return []
 
 

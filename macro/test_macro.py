@@ -119,9 +119,10 @@ class FakeSession:
         if code not in INDICATOR_DATA:
             return FakeResponse(EMPTY_PAYLOAD)
 
-        # GFDD lives in source 33 only; any other source answers empty.
-        if code.startswith("GFDD.") and params.get("source") != 33:
-            return FakeResponse(EMPTY_PAYLOAD)
+        # Observed live behaviour: GFDD codes are rejected outright when any
+        # source is specified, and resolve against the API default.
+        if code.startswith("GFDD.") and "source" in params:
+            return FakeResponse(ERROR_PAYLOAD)
 
         rows = INDICATOR_DATA[code]
         # Serve DOMS two rows at a time to exercise the pagination loop.
@@ -167,11 +168,22 @@ class TestFetching(unittest.TestCase):
         pages_seen = {c[1]["page"] for c in client.session.calls}
         self.assertEqual(pages_seen, {1, 2, 3})
 
-    def test_source_fallback_finds_gfdd_in_source_33(self):
+    def test_rejected_source_does_not_abort_the_fallback(self):
+        """A source that rejects the code must not stop later sources trying.
+
+        Regression: treating "Invalid value" as fatal killed both GFDD
+        indicators, which only resolve against the API default source.
+        """
         client = build_client()
         rows = fetch_indicator(client, "GFDD.OI.02", "all", "2020:2020")
         self.assertEqual(len(rows), 1)
         self.assertEqual(rows[0]["value"], 33.3)
+
+    def test_gfdd_declares_no_source(self):
+        # Declaring source=33 is what broke these codes in the first place.
+        from indicators import BY_CODE
+        for code in ("GFDD.OI.02", "GFDD.SI.06"):
+            self.assertIsNone(BY_CODE[code]["source"], code)
 
     def test_unknown_indicator_returns_empty_not_error(self):
         client = build_client()
@@ -357,14 +369,14 @@ class TestInvalidIndicator(unittest.TestCase):
         self.session.get = mock.Mock(return_value=FakeResponse(ERROR_PAYLOAD))
         self.client = WorldBankClient(retries=1, backoff=0, session=self.session)
 
-    def test_reports_the_offending_code_and_stops(self):
+    def test_reports_the_offending_code_after_exhausting_sources(self):
         with self.assertRaises(WorldBankError) as ctx:
             fetch_indicator(self.client, "FI.RES.MDOT.MO", "all", "2000:2025")
         message = str(ctx.exception)
         self.assertIn("FI.RES.MDOT.MO", message)
         self.assertIn("data.worldbank.org/indicator", message)
-        # One request, not one per fallback source.
-        self.assertEqual(self.session.get.call_count, 1)
+        # Every candidate source is tried before the code is called bad.
+        self.assertGreater(self.session.get.call_count, 1)
 
     def test_duplicate_api_messages_collapse(self):
         payload = [{"message": [

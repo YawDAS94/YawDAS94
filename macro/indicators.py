@@ -42,13 +42,15 @@ INDICATORS = [
         "code": "GFDD.OI.02",
         "short_name": "Bank concentration",
         "theme": "Financial structure",
-        "source": 33,
+        # Passing source=33 makes the API reject this code; the default works.
+        "source": None,
     },
     {
         "code": "GFDD.SI.06",
         "short_name": "Bank credit / bank deposits",
         "theme": "Financial stability",
-        "source": 33,
+        # Passing source=33 makes the API reject this code; the default works.
+        "source": None,
     },
     {
         "code": "NY.GDS.TOTL.ZS",
