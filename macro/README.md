@@ -9,12 +9,12 @@ Google Sheets pivot tables want: no reshaping needed after import.
 ```bash
 pip install -r requirements.txt
 
-# All countries, 2000-2024, every indicator, with the calculated metrics
+# All countries, 2000-2025, every indicator, with the calculated metrics
 python fetch_macro.py --out macro_long.csv
 
 # A shortlist, with a wide year-as-columns file for eyeballing
 python fetch_macro.py --countries "USA;GHA;BRA;NGA;KEN" \
-  --start 2010 --end 2024 --out macro_long.csv --wide-out macro_wide.csv
+  --start 2010 --end 2025 --out macro_long.csv --wide-out macro_wide.csv
 ```
 
 No API key needed — the World Bank v2 API is open.

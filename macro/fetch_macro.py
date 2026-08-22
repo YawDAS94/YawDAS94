@@ -5,7 +5,7 @@ The output is one row per country-indicator-year, which is the shape Google
 Sheets pivot tables want: drop `year` on columns, `country`/`region` on rows,
 `indicator` on the filter, and `value` in the values box.
 
-    python fetch_macro.py --start 2000 --end 2024 --out macro_long.csv
+    python fetch_macro.py --start 2000 --end 2025 --out macro_long.csv
 
 Run `python fetch_macro.py --help` for the full option list.
 """
@@ -275,7 +275,7 @@ def parse_args(argv=None) -> argparse.Namespace:
     parser.add_argument("--countries", default="all",
                         help="'all' or semicolon-separated ISO3 codes, e.g. 'USA;GHA;BRA'.")
     parser.add_argument("--start", type=int, default=2000, help="First year, inclusive.")
-    parser.add_argument("--end", type=int, default=2024, help="Last year, inclusive.")
+    parser.add_argument("--end", type=int, default=2025, help="Last year, inclusive.")
     parser.add_argument("--out", default="macro_long.csv", help="Long-format CSV output path.")
     parser.add_argument("--wide-out", default=None,
                         help="Optional extra wide (year-as-column) CSV path.")
