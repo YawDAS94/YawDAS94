@@ -52,13 +52,48 @@ Add `--include-aggregates` if you want them.
 **Savings, external balance and buffers**
 - `NY.GDS.TOTL.ZS` — gross domestic savings (% of GDP)
 - `BN.CAB.XOKA.GD.ZS` — current account balance (% of GDP)
-- `FI.RES.MDOT.MO` — total reserves in months of imports
+- `FI.RES.TOTL.MO` — total reserves in months of imports
 
 **External debt**
 - `DT.DOD.DECT.GN.ZS` — external debt stocks (% of GNI)
 - `DT.TDS.DECT.EX.ZS` — total debt service (% of exports)
 
 Edit `indicators.py` to add more — just append the code, a short name and a theme.
+
+## Actual coverage (run of 2000-2025)
+
+Coverage is very uneven, and one gap shapes the whole analysis:
+
+| indicator | countries | years returned |
+|---|---|---|
+| `BN.CAB.XOKA.GD.ZS` | 197 | 2000-2025 |
+| `NY.GDS.TOTL.ZS` | 187 | 2000-2025 |
+| `FS.AST.PRVT.GD.ZS` | 186 | 2000-2025 |
+| `FS.AST.CGOV.GD.ZS` | 186 | 2000-2025 |
+| `GFDD.OI.02` | 184 | 2000-**2021** |
+| `GFDD.SI.06` | 177 | 2000-**2021** |
+| `GC.NLD.TOTL.GD.ZS` | 154 | 2000-**2024** |
+| `DT.DOD.DECT.GN.ZS` | 121 | 2000-2024 |
+| `DT.TDS.DECT.EX.ZS` | 120 | 2000-2024 |
+| **`FS.AST.DOMS.GD.ZS`** | **69** | 2000-2025 |
+
+**`FS.AST.DOMS.GD.ZS` is the binding constraint.** It is the denominator of
+*both* calculated metrics but is reported for only 69 countries — roughly a
+third of the coverage of everything else. So:
+
+- `CALC.BANK.SOV.SAT` → ~69 countries
+- `CALC.NEWDEF.BANK.SHARE` → fewer still, where `GC.NLD.TOTL.GD.ZS` also exists
+
+Neither metric can be computed outside that set, however complete the other
+indicators look. Filter to those countries before comparing regions, or the
+comparison silently rests on whichever countries happen to report domestic
+credit.
+
+The `GFDD.*` series stop at **2021** and the debt and fiscal series at
+**2024**. In a pivot with `year` on columns, the right-hand columns therefore
+cover a shrinking, non-random subset of countries — a cross-indicator average
+by year will drift for that reason alone, not because the underlying economics
+moved.
 
 ## Calculated metrics
 

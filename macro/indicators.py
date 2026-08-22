@@ -63,7 +63,7 @@ INDICATORS = [
         "source": 2,
     },
     {
-        "code": "FI.RES.MDOT.MO",
+        "code": "FI.RES.TOTL.MO",
         "short_name": "Reserves in months of imports",
         "theme": "External buffers",
         "source": 2,

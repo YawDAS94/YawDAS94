@@ -349,6 +349,40 @@ if __name__ == "__main__":
     unittest.main()
 
 
+class TestInvalidIndicator(unittest.TestCase):
+    """A rejected indicator code must fail fast with an actionable message."""
+
+    def setUp(self):
+        self.session = FakeSession()
+        self.session.get = mock.Mock(return_value=FakeResponse(ERROR_PAYLOAD))
+        self.client = WorldBankClient(retries=1, backoff=0, session=self.session)
+
+    def test_reports_the_offending_code_and_stops(self):
+        with self.assertRaises(WorldBankError) as ctx:
+            fetch_indicator(self.client, "FI.RES.MDOT.MO", "all", "2000:2025")
+        message = str(ctx.exception)
+        self.assertIn("FI.RES.MDOT.MO", message)
+        self.assertIn("data.worldbank.org/indicator", message)
+        # One request, not one per fallback source.
+        self.assertEqual(self.session.get.call_count, 1)
+
+    def test_duplicate_api_messages_collapse(self):
+        payload = [{"message": [
+            {"id": "120", "key": "Invalid value", "value": "not valid"},
+            {"id": "120", "key": "Invalid value", "value": "not valid"},
+        ]}]
+        with self.assertRaises(WorldBankError) as ctx:
+            _split_payload(payload)
+        self.assertEqual(str(ctx.exception).count("not valid"), 1)
+        self.assertTrue(ctx.exception.invalid_parameter)
+
+    def test_transient_error_is_not_flagged_invalid(self):
+        payload = [{"message": [{"id": "500", "key": "Server", "value": "busy"}]}]
+        with self.assertRaises(WorldBankError) as ctx:
+            _split_payload(payload)
+        self.assertFalse(ctx.exception.invalid_parameter)
+
+
 class TestUnreachableApi(unittest.TestCase):
     def test_network_failure_exits_cleanly(self):
         """A dead network should give a readable message, not a traceback."""

@@ -41,7 +41,11 @@ LONG_COLUMNS = [
 
 
 class WorldBankError(RuntimeError):
-    pass
+    def __init__(self, message, invalid_parameter: bool = False):
+        super().__init__(message)
+        # True when the API rejected the request itself (a misspelled indicator
+        # code), as opposed to a transient or transport failure.
+        self.invalid_parameter = invalid_parameter
 
 
 class WorldBankClient:
@@ -100,12 +104,18 @@ def _split_payload(payload) -> Tuple[dict, Optional[list]]:
     head = payload[0]
     # Error responses are a single-element list carrying a `message` array.
     if isinstance(head, dict) and "message" in head:
-        messages = head.get("message") or []
-        detail = "; ".join(
-            f"{m.get('key', '')}: {m.get('value', '')}".strip(": ")
-            for m in messages if isinstance(m, dict)
-        )
-        raise WorldBankError(detail or "API returned an unspecified error")
+        messages = [m for m in (head.get("message") or []) if isinstance(m, dict)]
+        seen, parts = set(), []
+        for entry in messages:
+            text = f"{entry.get('key', '')}: {entry.get('value', '')}".strip(": ")
+            if text and text not in seen:
+                seen.add(text)
+                parts.append(text)
+        # id 120 is the API's "parameter value is not valid" - almost always a
+        # bad indicator code, which no other source will accept either.
+        invalid = any(str(m.get("id")) == "120" for m in messages)
+        raise WorldBankError("; ".join(parts) or "API returned an unspecified error",
+                             invalid_parameter=invalid)
 
     if len(payload) < 2 or not payload[1]:
         return (head if isinstance(head, dict) else {}), None
@@ -160,6 +170,10 @@ def fetch_indicator(client: WorldBankClient, code: str, countries: str,
             rows = client.paged_rows(f"country/{countries}/indicator/{code}", params)
         except WorldBankError as exc:
             last_error = exc
+            if exc.invalid_parameter:
+                raise WorldBankError(
+                    f"{code}: {exc} - check the indicator code exists at "
+                    f"https://data.worldbank.org/indicator/{code}")
             continue
         if any(row.get("value") is not None for row in rows):
             return rows
