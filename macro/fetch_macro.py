@@ -317,7 +317,14 @@ def main(argv=None) -> int:
     client = WorldBankClient(retries=args.retries, timeout=args.timeout)
 
     print("Fetching country metadata...", file=sys.stderr)
-    country_meta = fetch_country_metadata(client)
+    try:
+        country_meta = fetch_country_metadata(client)
+    except WorldBankError as exc:
+        # Nothing downstream works without the country register, so fail here
+        # with something readable rather than a traceback.
+        print(f"\nCould not reach the World Bank API: {exc}", file=sys.stderr)
+        print("Check your network connection or proxy and try again.", file=sys.stderr)
+        return 3
     iso2_to_iso3 = {m["iso2"]: m["iso3"] for m in country_meta.values() if m["iso2"]}
     print(f"  {len(country_meta)} countries and aggregates", file=sys.stderr)
 

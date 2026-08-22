@@ -347,3 +347,14 @@ class TestEndToEnd(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestUnreachableApi(unittest.TestCase):
+    def test_network_failure_exits_cleanly(self):
+        """A dead network should give a readable message, not a traceback."""
+        session = FakeSession()
+        session.get = mock.Mock(
+            side_effect=fetch_macro.requests.ConnectionError("tunnel failed"))
+        client = WorldBankClient(retries=1, backoff=0, session=session)
+        with mock.patch.object(fetch_macro, "WorldBankClient", lambda **kw: client):
+            self.assertEqual(fetch_macro.main(["--out", "/dev/null"]), 3)
