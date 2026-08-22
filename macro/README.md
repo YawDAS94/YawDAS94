@@ -168,11 +168,12 @@ filtering, and the ratio maths including the deficit sign convention.
 
 ## Notes on the API
 
-- `GFDD.*` codes live in the Global Financial Development database (source 33)
-  and `DT.*` in International Debt Statistics (source 6), not the default WDI
-  source. `indicators.py` records the right source per indicator, and the
-  fetcher retries across the others if a code comes back empty — so a wrong
-  guess costs one extra request rather than a missing indicator.
+- `DT.*` codes are served by International Debt Statistics (source 6), so
+  `indicators.py` records that source. The `GFDD.*` codes are the opposite
+  case: passing `source=33` makes the API **reject** them outright, and they
+  resolve only against the default source — so they declare no source at all.
+  Either way the fetcher retries across the other sources when one refuses,
+  and only calls a code bad once every source has turned it down.
 - Some sources return a blank `countryiso3code`; the script recovers the ISO3
   from the ISO2 code via the country register.
 - Coverage is uneven. `GC.NLD.TOTL.GD.ZS` in particular is missing for many
