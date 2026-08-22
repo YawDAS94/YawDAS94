@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+macro_long.csv
+macro_wide.csv
